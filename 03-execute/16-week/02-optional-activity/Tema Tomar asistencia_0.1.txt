@@ -1,0 +1,172 @@
+Sistema Web para la Optimización de la Toma de Asistencia en el SENA
+Tema
+
+Sistema Web para la Optimización del Proceso de Toma de Asistencia en el SENA
+
+Necesidades
+
+Durante el análisis del proceso de toma de asistencia en la ficha ADSO 3413974, se identificaron las siguientes necesidades:
+
+Optimizar el tiempo empleado por el instructor durante el registro de asistencia.
+Contar con una herramienta especializada para la toma de asistencia sin depender completamente de SOFIA Plus.
+Mostrar el listado completo de aprendices en una única pantalla para evitar búsquedas individuales.
+Registrar la asistencia de manera rápida, organizada y precisa.
+Disminuir los errores ocasionados por el proceso manual de registro.
+Almacenar los registros de asistencia para facilitar su consulta y modificación.
+Disponer de una interfaz sencilla, intuitiva y fácil de utilizar.
+Desarrollar una solución enfocada exclusivamente en el proceso de formación del SENA.
+Contar con un sistema independiente que no requiera integración con SOFIA Plus.
+Diseñar una arquitectura que permita incorporar nuevas funcionalidades en futuras versiones.
+Justificación
+
+El proceso actual de toma de asistencia mediante SOFIA Plus requiere que el instructor acceda a la plataforma, busque la ficha correspondiente, localice a cada aprendiz y verifique nuevamente el número de asistentes, lo que consume parte del tiempo destinado a la formación.
+
+El desarrollo de un sistema web especializado permitirá optimizar este proceso mediante una interfaz sencilla y organizada, reduciendo el tiempo empleado durante el registro de asistencia y facilitando la consulta de la información almacenada.
+
+Además, este proyecto permitirá aplicar los conocimientos adquiridos durante el programa de Análisis y Desarrollo de Software (ADSO), utilizando metodologías de Ingeniería de Requerimientos, modelado UML y desarrollo de aplicaciones web.
+
+Objetivo General
+
+Desarrollar un sistema web que optimice el proceso de toma de asistencia de los aprendices de la ficha ADSO 3413974, reduciendo el tiempo empleado por el instructor mediante una interfaz sencilla, rápida y organizada.
+
+Objetivos Específicos
+Analizar el proceso actual de toma de asistencia realizado mediante SOFIA Plus para identificar las principales dificultades.
+Identificar los requerimientos funcionales del sistema.
+Diseñar una interfaz intuitiva que permita registrar la asistencia de todos los aprendices desde una única pantalla.
+Implementar un sistema que permita registrar, consultar y modificar la asistencia de los aprendices.
+Almacenar los registros de asistencia para facilitar su consulta posterior.
+Diseñar una arquitectura que permita incorporar nuevas funcionalidades en futuras versiones.
+Ingeniería de Requerimientos
+Descripción
+
+El proyecto consiste en desarrollar una aplicación web especializada en la toma de asistencia para el entorno de formación del SENA.
+
+La aplicación estará enfocada en optimizar el tiempo empleado por el instructor durante el registro de asistencia, ofreciendo una alternativa más rápida y organizada que el procedimiento realizado actualmente mediante SOFIA Plus.
+
+El sistema será utilizado únicamente como herramienta de apoyo durante las jornadas de formación y funcionará de manera independiente, sin integración con plataformas institucionales.
+
+Instrumentos de Recolección de Información
+Observación del proceso actual de toma de asistencia.
+Revisión del procedimiento realizado en SOFIA Plus.
+Entrevista con el instructor.
+Análisis del listado oficial de aprendices.
+Requerimientos Funcionales
+
+RF01. El sistema deberá mostrar automáticamente el listado de aprendices de la ficha ADSO 3413974.
+
+RF02. El sistema deberá permitir registrar la asistencia de todos los aprendices desde una única pantalla.
+
+RF03. El sistema deberá permitir asignar a cada aprendiz uno de los siguientes estados:
+
+Asistió.
+Tarde.
+Ausente.
+
+RF04. El sistema deberá almacenar la fecha, la hora y el estado de asistencia de cada aprendiz.
+
+RF05. El sistema deberá permitir consultar los registros de asistencia por fecha.
+
+RF06. El sistema deberá permitir modificar un registro de asistencia previamente almacenado.
+
+RF07. El sistema deberá permitir buscar un aprendiz por nombre o documento.
+
+RF08. El sistema deberá mostrar un resumen de la asistencia registrada, indicando el número de asistentes, ausentes y llegadas tarde.
+
+Documento SRS (IEEE 830)
+Nombre del Sistema
+
+Sistema Web de Toma de Asistencia para el SENA
+
+Propósito
+
+Optimizar el proceso de toma de asistencia durante las jornadas de formación mediante una herramienta web sencilla, rápida y especializada.
+
+Alcance
+
+El sistema permitirá visualizar el listado de aprendices, registrar la asistencia, consultar registros, modificar información previamente almacenada y generar reportes básicos.
+
+El sistema estará dirigido inicialmente a la ficha ADSO 3413974 y funcionará de forma independiente, sin integración con SOFIA Plus ni con otros servicios institucionales.
+
+Actor Principal
+Instructor.
+Restricciones
+El sistema estará orientado inicialmente a una única ficha de formación.
+No contará con autenticación de usuarios.
+No tendrá integración con SOFIA Plus.
+Será utilizado únicamente como herramienta de apoyo durante las jornadas de formación.
+El sistema deberá funcionar en un navegador web.
+Caso de Uso
+                           Instructor
+                                |
+      -------------------------------------------------
+      |         |          |          |              |
+      |         |          |          |              |
+      V         V          V          V              V
+   (UC01)    (UC02)     (UC03)     (UC04)        (UC05)
+ Registrar  Consultar  Modificar   Buscar      Generar
+ Asistencia Asistencia Asistencia  Aprendiz     Reportes
+      |
+      +----------------------+----------------------+
+      |                      |                      |
+      | <<include>>          | <<include>>         | <<include>>
+      V                      V                      V
+Mostrar lista        Registrar estado       Guardar registro
+de aprendices         de asistencia
+Diagrama de Clases
+                    +-------------------------+
+                    |       Instructor        |
+                    +-------------------------+
+                    | - idInstructor          |
+                    | - nombre                |
+                    +-------------------------+
+                    | + registrarAsistencia() |
+                    | + consultarAsistencia() |
+                    | + modificarAsistencia() |
+                    | + generarReporte()      |
+                    +-------------------------+
+                               |
+                             1 |
+                               |
+                           registra
+                               |
+                             * |
+                               |
+                    +-------------------------+
+                    |       Asistencia        |
+                    +-------------------------+
+                    | - idAsistencia          |
+                    | - fecha                 |
+                    | - hora                  |
+                    | - estado                |
+                    +-------------------------+
+                    | + guardar()             |
+                    | + editar()              |
+                    | + consultar()           |
+                    +-------------------------+
+                               |
+                             * |
+                               |
+                         pertenece a
+                               |
+                             1 |
+                               |
+                    +-------------------------+
+                    |        Aprendiz         |
+                    +-------------------------+
+                    | - idAprendiz            |
+                    | - documento             |
+                    | - nombre                |
+                    +-------------------------+
+                    | + obtenerDatos()        |
+                    +-------------------------+
+
+Posibles Mejoras Futuras
+Generación de códigos QR para registrar asistencia.
+Códigos temporales de asistencia.
+Reportes en PDF y Excel.
+Estadísticas de asistencia por aprendiz.
+Manejo de múltiples fichas de formación.
+Integración con plataformas institucionales como SOFIA Plus.
+Desarrollo de una aplicación móvil.
+Notificaciones automáticas.
+Panel administrativo con indicadores de asistencia.
