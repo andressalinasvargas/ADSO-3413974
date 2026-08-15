@@ -1,0 +1,3 @@
+Seguimiento de ficha → Registrar seguimiento: el Avance curricular (%) sigue siendo un campo manual.
+Panel de indicadores → Distribución por nivel de riesgo: la gráfica aún muestra poca información y no identifica claramente valores/umbrales.
+Parametrización / Auditoría: revisar detalles visuales generales y consistencia de campos.
