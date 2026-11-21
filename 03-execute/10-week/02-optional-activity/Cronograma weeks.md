@@ -25,7 +25,7 @@
 - **Week 9:** Actividad supermercado
   - Levantamiento de requisitos, análisis de datos y documento SRS para Supermercado "La Esquina".
 - **Week 10:** Cronograma
-  - Encargados: Kevin Eduardo y Brenda Galeano.Consolidación y seguimiento del cronograma semanal.
+  - Encargados: Kevin Eduardo y Brenda Galeano. Consolidación y seguimiento del cronograma semanal.
 - **Week 11:** Actividad SRS Supermercado
   - Hacer una síntesis, glosario, cronograma, presentación e infografía de apoyo para exponer en 3 minutos.
 - **Week 12:** Qué son las TIC
@@ -35,7 +35,7 @@
 - **Week 14:** Implementar documentos de gestión de horarios, adaptarlos a nuestro proyecto
   - Adaptación documental, presentación y mockup al proyecto (`SIGEV`).
 - **Week 15:** Trabajo Diagramas UML, `.drawio` y Word
-  - Modelado UML de `schedule-sena` en documento Word y archivo fuente `.drawio`.
+  - Modelado UML de `schedule-sena` en documento Word, archivo fuente `.drawio` y versión visual PDF.
 - **Week 16:** Trabajo UML, Use Case, Diagrama Use Case y Diagrama de Clases
   - Subir archivo y modelado de la actividad de **Asistencia a clase SENA** (casos de uso y diagrama de clases).
 - **Week 17:** Mockup de Asistencia SENA
@@ -68,8 +68,8 @@
 | Semana | Carpeta en `03-execute/` | Entregables principales |
 | :--- | :--- | :--- |
 | **Week 2** | [`02-week/02-optional-activity/`](../02-week/02-optional-activity/) | `DESARROLLAR_LA_ESTRUCTURA_DE_DATOS.md` (enlace YouTube) |
-| **Week 3** | [`03-week/02-optional-activity/`](../03-week/02-optional-activity/) | `manual_commit_git.md` |
-| **Week 4** | [`04-week/02-optional-activity/`](../04-week/02-optional-activity/) | `Analisis-de-Requerimientos-del-Sistema.pdf`, `Cuestionario_GS_v2_Consolidado.xlsx` |
+| **Week 3** | [`03-week/02-optional-activity/`](../03-week/02-optional-activity/) | `manual_commit_git.md`, `Manual_GitHub_y_Comandos.md` |
+| **Week 4** | [`04-week/02-optional-activity/`](../04-week/02-optional-activity/) | `Analisis-de-Requerimientos-del-Sistema.pdf`, `Cuestionario_GS_v2_Consolidado.xlsx`, `Lista_de_Chequeo_Requisitos_Supermercado.md` |
 | **Week 5** | [`05-week/02-optional-activity/`](../05-week/02-optional-activity/) | `Mapa de procesos para desarrollo de software.png`, `Mapa_de_Procesos_ADSO.pptx`, `Elicitación de Requisitos.zip` |
 | **Week 6** | [`06-week/02-optional-activity/`](../06-week/02-optional-activity/) | `Instrumentos_Recoleccion_Informacion.png`, `Instrumentos_Recoleccion_Informacion.pptx.pdf`, `Instrumentos_Recoleccion_AgroWeb.md` |
 | **Week 7** | [`07-week/02-optional-activity/`](../07-week/02-optional-activity/) | `Que_es_SRS.md` |
@@ -80,14 +80,14 @@
 | **Week 12** | [`12-week/02-optional-activity/`](../12-week/02-optional-activity/) | `Que_son_las_TIC.md`, `Apuntes.pdf`, `Retrospectiva.docx` |
 | **Week 13** | [`13-week/02-optional-activity/`](../13-week/02-optional-activity/) | `PRJ-SENA-SCHEDULE.pptx`, `Problema y Contexto Normativo del Proyecto.docx`, `Presentación1.pptx` |
 | **Week 14** | [`14-week/02-optional-activity/`](../14-week/02-optional-activity/) | `SIGEV.docx`, `SIGEV_Presentacion.pptx`, `Mockup.jpeg` |
-| **Week 15** | [`15-week/02-optional-activity/`](../15-week/02-optional-activity/) | `Schedule_Sena.docx`, `Diagramas_UML_Schedule_Sena.drawio`, `Estructura_Laboratorio.docx`, `Laboratorio_Sena_LaEsquina.zip` |
+| **Week 15** | [`15-week/02-optional-activity/`](../15-week/02-optional-activity/) | `Schedule_Sena.docx`, `Diagramas_UML_Schedule_Sena.drawio`, `Diagramas_UML_Schedule_Sena.pdf`, `Estructura_Laboratorio.docx`, `Laboratorio_Sena_LaEsquina.zip` |
 | **Week 16** | [`16-week/02-optional-activity/`](../16-week/02-optional-activity/) | `Tema Tomar asistencia.txt`, `Tema Tomar asistencia_0.1.txt`, `Diagramas_UML_Asistencia_SENA.drawio`, `Diagramas_UML_Asistencia_SENA.pdf` |
 | **Week 17** | [`17-week/02-optional-activity/`](../17-week/02-optional-activity/) | `Sistema_Asistencia_1.1.txt`, mockups PNG, `Sistema_Asistencia.zip`, `Estrategia de Gestion del Conocimiento.pptx` |
 | **Week 18** | [`18-week/02-optional-activity/`](../18-week/02-optional-activity/) | `Sistema_Asistencia_V2.zip`, `Ingeniería inversa apuntes.txt`, `Plan de contingencia.png`, `DESIGN THINKING.jpeg`, `MOSCOW.jpeg` |
 | **Week 19** | [`19-week/02-optional-activity/`](../19-week/02-optional-activity/) | `Resumen_Socializacion_MVP.md` |
-| **Week 20** | [`20-week/02-optional-activity/`](../20-week/02-optional-activity/) | `Diagrama_entidad_relacion.drawio`, PNG ERD Clínica Veterinaria, `Design thinking.png`, `Moscow.png` |
+| **Week 20** | [`20-week/02-optional-activity/`](../20-week/02-optional-activity/) | `Diagrama_entidad_relacion.drawio`, `Diagrama_entidad_relacion_Clinica_Veterinaria.png`, `Design thinking.png`, `Moscow.png` |
 | **Week 21** | [`21-week/02-optional-activity/`](../21-week/02-optional-activity/) | `Diagrama_Aticulos_Encargos.jpeg`, `Diagrama_Aticulos_Encargo_MR.png`, `analisis-mockup-sena-horarios.md`, `sena_analisis_mockup.pptx` |
-| **Week 22** | [`22-week/02-optional-activity/`](../22-week/02-optional-activity/) | `Diagramas_Camunda.zip`, 6 diagramas PNG BPMN, `AndresFernandoSalinasVargas.md`, `Seguimiento de ficha → Registrar se.txt`, `tabla_verificacion_retrospectiva_estilo_anterior.png` |
+| **Week 22** | [`22-week/02-optional-activity/`](../22-week/02-optional-activity/) | `README.md`, `Diagramas_Camunda.zip`, 6 diagramas PNG BPMN, `AndresFernandoSalinasVargas.md`, `Seguimiento de ficha → Registrar se.txt`, `tabla_verificacion_retrospectiva_estilo_anterior.png` |
 | **Week 23** | [`23-week/02-optional-activity/`](../23-week/02-optional-activity/) | `README.md`, `Estrategia de Gestion del Conocimiento.pptx`, `Ingeniería inversa apuntes.txt`, `Plan de contingencia.png`, `Modelo_Datos_SENA_Gestion_Horarios.md`, `ERD_Sistema_Gestion_Horarios_SENA.png`, `Modelo_Relacional_phpMyAdmin_Horarios_SENA.png`, `Flujo_Migracion_y_Modernizacion_Sistemas.jpg` |
 | **Week 24** | [`24-week/02-optional-activity/`](../24-week/02-optional-activity/) | `Sistema_Automotriz.zip`, `Toma_Asistencia.zip` |
 | **Week 25** | [`25-week/02-optional-activity/`](../25-week/02-optional-activity/) | `Preguntas.MD`, `Analisis_y_Respuestas_Hallazgos.md` |
