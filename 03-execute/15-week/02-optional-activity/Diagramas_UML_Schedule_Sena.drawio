@@ -1,0 +1,220 @@
+<mxfile host="app.diagrams.net" modified="2026-11-21T16:30:00.000Z" agent="ADSO-3413974" version="24.7.17">
+  <diagram id="class-diagram-schedule" name="Diagrama de Clases">
+    <mxGraphModel dx="1420" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title1" value="Diagrama de Clases UML — Sistema de Gestión de Horarios (schedule-sena)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="760" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ProgramaFormacion -->
+        <mxCell id="cls-prog" value="ProgramaFormacion" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="230" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-prog-attrs" value="- id : Long&#xa;- codigo : String&#xa;- nombre : String" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-prog">
+          <mxGeometry y="28" width="230" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-prog-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;" vertex="1" parent="cls-prog">
+          <mxGeometry y="86" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-prog-meth" value="+ agregarFicha()&#xa;+ consultarFichas()" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-prog">
+          <mxGeometry y="94" width="230" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- Ficha -->
+        <mxCell id="cls-ficha" value="Ficha" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="440" y="80" width="230" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-ficha-attrs" value="- id : Long&#xa;- codigo : String&#xa;- numAprendices : Integer&#xa;- estado : String" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-ficha">
+          <mxGeometry y="28" width="230" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-ficha-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;" vertex="1" parent="cls-ficha">
+          <mxGeometry y="100" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-ficha-meth" value="+ actualizarEstado()" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-ficha">
+          <mxGeometry y="108" width="230" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Horario -->
+        <mxCell id="cls-horario" value="Horario" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="440" y="310" width="230" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-horario-attrs" value="- id : Long&#xa;- fecha : Date&#xa;- horaInicio : Time&#xa;- horaFin : Time&#xa;- estado : String" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-horario">
+          <mxGeometry y="28" width="230" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-horario-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#82b366;" vertex="1" parent="cls-horario">
+          <mxGeometry y="116" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-horario-meth" value="+ validarConflicto()&#xa;+ cambiarEstado()" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-horario">
+          <mxGeometry y="124" width="230" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- Instructor -->
+        <mxCell id="cls-inst" value="Instructor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="570" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-inst-attrs" value="- id : Long&#xa;- documento : String&#xa;- nombre : String&#xa;- tipoContrato : String" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-inst">
+          <mxGeometry y="28" width="240" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-inst-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#d6b656;" vertex="1" parent="cls-inst">
+          <mxGeometry y="100" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-inst-meth" value="+ consultarDisponibilidad()&#xa;+ actualizarDisponibilidad()" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-inst">
+          <mxGeometry y="108" width="240" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- Disponibilidad -->
+        <mxCell id="cls-disp" value="Disponibilidad" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="325" width="240" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-disp-attrs" value="- id : Long&#xa;- dia : String&#xa;- horaInicio : Time&#xa;- horaFin : Time" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-disp">
+          <mxGeometry y="28" width="240" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-disp-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#d6b656;" vertex="1" parent="cls-disp">
+          <mxGeometry y="100" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-disp-meth" value="+ verificarDisponibilidad()" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-disp">
+          <mxGeometry y="108" width="240" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- AmbienteFormacion -->
+        <mxCell id="cls-amb" value="AmbienteFormacion" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="435" y="570" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-amb-attrs" value="- id : Long&#xa;- codigo : String&#xa;- capacidad : Integer&#xa;- estado : String" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-amb">
+          <mxGeometry y="28" width="240" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-amb-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#9673a6;" vertex="1" parent="cls-amb">
+          <mxGeometry y="100" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-amb-meth" value="+ validarCapacidad()&#xa;+ cambiarEstado()" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-amb">
+          <mxGeometry y="108" width="240" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- Observacion -->
+        <mxCell id="cls-obs" value="Observacion" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="810" y="570" width="240" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-obs-attrs" value="- id : Long&#xa;- descripcion : String&#xa;- fechaRegistro : Date" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-obs">
+          <mxGeometry y="28" width="240" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-obs-sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#b85450;" vertex="1" parent="cls-obs">
+          <mxGeometry y="86" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cls-obs-meth" value="+ registrarObservacion()" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cls-obs">
+          <mxGeometry y="94" width="240" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <!-- ProgramaFormacion (1) ◇—— (*) Ficha (Agregación) -->
+        <mxCell id="rel-prog-ficha" value="agrupa (1 .. *)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;endArrow=none;strokeWidth=1.5;fontSize=10;" edge="1" parent="1" source="cls-prog" target="cls-ficha">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Ficha (1) —— (*) Horario -->
+        <mxCell id="rel-ficha-hor" value="tiene (1 .. *)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.5;fontSize=10;" edge="1" parent="1" source="cls-ficha" target="cls-horario">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Instructor (1) —— (*) Horario -->
+        <mxCell id="rel-inst-hor" value="imparte (1 .. *)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.5;fontSize=10;" edge="1" parent="1" source="cls-inst" target="cls-horario">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="650" />
+              <mxPoint x="370" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- AmbienteFormacion (1) —— (*) Horario -->
+        <mxCell id="rel-amb-hor" value="acoge (1 .. *)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.5;fontSize=10;" edge="1" parent="1" source="cls-amb" target="cls-horario">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Horario (1) —— (*) Observacion -->
+        <mxCell id="rel-hor-obs" value="genera (1 .. *)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.5;fontSize=10;" edge="1" parent="1" source="cls-horario" target="cls-obs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="398" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Instructor (1) —— (*) Disponibilidad -->
+        <mxCell id="rel-inst-disp" value="registra (1 .. *)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.5;fontSize=10;" edge="1" parent="1" source="cls-inst" target="cls-disp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="usecase-diagram-schedule" name="Diagrama de Casos de Uso">
+    <mxGraphModel dx="1420" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title2" value="Diagrama de Casos de Uso UML — Sistema de Gestión de Horarios (schedule-sena)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="760" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- System boundary -->
+        <mxCell id="sys-bound" value="Sistema schedule-sena" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;fontSize=13;fontStyle=1;fillColor=#f8fafc;strokeColor=#334155;strokeWidth=2;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="290" y="70" width="520" height="650" as="geometry" />
+        </mxCell>
+
+        <!-- Actors -->
+        <mxCell id="act-coord" value="Coordinador&#xa;académico" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="130" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="act-inst" value="Instructor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="340" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="act-apr" value="Aprendiz" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="240" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="act-admin" value="Administrador&#xa;del sistema" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="550" width="40" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Use Cases -->
+        <mxCell id="uc-01" value="CU-01&#xa;Crear y modificar horarios" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="120" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-02" value="CU-02&#xa;Consultar horario" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="230" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-03" value="CU-03&#xa;Registrar observaciones" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="340" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-04" value="CU-04&#xa;Gestionar disponibilidad" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="430" y="440" width="240" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-05" value="CU-05&#xa;Gestionar ambientes y fichas" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="430" y="535" width="240" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-06" value="CU-06&#xa;Gestionar usuarios y programas" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="430" y="630" width="240" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Actor-UseCase Connections -->
+        <mxCell id="e-coord-uc1" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="act-coord" target="uc-01"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-coord-uc2" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="act-coord" target="uc-02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-coord-uc5" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="act-coord" target="uc-05"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e-inst-uc1" style="endArrow=none;html=1;strokeWidth=1.2;dashed=1;" edge="1" parent="1" source="act-inst" target="uc-01"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-inst-uc2" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="act-inst" target="uc-02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-inst-uc3" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="act-inst" target="uc-03"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-inst-uc4" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="act-inst" target="uc-04"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e-apr-uc2" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="act-apr" target="uc-02"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e-adm-uc5" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="act-admin" target="uc-05"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-adm-uc6" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="act-admin" target="uc-06"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net" modified="2026-11-21T16:30:00.000Z" agent="ADSO-3413974" version="24.7.17">
+  <diagram id="usecase-asistencia" name="Casos de Uso">
+    <mxGraphModel dx="1280" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1160" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="uc-title" value="Diagrama de Casos de Uso — Sistema Web de Toma de Asistencia SENA (Ficha 3413974)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="760" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="asist-sys" value="Sistema Web Toma de Asistencia SENA" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;fontSize=13;fontStyle=1;fillColor=#f8fafc;strokeColor=#334155;strokeWidth=2;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="250" y="70" width="780" height="580" as="geometry" />
+        </mxCell>
+
+        <mxCell id="actor-inst" value="Instructor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="300" width="45" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Primary Use Cases -->
+        <mxCell id="uc01" value="UC01&#xa;Registrar Asistencia" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="130" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="uc02" value="UC02&#xa;Consultar Asistencia" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="240" width="210" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="uc03" value="UC03&#xa;Modificar Asistencia" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="340" width="210" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="uc04" value="UC04&#xa;Buscar Aprendiz" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="440" width="210" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="uc05" value="UC05&#xa;Generar Reportes" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="540" width="210" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Included Use Cases -->
+        <mxCell id="inc-1" value="Mostrar lista&#xa;de aprendices" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="760" y="95" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="inc-2" value="Registrar estado&#xa;de asistencia" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="760" y="185" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="inc-3" value="Guardar registro" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="760" y="275" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Actor edges -->
+        <mxCell id="ae1" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="actor-inst" target="uc01"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae2" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="actor-inst" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae3" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="actor-inst" target="uc03"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae4" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="actor-inst" target="uc04"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae5" style="endArrow=none;html=1;strokeWidth=1.4;" edge="1" parent="1" source="actor-inst" target="uc05"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Include edges -->
+        <mxCell id="ie1" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.3;fontSize=10;" edge="1" parent="1" source="uc01" target="inc-1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ie2" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.3;fontSize=10;" edge="1" parent="1" source="uc01" target="inc-2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ie3" value="&lt;&lt;include&gt;&gt;" style="endArrow=open;endFill=0;dashed=1;html=1;strokeWidth=1.3;fontSize=10;" edge="1" parent="1" source="uc01" target="inc-3"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="class-asistencia" name="Diagrama de Clases">
+    <mxGraphModel dx="1200" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="cl-title" value="Diagrama de Clases — Sistema Web de Toma de Asistencia SENA (Ficha 3413974)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="760" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Instructor -->
+        <mxCell id="c-inst" value="Instructor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="130" width="230" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="c-inst-a" value="- idInstructor&#xa;- nombre" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="c-inst">
+          <mxGeometry y="28" width="230" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="c-inst-s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;" vertex="1" parent="c-inst">
+          <mxGeometry y="74" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c-inst-m" value="+ registrarAsistencia()&#xa;+ consultarAsistencia()&#xa;+ modificarAsistencia()&#xa;+ generarReporte()" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="c-inst">
+          <mxGeometry y="82" width="230" height="88" as="geometry" />
+        </mxCell>
+
+        <!-- Asistencia -->
+        <mxCell id="c-asist" value="Asistencia" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="120" width="220" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="c-asist-a" value="- idAsistencia&#xa;- fecha&#xa;- hora&#xa;- estado" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="c-asist">
+          <mxGeometry y="28" width="220" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="c-asist-s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#82b366;" vertex="1" parent="c-asist">
+          <mxGeometry y="102" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c-asist-m" value="+ guardar()&#xa;+ editar()&#xa;+ consultar()" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="c-asist">
+          <mxGeometry y="110" width="220" height="76" as="geometry" />
+        </mxCell>
+
+        <!-- Aprendiz -->
+        <mxCell id="c-apr" value="Aprendiz" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="770" y="135" width="220" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="c-apr-a" value="- idAprendiz&#xa;- documento&#xa;- nombre" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="c-apr">
+          <mxGeometry y="28" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c-apr-s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#d6b656;" vertex="1" parent="c-apr">
+          <mxGeometry y="88" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c-apr-m" value="+ obtenerDatos()" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="c-apr">
+          <mxGeometry y="96" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Associations -->
+        <mxCell id="r-inst-asist" value="1        registra        *" style="endArrow=none;html=1;strokeWidth=1.6;fontSize=11;fontStyle=1;" edge="1" parent="1" source="c-inst" target="c-asist"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="r-asist-apr" value="*      pertenece a      1" style="endArrow=none;html=1;strokeWidth=1.6;fontSize=11;fontStyle=1;" edge="1" parent="1" source="c-asist" target="c-apr"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
