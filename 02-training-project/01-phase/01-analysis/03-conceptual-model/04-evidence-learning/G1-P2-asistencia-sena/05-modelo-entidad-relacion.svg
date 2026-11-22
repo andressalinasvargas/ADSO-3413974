@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1460 1040" width="1460" height="1040" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1460" height="1040" fill="#ffffff"/>
+  <text x="30" y="32" font-size="17" font-weight="700" fill="#0f172a">Modelo Entidad-Relación (MER) — Notación Pata de Gallo (Crow's Foot) · Sistema de Asistencia SENA</text>
+
+  <!-- Entidades -->
+  
+      <g>
+        
+        <rect x="40" y="75" width="255" height="116" rx="3" fill="#ffffff" stroke="#b45309" stroke-width="1.8"/>
+        <rect x="40" y="75" width="255" height="30" rx="3" fill="#fef3c7" stroke="#b45309" stroke-width="1.8"/>
+        <text x="167.5" y="95" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">PROGRAMA_FORMACION</text>
+        <text x="50" y="122" font-size="11.2" font-weight="700" text-decoration="underline" fill="#0f172a">PK id_programa</text><text x="50" y="140" font-size="11.2"  fill="#0f172a">UK codigo_programa</text><text x="50" y="158" font-size="11.2"  fill="#0f172a">nombre_programa</text><text x="50" y="176" font-size="11.2"  fill="#0f172a">nivel_formacion</text>
+      </g>
+  
+      <g>
+        
+        <rect x="40" y="275" width="255" height="134" rx="3" fill="#ffffff" stroke="#b45309" stroke-width="1.8"/>
+        <rect x="40" y="275" width="255" height="30" rx="3" fill="#fef3c7" stroke="#b45309" stroke-width="1.8"/>
+        <text x="167.5" y="295" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">SEDE</text>
+        <text x="50" y="322" font-size="11.2" font-weight="700" text-decoration="underline" fill="#0f172a">PK id_sede</text><text x="50" y="340" font-size="11.2"  fill="#0f172a">UK nombre_sede</text><text x="50" y="358" font-size="11.2"  fill="#0f172a">latitud_sede</text><text x="50" y="376" font-size="11.2"  fill="#0f172a">longitud_sede</text><text x="50" y="394" font-size="11.2"  fill="#0f172a">radio_max_metros</text>
+      </g>
+  
+      <g>
+        
+        <rect x="440" y="155" width="260" height="152" rx="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.8"/>
+        <rect x="440" y="155" width="260" height="30" rx="3" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+        <text x="570" y="175" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">FICHA</text>
+        <text x="450" y="202" font-size="11.2" font-weight="700" text-decoration="underline" fill="#0f172a">PK id_ficha</text><text x="450" y="220" font-size="11.2"  fill="#0f172a">UK numero_ficha</text><text x="450" y="238" font-size="11.2"  fill="#0f172a">jornada</text><text x="450" y="256" font-size="11.2"  fill="#0f172a">activa</text><text x="450" y="274" font-size="11.2"  fill="#0f172a">FK id_programa</text><text x="450" y="292" font-size="11.2"  fill="#0f172a">FK id_sede</text>
+      </g>
+  
+      <g>
+        
+        <rect x="980" y="75" width="290" height="152" rx="3" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.8"/>
+        <rect x="980" y="75" width="290" height="30" rx="3" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+        <text x="1125" y="95" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">INSTRUCTOR</text>
+        <text x="990" y="122" font-size="11.2" font-weight="700" text-decoration="underline" fill="#0f172a">PK id_instructor</text><text x="990" y="140" font-size="11.2"  fill="#0f172a">UK documento</text><text x="990" y="158" font-size="11.2"  fill="#0f172a">nombre</text><text x="990" y="176" font-size="11.2"  fill="#0f172a">UK usuario</text><text x="990" y="194" font-size="11.2"  fill="#0f172a">rol_sistema</text><text x="990" y="212" font-size="11.2"  fill="#0f172a">activo</text>
+      </g>
+  
+      <g>
+        
+        <rect x="790" y="290" width="290" height="134" rx="3" fill="#ffffff" stroke="#6d28d9" stroke-width="1.8"/>
+        <rect x="790" y="290" width="290" height="30" rx="3" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.8"/>
+        <text x="935" y="310" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">ASIGNACION_INSTRUCTOR_FICHA</text>
+        <text x="800" y="337" font-size="11.2"  fill="#0f172a">PK,FK id_instructor</text><text x="800" y="355" font-size="11.2"  fill="#0f172a">PK,FK id_ficha</text><text x="800" y="373" font-size="11.2" font-weight="700" text-decoration="underline" fill="#0f172a">PK fecha_inicio</text><text x="800" y="391" font-size="11.2"  fill="#0f172a">fecha_fin</text><text x="800" y="409" font-size="11.2"  fill="#0f172a">rol_en_ficha</text>
+      </g>
+  
+      <g>
+        
+        <rect x="40" y="540" width="275" height="170" rx="3" fill="#ffffff" stroke="#15803d" stroke-width="1.8"/>
+        <rect x="40" y="540" width="275" height="30" rx="3" fill="#dcfce7" stroke="#15803d" stroke-width="1.8"/>
+        <text x="177.5" y="560" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">APRENDIZ</text>
+        <text x="50" y="587" font-size="11.2" font-weight="700" text-decoration="underline" fill="#0f172a">PK id_aprendiz</text><text x="50" y="605" font-size="11.2"  fill="#0f172a">UK documento</text><text x="50" y="623" font-size="11.2"  fill="#0f172a">nombre</text><text x="50" y="641" font-size="11.2"  fill="#0f172a">email</text><text x="50" y="659" font-size="11.2"  fill="#0f172a">UK qr_token</text><text x="50" y="677" font-size="11.2"  fill="#0f172a">activo</text><text x="50" y="695" font-size="11.2"  fill="#0f172a">FK id_ficha (opcional)</text>
+      </g>
+  
+      <g>
+        
+        <rect x="440" y="500" width="295" height="206" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1.8"/>
+        <rect x="440" y="500" width="295" height="30" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+        <text x="587.5" y="520" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">SESION_ASISTENCIA</text>
+        <text x="450" y="547" font-size="11.2" font-weight="700" text-decoration="underline" fill="#0f172a">PK id_sesion</text><text x="450" y="565" font-size="11.2"  fill="#0f172a">UK token</text><text x="450" y="583" font-size="11.2"  fill="#0f172a">UK codigo</text><text x="450" y="601" font-size="11.2"  fill="#0f172a">inicia_en</text><text x="450" y="619" font-size="11.2"  fill="#0f172a">vence_en</text><text x="450" y="637" font-size="11.2"  fill="#0f172a">tolerancia_minutos</text><text x="450" y="655" font-size="11.2"  fill="#0f172a">activa</text><text x="450" y="673" font-size="11.2"  fill="#0f172a">FK id_ficha</text><text x="450" y="691" font-size="11.2"  fill="#0f172a">FK id_instructor</text>
+      </g>
+  
+      <g>
+        
+        <rect x="440" y="770" width="320" height="206" rx="3" fill="#ffffff" stroke="#6d28d9" stroke-width="1.8"/>
+        <rect x="440" y="770" width="320" height="30" rx="3" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.8"/>
+        <text x="600" y="790" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">REGISTRO_ASISTENCIA</text>
+        <text x="450" y="817" font-size="11.2" font-weight="700" text-decoration="underline" fill="#0f172a">PK id_registro</text><text x="450" y="835" font-size="11.2"  fill="#0f172a">UK (id_aprendiz, id_sesion)</text><text x="450" y="853" font-size="11.2"  fill="#0f172a">fecha_hora</text><text x="450" y="871" font-size="11.2"  fill="#0f172a">canal_registro</text><text x="450" y="889" font-size="11.2"  fill="#0f172a">tarde_minutos</text><text x="450" y="907" font-size="11.2"  fill="#0f172a">latitud / longitud / precision_gps</text><text x="450" y="925" font-size="11.2"  fill="#0f172a">verificado_gps</text><text x="450" y="943" font-size="11.2"  fill="#0f172a">consentimiento_datos</text><text x="450" y="961" font-size="11.2"  fill="#0f172a">ip_origen / estado_red / detalle_red</text>
+      </g>
+  
+      <g>
+        <rect x="975" y="790" width="325" height="144" rx="5" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+        <rect x="980" y="795" width="315" height="134" rx="3" fill="#ffffff" stroke="#dc2626" stroke-width="1.8"/>
+        <rect x="980" y="795" width="315" height="30" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8"/>
+        <text x="1137.5" y="815" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">NOVEDAD_CONTINGENCIA</text>
+        <text x="990" y="842" font-size="11.2"  fill="#0f172a">PK,FK id_registro</text><text x="990" y="860" font-size="11.2" font-weight="700" text-decoration="underline" fill="#0f172a">PK numero_novedad (parcial)</text><text x="990" y="878" font-size="11.2"  fill="#0f172a">tipo_novedad</text><text x="990" y="896" font-size="11.2"  fill="#0f172a">observacion</text><text x="990" y="914" font-size="11.2"  fill="#0f172a">fecha_reporte</text>
+      </g>
+
+  <!-- Relaciones Pata de Gallo -->
+  
+    <path d="M295,125 L368,125 L368,200 L440,200" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+    <g transform="translate(295,125) rotate(180)"><line x1="-10" y1="-8" x2="-10" y2="8" stroke="#1e293b" stroke-width="1.8"/><line x1="-16" y1="-8" x2="-16" y2="8" stroke="#1e293b" stroke-width="1.8"/></g>
+    <g transform="translate(440,200) rotate(0)"><line x1="0" y1="0" x2="-13" y2="-8" stroke="#1e293b" stroke-width="1.8"/><line x1="0" y1="0" x2="-13" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-19" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <rect x="302" y="153" width="132" height="17" rx="3" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="368" y="165" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f172a">ofrece (1:0..*)</text>
+  
+    <path d="M295,335 L368,335 L368,255 L440,255" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+    <g transform="translate(295,335) rotate(180)"><line x1="-10" y1="-8" x2="-10" y2="8" stroke="#1e293b" stroke-width="1.8"/><line x1="-16" y1="-8" x2="-16" y2="8" stroke="#1e293b" stroke-width="1.8"/></g>
+    <g transform="translate(440,255) rotate(0)"><line x1="0" y1="0" x2="-13" y2="-8" stroke="#1e293b" stroke-width="1.8"/><line x1="0" y1="0" x2="-13" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-19" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <rect x="302" y="289" width="132" height="17" rx="3" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="368" y="301" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f172a">aloja (1:0..*)</text>
+  
+    <path d="M700,245 L745,245 L745,355 L790,355" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+    <g transform="translate(700,245) rotate(180)"><line x1="-10" y1="-8" x2="-10" y2="8" stroke="#1e293b" stroke-width="1.8"/><line x1="-16" y1="-8" x2="-16" y2="8" stroke="#1e293b" stroke-width="1.8"/></g>
+    <g transform="translate(790,355) rotate(0)"><line x1="0" y1="0" x2="-13" y2="-8" stroke="#1e293b" stroke-width="1.8"/><line x1="0" y1="0" x2="-13" y2="8" stroke="#1e293b" stroke-width="1.8"/><line x1="-16" y1="-8" x2="-16" y2="8" stroke="#1e293b" stroke-width="1.8"/></g>
+    <rect x="679" y="296" width="132" height="17" rx="3" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="745" y="308" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f172a">recibe (1:1..*)</text>
+  
+    <path d="M980,155 L935,155 L935,290" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+    <g transform="translate(980,155) rotate(0)"><line x1="-10" y1="-8" x2="-10" y2="8" stroke="#1e293b" stroke-width="1.8"/><line x1="-16" y1="-8" x2="-16" y2="8" stroke="#1e293b" stroke-width="1.8"/></g>
+    <g transform="translate(935,290) rotate(90)"><line x1="0" y1="0" x2="-13" y2="-8" stroke="#1e293b" stroke-width="1.8"/><line x1="0" y1="0" x2="-13" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-19" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <rect x="869" y="213" width="132" height="17" rx="3" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="935" y="225" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f172a">participa (1:0..*)</text>
+
+  
+    <path d="M495,307 L495,430 L175,430 L175,540" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+    <g transform="translate(495,307) rotate(270)"><line x1="-10" y1="-8" x2="-10" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-18" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <g transform="translate(175,540) rotate(90)"><line x1="0" y1="0" x2="-13" y2="-8" stroke="#1e293b" stroke-width="1.8"/><line x1="0" y1="0" x2="-13" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-19" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <rect x="259" y="436" width="132" height="17" rx="3" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="325" y="448" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f172a">agrupa (0..1:0..*)</text>
+  
+    <path d="M590,307 L590,500" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+    <g transform="translate(590,307) rotate(270)"><line x1="-10" y1="-8" x2="-10" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-18" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <g transform="translate(590,500) rotate(90)"><line x1="0" y1="0" x2="-13" y2="-8" stroke="#1e293b" stroke-width="1.8"/><line x1="0" y1="0" x2="-13" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-19" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <rect x="589" y="406" width="132" height="17" rx="3" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="655" y="418" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f172a">convoca (0..1:0..*)</text>
+  
+    <path d="M1140,227 L1140,565 L735,565" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+    <g transform="translate(1140,227) rotate(270)"><line x1="-10" y1="-8" x2="-10" y2="8" stroke="#1e293b" stroke-width="1.8"/><line x1="-16" y1="-8" x2="-16" y2="8" stroke="#1e293b" stroke-width="1.8"/></g>
+    <g transform="translate(735,565) rotate(180)"><line x1="0" y1="0" x2="-13" y2="-8" stroke="#1e293b" stroke-width="1.8"/><line x1="0" y1="0" x2="-13" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-19" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <rect x="1074" y="416" width="132" height="17" rx="3" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="1140" y="428" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f172a">abre (1:0..*)</text>
+
+  
+    <path d="M175,710 L175,850 L440,850" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+    <g transform="translate(175,710) rotate(270)"><line x1="-10" y1="-8" x2="-10" y2="8" stroke="#1e293b" stroke-width="1.8"/><line x1="-16" y1="-8" x2="-16" y2="8" stroke="#1e293b" stroke-width="1.8"/></g>
+    <g transform="translate(440,850) rotate(0)"><line x1="0" y1="0" x2="-13" y2="-8" stroke="#1e293b" stroke-width="1.8"/><line x1="0" y1="0" x2="-13" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-19" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <rect x="229" y="841" width="132" height="17" rx="3" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="295" y="853" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f172a">registra (1:0..*)</text>
+  
+    <path d="M590,706 L590,770" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+    <g transform="translate(590,706) rotate(270)"><line x1="-10" y1="-8" x2="-10" y2="8" stroke="#1e293b" stroke-width="1.8"/><line x1="-16" y1="-8" x2="-16" y2="8" stroke="#1e293b" stroke-width="1.8"/></g>
+    <g transform="translate(590,770) rotate(90)"><line x1="0" y1="0" x2="-13" y2="-8" stroke="#1e293b" stroke-width="1.8"/><line x1="0" y1="0" x2="-13" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-19" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <rect x="592" y="729" width="132" height="17" rx="3" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="658" y="741" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f172a">consolida (1:0..*)</text>
+  
+    <path d="M760,860 L975,860" fill="none" stroke="#1e293b" stroke-width="1.6"/>
+    <g transform="translate(760,860) rotate(180)"><line x1="-10" y1="-8" x2="-10" y2="8" stroke="#1e293b" stroke-width="1.8"/><line x1="-16" y1="-8" x2="-16" y2="8" stroke="#1e293b" stroke-width="1.8"/></g>
+    <g transform="translate(975,860) rotate(0)"><line x1="0" y1="0" x2="-13" y2="-8" stroke="#1e293b" stroke-width="1.8"/><line x1="0" y1="0" x2="-13" y2="8" stroke="#1e293b" stroke-width="1.8"/><circle cx="-19" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="1.7"/></g>
+    <rect x="802" y="836" width="132" height="17" rx="3" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="868" y="848" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0f172a">documenta (1:0..*)</text>
+
+  <!-- Leyenda Pata de Gallo -->
+  <rect x="980" y="595" width="435" height="145" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="998" y="620" font-size="12.5" font-weight="700" fill="#0f172a">Leyenda · Notación Pata de Gallo (Crow's Foot)</text>
+  <text x="998" y="644" font-size="11.2" fill="#334155">||  Uno obligatorio (mínimo 1, máximo 1)</text>
+  <text x="998" y="666" font-size="11.2" fill="#334155">○|  Cero o uno (participación opcional, máximo 1)</text>
+  <text x="998" y="688" font-size="11.2" fill="#334155">|&lt;  Uno o muchos (participación total, 1..*)</text>
+  <text x="998" y="710" font-size="11.2" fill="#334155">○&lt;  Cero o muchos (participación parcial, 0..*)</text>
+  <text x="998" y="730" font-size="11.2" font-weight="700" fill="#b91c1c">Doble rectángulo: Entidad Débil (NOVEDAD_CONTINGENCIA)</text>
+</svg>

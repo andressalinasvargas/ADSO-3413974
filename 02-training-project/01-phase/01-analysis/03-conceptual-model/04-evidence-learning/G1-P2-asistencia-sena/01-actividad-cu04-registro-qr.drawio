@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net" modified="2026-11-22T18:00:00.000Z" agent="ADSO-3413974" version="24.7.17">
+  <diagram id="act-cu04" name="Actividad CU-04">
+    <mxGraphModel dx="1320" dy="1040" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="1040" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="l_apr" value="Aprendiz" style="swimlane;startSize=30;fontStyle=1;fillColor=#f8fafc;" vertex="1" parent="1"><mxGeometry x="25" y="40" width="380" height="920" as="geometry"/></mxCell>
+        <mxCell id="l_sys" value="Sistema de Asistencia" style="swimlane;startSize=30;fontStyle=1;fillColor=#ffffff;" vertex="1" parent="1"><mxGeometry x="405" y="40" width="590" height="920" as="geometry"/></mxCell>
+        <mxCell id="l_gps" value="Servicio GPS" style="swimlane;startSize=30;fontStyle=1;fillColor=#f8fafc;" vertex="1" parent="1"><mxGeometry x="995" y="40" width="300" height="920" as="geometry"/></mxCell>
+        <mxCell id="s" value="" style="ellipse;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="l_apr"><mxGeometry x="175" y="55" width="24" height="24" as="geometry"/></mxCell>
+        <mxCell id="d1" value="¿Canal de acceso?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="l_apr"><mxGeometry x="115" y="105" width="144" height="60" as="geometry"/></mxCell>
+        <mxCell id="a1" value="Escanear QR dinámico proyectado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="l_apr"><mxGeometry x="15" y="200" width="160" height="46" as="geometry"/></mxCell>
+        <mxCell id="a2" value="Ingresar código de 6 dígitos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="l_apr"><mxGeometry x="200" y="200" width="160" height="46" as="geometry"/></mxCell>
+        <mxCell id="a3" value="Ingresar documento, aceptar datos y enviar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="l_apr"><mxGeometry x="45" y="395" width="280" height="48" as="geometry"/></mxCell>
+        <mxCell id="a4" value="Visualizar comprobante de asistencia" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="l_apr"><mxGeometry x="75" y="845" width="230" height="46" as="geometry"/></mxCell>
+        <mxCell id="f_ok" value="" style="ellipse;shape=doubleEllipse;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="l_apr"><mxGeometry x="20" y="856" width="26" height="26" as="geometry"/></mxCell>
+        <mxCell id="d2" value="¿Sesión activa y QR/código vigente?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="l_sys"><mxGeometry x="65" y="240" width="180" height="64" as="geometry"/></mxCell>
+        <mxCell id="e2" value="Mostrar aviso QR vencido/cerrado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="l_sys"><mxGeometry x="355" y="248" width="200" height="48" as="geometry"/></mxCell>
+        <mxCell id="s3" value="Mostrar ficha, formulario y política de datos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="l_sys"><mxGeometry x="50" y="335" width="210" height="46" as="geometry"/></mxCell>
+        <mxCell id="d3" value="¿Aceptó política de datos?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="l_sys"><mxGeometry x="65" y="405" width="180" height="64" as="geometry"/></mxCell>
+        <mxCell id="e3" value="Bloquear envío y exigir aceptación" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="l_sys"><mxGeometry x="355" y="413" width="200" height="48" as="geometry"/></mxCell>
+        <mxCell id="g1" value="Obtener coordenadas y precisión GPS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="l_gps"><mxGeometry x="45" y="475" width="210" height="48" as="geometry"/></mxCell>
+        <mxCell id="d4" value="¿Permiso GPS, err ≤ 100m y dentro de sede?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="l_sys"><mxGeometry x="60" y="520" width="190" height="68" as="geometry"/></mxCell>
+        <mxCell id="e4" value="Rechazar por GPS o geocerca" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="l_sys"><mxGeometry x="355" y="530" width="200" height="48" as="geometry"/></mxCell>
+        <mxCell id="d5" value="¿Aprendiz activo, ficha correcta y sin duplicado?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="l_sys"><mxGeometry x="60" y="630" width="190" height="68" as="geometry"/></mxCell>
+        <mxCell id="e5" value="Informar error de ficha/duplicado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="l_sys"><mxGeometry x="355" y="640" width="200" height="48" as="geometry"/></mxCell>
+        <mxCell id="d6" value="¿Hora actual &gt; inicio + tolerancia?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="l_sys"><mxGeometry x="65" y="735" width="180" height="64" as="geometry"/></mxCell>
+        <mxCell id="ok_t" value="Guardar asistencia A tiempo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="l_sys"><mxGeometry x="45" y="820" width="195" height="46" as="geometry"/></mxCell>
+        <mxCell id="ok_l" value="Calcular tardanza (CU-09) y guardar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="l_sys"><mxGeometry x="315" y="820" width="220" height="46" as="geometry"/></mxCell>
+        <mxCell id="x1" edge="1" parent="l_apr" source="s" target="d1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x2" value="[QR dinámico]" edge="1" parent="l_apr" source="d1" target="a1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x3" value="[Código 6 dígitos]" edge="1" parent="l_apr" source="d1" target="a2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x4" edge="1" parent="1" source="a1" target="d2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x5" edge="1" parent="1" source="a2" target="d2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x6" value="[No]" edge="1" parent="l_sys" source="d2" target="e2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x7" value="[Sí]" edge="1" parent="l_sys" source="d2" target="s3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x8" edge="1" parent="1" source="s3" target="a3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x9" edge="1" parent="1" source="a3" target="d3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x10" value="[No]" edge="1" parent="l_sys" source="d3" target="e3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x11" value="[Sí]" edge="1" parent="1" source="d3" target="g1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x12" edge="1" parent="1" source="g1" target="d4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x13" value="[No]" edge="1" parent="l_sys" source="d4" target="e4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x14" value="[Sí]" edge="1" parent="l_sys" source="d4" target="d5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x15" value="[No]" edge="1" parent="l_sys" source="d5" target="e5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x16" value="[Sí]" edge="1" parent="l_sys" source="d5" target="d6"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x17" value="[No]" edge="1" parent="l_sys" source="d6" target="ok_t"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x18" value="[Sí]" edge="1" parent="l_sys" source="d6" target="ok_l"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x19" edge="1" parent="1" source="ok_t" target="a4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x20" edge="1" parent="1" source="ok_l" target="a4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="x21" edge="1" parent="l_apr" source="a4" target="f_ok"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

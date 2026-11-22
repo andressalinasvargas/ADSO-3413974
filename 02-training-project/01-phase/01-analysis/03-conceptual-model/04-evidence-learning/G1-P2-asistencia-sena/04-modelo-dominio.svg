@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 970" width="1440" height="970" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="genTriangle" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="13" markerHeight="13" orient="auto">
+      <path d="M1,1 L13,7 L1,13 Z" fill="#ffffff" stroke="#1e293b" stroke-width="1.6"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="970" fill="#ffffff"/>
+  <text x="30" y="32" font-size="17" font-weight="700" fill="#0f172a">Modelo de Dominio — Clases Conceptuales, Generalización y Clases de Asociación (Sin Métodos ni Claves Técnicas)</text>
+
+  <!-- Superclase Persona -->
+  
+      <g>
+        <rect x="545" y="58" width="280" height="112" rx="4" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+        <rect x="545" y="58" width="280" height="44" rx="4" fill="#f1f5f9" stroke="#334155" stroke-width="1.8"/>
+        <text x="685" y="73" text-anchor="middle" font-size="10" fill="#475569">{abstract}</text>
+        <text x="685" y="92" text-anchor="middle" font-size="13" font-weight="700" font-style="italic" fill="#0f172a">Persona</text>
+        <text x="555" y="119" font-size="11.5" fill="#1e293b">documento</text><text x="555" y="137" font-size="11.5" fill="#1e293b">nombreCompleto</text><text x="555" y="155" font-size="11.5" fill="#1e293b">correoInstitucional</text>
+      </g>
+
+  <!-- Subclases -->
+  
+      <g>
+        <rect x="40" y="210" width="235" height="80" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.8"/>
+        <rect x="40" y="210" width="235" height="30" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+        
+        <text x="157.5" y="230" text-anchor="middle" font-size="13" font-weight="700"  fill="#0f172a">CoordinadorAcademico</text>
+        <text x="50" y="257" font-size="11.5" fill="#1e293b">areaAcademica</text><text x="50" y="275" font-size="11.5" fill="#1e293b">estado</text>
+      </g>
+  
+      <g>
+        <rect x="545" y="210" width="280" height="98" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.8"/>
+        <rect x="545" y="210" width="280" height="30" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+        
+        <text x="685" y="230" text-anchor="middle" font-size="13" font-weight="700"  fill="#0f172a">Instructor</text>
+        <text x="555" y="257" font-size="11.5" fill="#1e293b">nombreUsuario</text><text x="555" y="275" font-size="11.5" fill="#1e293b">especialidad</text><text x="555" y="293" font-size="11.5" fill="#1e293b">estado</text>
+      </g>
+  
+      <g>
+        <rect x="980" y="210" width="270" height="98" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1.8"/>
+        <rect x="980" y="210" width="270" height="30" rx="4" fill="#dcfce7" stroke="#15803d" stroke-width="1.8"/>
+        
+        <text x="1115" y="230" text-anchor="middle" font-size="13" font-weight="700"  fill="#0f172a">Aprendiz</text>
+        <text x="990" y="257" font-size="11.5" fill="#1e293b">tokenCredencial</text><text x="990" y="275" font-size="11.5" fill="#1e293b">estadoActivo</text><text x="990" y="293" font-size="11.5" fill="#1e293b">fechaIngreso</text>
+      </g>
+
+  <!-- Flechas de Generalización -->
+  <path d="M157,210 L157,185 L685,185 L685,170" fill="none" stroke="#1e293b" stroke-width="1.6" marker-end="url(#genTriangle)"/>
+  <path d="M685,210 L685,170" fill="none" stroke="#1e293b" stroke-width="1.6" marker-end="url(#genTriangle)"/>
+  <path d="M1115,210 L1115,185 L685,185 L685,170" fill="none" stroke="#1e293b" stroke-width="1.6" marker-end="url(#genTriangle)"/>
+
+  <!-- Nivel intermedio: Programa, Ficha, Sede + Clase Asociación AsignacionInstructor -->
+  
+      <g>
+        <rect x="195" y="318" width="215" height="112" rx="4" fill="#ffffff" stroke="#6d28d9" stroke-width="1.8"/>
+        <rect x="195" y="318" width="215" height="44" rx="4" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.8"/>
+        <text x="302.5" y="333" text-anchor="middle" font-size="10" fill="#475569">«clase de asociación»</text>
+        <text x="302.5" y="352" text-anchor="middle" font-size="13" font-weight="700"  fill="#0f172a">AsignacionInstructor</text>
+        <text x="205" y="379" font-size="11.5" fill="#1e293b">fechaInicio</text><text x="205" y="397" font-size="11.5" fill="#1e293b">fechaFin</text><text x="205" y="415" font-size="11.5" fill="#1e293b">rolEnFicha</text>
+      </g>
+  
+      <g>
+        <rect x="30" y="455" width="220" height="98" rx="4" fill="#ffffff" stroke="#b45309" stroke-width="1.8"/>
+        <rect x="30" y="455" width="220" height="30" rx="4" fill="#fef3c7" stroke="#b45309" stroke-width="1.8"/>
+        
+        <text x="140" y="475" text-anchor="middle" font-size="13" font-weight="700"  fill="#0f172a">ProgramaFormacion</text>
+        <text x="40" y="502" font-size="11.5" fill="#1e293b">codigoPrograma</text><text x="40" y="520" font-size="11.5" fill="#1e293b">nombrePrograma</text><text x="40" y="538" font-size="11.5" fill="#1e293b">nivelFormacion</text>
+      </g>
+  
+      <g>
+        <rect x="355" y="455" width="215" height="98" rx="4" fill="#ffffff" stroke="#b45309" stroke-width="1.8"/>
+        <rect x="355" y="455" width="215" height="30" rx="4" fill="#fef3c7" stroke="#b45309" stroke-width="1.8"/>
+        
+        <text x="462.5" y="475" text-anchor="middle" font-size="13" font-weight="700"  fill="#0f172a">FichaFormacion</text>
+        <text x="365" y="502" font-size="11.5" fill="#1e293b">numeroFicha</text><text x="365" y="520" font-size="11.5" fill="#1e293b">jornada</text><text x="365" y="538" font-size="11.5" fill="#1e293b">estadoActiva</text>
+      </g>
+  
+      <g>
+        <rect x="30" y="680" width="220" height="116" rx="4" fill="#ffffff" stroke="#b45309" stroke-width="1.8"/>
+        <rect x="30" y="680" width="220" height="30" rx="4" fill="#fef3c7" stroke="#b45309" stroke-width="1.8"/>
+        
+        <text x="140" y="700" text-anchor="middle" font-size="13" font-weight="700"  fill="#0f172a">SedeFormacion</text>
+        <text x="40" y="727" font-size="11.5" fill="#1e293b">nombreSede</text><text x="40" y="745" font-size="11.5" fill="#1e293b">latitudCentro</text><text x="40" y="763" font-size="11.5" fill="#1e293b">longitudCentro</text><text x="40" y="781" font-size="11.5" fill="#1e293b">radioPermitidoMetros</text>
+      </g>
+
+  <!-- Nivel inferior: SesionAsistencia, RegistroAsistencia, NovedadContingencia -->
+  
+      <g>
+        <rect x="545" y="665" width="275" height="152" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="1.8"/>
+        <rect x="545" y="665" width="275" height="30" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+        
+        <text x="682.5" y="685" text-anchor="middle" font-size="13" font-weight="700"  fill="#0f172a">SesionAsistencia</text>
+        <text x="555" y="712" font-size="11.5" fill="#1e293b">codigoAcceso</text><text x="555" y="730" font-size="11.5" fill="#1e293b">tokenSesion</text><text x="555" y="748" font-size="11.5" fill="#1e293b">horaInicioOficial</text><text x="555" y="766" font-size="11.5" fill="#1e293b">horaVencimiento</text><text x="555" y="784" font-size="11.5" fill="#1e293b">toleranciaMinutos</text><text x="555" y="802" font-size="11.5" fill="#1e293b">estadoActiva</text>
+      </g>
+  
+      <g>
+        <rect x="965" y="520" width="290" height="202" rx="4" fill="#ffffff" stroke="#6d28d9" stroke-width="1.8"/>
+        <rect x="965" y="520" width="290" height="44" rx="4" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.8"/>
+        <text x="1110" y="535" text-anchor="middle" font-size="10" fill="#475569">«clase de asociación»</text>
+        <text x="1110" y="554" text-anchor="middle" font-size="13" font-weight="700"  fill="#0f172a">RegistroAsistencia</text>
+        <text x="975" y="581" font-size="11.5" fill="#1e293b">fechaHora</text><text x="975" y="599" font-size="11.5" fill="#1e293b">canalRegistro</text><text x="975" y="617" font-size="11.5" fill="#1e293b">tardeMinutos</text><text x="975" y="635" font-size="11.5" fill="#1e293b">latitud</text><text x="975" y="653" font-size="11.5" fill="#1e293b">longitud</text><text x="975" y="671" font-size="11.5" fill="#1e293b">precisionMetros</text><text x="975" y="689" font-size="11.5" fill="#1e293b">estadoRed</text><text x="975" y="707" font-size="11.5" fill="#1e293b">consentimientoDatos</text>
+      </g>
+  
+      <g>
+        <rect x="975" y="775" width="270" height="116" rx="4" fill="#ffffff" stroke="#dc2626" stroke-width="1.8"/>
+        <rect x="975" y="775" width="270" height="30" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8"/>
+        
+        <text x="1110" y="795" text-anchor="middle" font-size="13" font-weight="700"  fill="#0f172a">NovedadContingencia</text>
+        <text x="985" y="822" font-size="11.5" fill="#1e293b">numeroNovedad</text><text x="985" y="840" font-size="11.5" fill="#1e293b">tipoNovedad</text><text x="985" y="858" font-size="11.5" fill="#1e293b">observacion</text><text x="985" y="876" font-size="11.5" fill="#1e293b">fechaReporte</text>
+      </g>
+
+  <!-- Asociaciones y multiplicidades -->
+  
+    <path d="M250,504 L355,504" fill="none" stroke="#334155" stroke-width="1.6"/>
+    <rect x="250" y="510" width="104" height="17" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="302" y="523" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">contiene</text>
+    <text x="258" y="496" font-size="11" font-weight="700" fill="#0f766e">1</text>
+    <text x="328" y="496" font-size="11" font-weight="700" fill="#0f766e">0..*</text>
+  
+    <path d="M140,680 L140,615 L405,615 L405,553" fill="none" stroke="#334155" stroke-width="1.6"/>
+    <rect x="220" y="605" width="104" height="17" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="272" y="618" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">alberga</text>
+    <text x="150" y="670" font-size="11" font-weight="700" fill="#0f766e">1</text>
+    <text x="412" y="570" font-size="11" font-weight="700" fill="#0f766e">0..*</text>
+  
+    <path d="M545,280 L465,280 L465,455" fill="none" stroke="#334155" stroke-width="1.6"/>
+    <rect x="413" y="310" width="104" height="17" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="465" y="323" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">asignado a</text>
+    <text x="516" y="272" font-size="11" font-weight="700" fill="#0f766e">1..*</text>
+    <text x="474" y="444" font-size="11" font-weight="700" fill="#0f766e">0..*</text>
+  <line x1="410" y1="374" x2="465" y2="374" stroke="#6d28d9" stroke-width="1.6" stroke-dasharray="6,4"/>
+
+  
+    <path d="M570,500 L875,500 L875,275 L980,275" fill="none" stroke="#334155" stroke-width="1.6"/>
+    <rect x="743" y="490" width="104" height="17" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="795" y="503" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">agrupa</text>
+    <text x="580" y="492" font-size="11" font-weight="700" fill="#0f766e">0..1</text>
+    <text x="950" y="267" font-size="11" font-weight="700" fill="#0f766e">0..*</text>
+  
+    <path d="M685,308 L685,665" fill="none" stroke="#334155" stroke-width="1.6"/>
+    <rect x="633" y="385" width="104" height="17" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="685" y="398" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">abre</text>
+    <text x="695" y="326" font-size="11" font-weight="700" fill="#0f766e">1</text>
+    <text x="695" y="653" font-size="11" font-weight="700" fill="#0f766e">0..*</text>
+  
+    <path d="M500,553 L500,725 L545,725" fill="none" stroke="#334155" stroke-width="1.6"/>
+    <rect x="448" y="640" width="104" height="17" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="500" y="653" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">convoca</text>
+    <text x="510" y="570" font-size="11" font-weight="700" fill="#0f766e">0..1</text>
+    <text x="518" y="717" font-size="11" font-weight="700" fill="#0f766e">0..*</text>
+  
+    <path d="M1250,275 L1335,275 L1335,730 L820,730" fill="none" stroke="#334155" stroke-width="1.6"/>
+    <rect x="1283" y="460" width="104" height="17" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="1335" y="473" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">asiste a</text>
+    <text x="1262" y="265" font-size="11" font-weight="700" fill="#0f766e">0..*</text>
+    <text x="832" y="720" font-size="11" font-weight="700" fill="#0f766e">0..*</text>
+  <line x1="1255" y1="620" x2="1335" y2="620" stroke="#6d28d9" stroke-width="1.6" stroke-dasharray="6,4"/>
+
+  
+    <path d="M1110,722 L1110,775" fill="none" stroke="#334155" stroke-width="1.6"/>
+    <rect x="1113" y="740" width="104" height="17" rx="3" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="1165" y="753" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">documenta</text>
+    <text x="1120" y="738" font-size="11" font-weight="700" fill="#0f766e">1</text>
+    <text x="1120" y="765" font-size="11" font-weight="700" fill="#0f766e">0..*</text>
+
+  <rect x="30" y="914" width="1380" height="40" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="48" y="939" font-size="11.5" fill="#1e293b"><tspan font-weight="700">Nota:</tspan> Las 11 clases representan conceptos del negocio exclusivamente con atributos conceptuales (sin métodos, sin llaves foráneas ni tipos SQL). Generalización: Persona. Clases de asociación: AsignacionInstructor y RegistroAsistencia.</text>
+</svg>

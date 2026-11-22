@@ -1,0 +1,34 @@
+# Matriz de Trazabilidad Completa: Requisito → Artefactos de Análisis
+
+**Producto:** G1-P2 · Modelo de análisis y verificación  
+**Formato:** Anexo C de `Plantilla_README_Entrega_G1.md`  
+**Cobertura verificada:** **12 / 12 Requisitos Funcionales (100 %)** trazados desde `G1-P1` hasta `G1-P2`.
+
+---
+
+## 1. Matriz de Trazabilidad Completa (`RF-01` a `RF-12`)
+
+| Requisito | Caso de uso | Diagrama de actividades | Plantilla extendida | Clase(s) de dominio | Entidad(es) del MER | Pantalla del prototipo |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **RF-01** Autenticación de usuarios administrativos | `CU-01` Autenticar usuario | `02-actividad-cu03-cu11` (precondición de inicio) | Referenciada en precondición de `CU-03`, `CU-08`, `CU-12` | `Persona`, `Instructor`, `CoordinadorAcademico` | `INSTRUCTOR` | Referencia transversal (acceso previo a [pantalla-01](06-prototipo-inicial/pantalla-01-cu03-abrir-sesion.png)) |
+| **RF-02** Gestión de fichas y aprendices | `CU-02` Gestionar aprendices y credenciales QR | Referenciada en flujo administrativo | Precondición activa en `CU-03`, `CU-04`, `CU-08` | `ProgramaFormacion`, `FichaFormacion`, `Aprendiz`, `AsignacionInstructor` | `PROGRAMA_FORMACION`, `FICHA`, `APRENDIZ`, `ASIGNACION_INSTRUCTOR_FICHA` | [pantalla-03-cu08-contingencia-manual.png](06-prototipo-inicial/pantalla-03-cu08-contingencia-manual.png) |
+| **RF-03** Apertura de sesión de asistencia | `CU-03` Abrir sesión de asistencia | [02-actividad-cu03-cu11-ciclo-sesion.png](02-actividad-cu03-cu11-ciclo-sesion.png) | `CU-03` en [03-plantillas-casos-uso.md](03-plantillas-casos-uso.md) | `Instructor`, `FichaFormacion`, `SesionAsistencia` | `INSTRUCTOR`, `FICHA`, `SESION_ASISTENCIA` | [pantalla-01-cu03-abrir-sesion.png](06-prototipo-inicial/pantalla-01-cu03-abrir-sesion.png) |
+| **RF-04** Validación de vigencia y pertenencia a ficha | `CU-06` Verificar vigencia de sesión y pertenencia a ficha | [01-actividad-cu04-registro-qr.png](01-actividad-cu04-registro-qr.png) y [02-actividad-cu03-cu11-ciclo-sesion.png](02-actividad-cu03-cu11-ciclo-sesion.png) | `CU-04` (pasos 2, 6) y `CU-08` (pasos 3, 4) | `SesionAsistencia`, `FichaFormacion`, `Aprendiz` | `SESION_ASISTENCIA`, `FICHA`, `APRENDIZ` | [pantalla-02-cu04-registro-aprendiz.png](06-prototipo-inicial/pantalla-02-cu04-registro-aprendiz.png) |
+| **RF-05** Autorregistro móvil del aprendiz | `CU-04` Registrar asistencia por QR o código | [01-actividad-cu04-registro-qr.png](01-actividad-cu04-registro-qr.png) | `CU-04` en [03-plantillas-casos-uso.md](03-plantillas-casos-uso.md) | `Aprendiz`, `SesionAsistencia`, `RegistroAsistencia` | `APRENDIZ`, `SESION_ASISTENCIA`, `REGISTRO_ASISTENCIA` | [pantalla-02-cu04-registro-aprendiz.png](06-prototipo-inicial/pantalla-02-cu04-registro-aprendiz.png) |
+| **RF-06** Validación de ubicación y consentimiento de datos | `CU-05` Validar ubicación y consentimiento de datos | [01-actividad-cu04-registro-qr.png](01-actividad-cu04-registro-qr.png) | `CU-04` (pasos 4, 5 y exc. `4a`, `5a`, `5b`) | `SedeFormacion`, `RegistroAsistencia` | `SEDE`, `REGISTRO_ASISTENCIA` | [pantalla-02-cu04-registro-aprendiz.png](06-prototipo-inicial/pantalla-02-cu04-registro-aprendiz.png) |
+| **RF-07** Prevención de registros duplicados | `CU-06` Verificar vigencia de sesión y pertenencia a ficha | [01-actividad-cu04-registro-qr.png](01-actividad-cu04-registro-qr.png) y [02-actividad-cu03-cu11-ciclo-sesion.png](02-actividad-cu03-cu11-ciclo-sesion.png) | `CU-04` (exc. `6b`) y `CU-08` (exc. `4b`) | `RegistroAsistencia` | `REGISTRO_ASISTENCIA` (clave única `(id_aprendiz, id_sesion)`) | [pantalla-03-cu08-contingencia-manual.png](06-prototipo-inicial/pantalla-03-cu08-contingencia-manual.png) |
+| **RF-08** Registro mediante escáner de credencial QR | `CU-07` Registrar asistencia mediante escáner QR | [02-actividad-cu03-cu11-ciclo-sesion.png](02-actividad-cu03-cu11-ciclo-sesion.png) (rama concurrente Escáner) | Referenciado en flujo concurrente de sesión | `Instructor`, `Aprendiz`, `RegistroAsistencia` | `INSTRUCTOR`, `APRENDIZ`, `REGISTRO_ASISTENCIA` | [pantalla-01-cu03-abrir-sesion.png](06-prototipo-inicial/pantalla-01-cu03-abrir-sesion.png) |
+| **RF-09** Registro manual y novedades de contingencia | `CU-08` Registrar asistencia por contingencia manual · `CU-10` Documentar novedad | [02-actividad-cu03-cu11-ciclo-sesion.png](02-actividad-cu03-cu11-ciclo-sesion.png) (rama concurrente Manual) | `CU-08` en [03-plantillas-casos-uso.md](03-plantillas-casos-uso.md) | `Instructor`, `RegistroAsistencia`, `NovedadContingencia` | `REGISTRO_ASISTENCIA`, `NOVEDAD_CONTINGENCIA` | [pantalla-03-cu08-contingencia-manual.png](06-prototipo-inicial/pantalla-03-cu08-contingencia-manual.png) |
+| **RF-10** Cálculo automático de tardanza | `CU-09` Calcular y registrar tardanza | [01-actividad-cu04-registro-qr.png](01-actividad-cu04-registro-qr.png) y [02-actividad-cu03-cu11-ciclo-sesion.png](02-actividad-cu03-cu11-ciclo-sesion.png) | `CU-04` (flujo alterno `7a`), `CU-08` (flujo alterno `5a`) | `SesionAsistencia`, `RegistroAsistencia` | `SESION_ASISTENCIA`, `REGISTRO_ASISTENCIA` | [pantalla-04-cu12-historial-reportes.png](06-prototipo-inicial/pantalla-04-cu12-historial-reportes.png) |
+| **RF-11** Cierre manual y automático de sesión | `CU-11` Cerrar sesión de asistencia | [02-actividad-cu03-cu11-ciclo-sesion.png](02-actividad-cu03-cu11-ciclo-sesion.png) | Postcondición de `CU-03` | `Instructor`, `SesionAsistencia` | `INSTRUCTOR`, `SESION_ASISTENCIA` | [pantalla-01-cu03-abrir-sesion.png](06-prototipo-inicial/pantalla-01-cu03-abrir-sesion.png) |
+| **RF-12** Consulta de historial y generación de reportes | `CU-12` Consultar historial y generar reportes | Flujo posterior al cierre / consulta en línea | `CU-12` en [03-plantillas-casos-uso.md](03-plantillas-casos-uso.md) | `CoordinadorAcademico`, `Instructor`, `FichaFormacion`, `RegistroAsistencia` | `FICHA`, `APRENDIZ`, `SESION_ASISTENCIA`, `REGISTRO_ASISTENCIA`, `NOVEDAD_CONTINGENCIA` | [pantalla-04-cu12-historial-reportes.png](06-prototipo-inicial/pantalla-04-cu12-historial-reportes.png) |
+
+---
+
+## 2. Cobertura de Requisitos No Funcionales (`RNF-01` a `RNF-06`)
+
+Los requisitos no funcionales no generan pantallas ni tablas por sí mismos, pero quedan reflejados en atributos de negocio del dominio/MER y restricciones de validación en casos de uso:
+- `RNF-01` (Seguridad) → `Instructor.usuario`, propiedad en `SESION_ASISTENCIA`, validaciones de `CU-01` y `CU-08`.
+- `RNF-02` (Ley 1581 de 2012) → `RegistroAsistencia.consentimientoDatos`, `Aprendiz.estadoActivo`, `Ficha.activa`, pasos 3–4 de `CU-04`.
+- `RNF-03`, `RNF-04`, `RNF-05` (Rendimiento, Usabilidad móvil y Contingencia) → `codigoAcceso` en `CU-04` (alterno `1a`), rama `CU-08` + `NOVEDAD_CONTINGENCIA`, flujo móvil en ≤ 3 pasos (`pantalla-02`).
+- `RNF-06` (Auditoría) → `fechaHora`, `canalRegistro`, `estadoRed`, `latitud`, `longitud`, `precisionMetros` en `REGISTRO_ASISTENCIA`.
