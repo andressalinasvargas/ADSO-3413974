@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net" modified="2026-11-23T09:16:30.000Z" agent="ADSO-3413974" version="24.7.17">
+  <diagram id="comp-diagram" name="Vista de Componentes">
+    <mxGraphModel dx="1520" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1520" pageHeight="920" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="t" value="A5 · Vista de Componentes e Interfaces (8 Componentes) — asistencia-sena" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=16;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="15" width="900" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Presentacion -->
+        <mxCell id="cmp_wui" value="&lt;b&gt;«component»&lt;br&gt;WebAppInstructor&lt;/b&gt;&lt;hr&gt;Provee: &lt;b&gt;IUiAdministrativa&lt;/b&gt;&lt;br&gt;Requiere: IAutenticacion, IGestionAcademica, IFachadaAsistencia, IReportesAuditoria" style="shape=component;align=left;spacingLeft=30;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11.5;" vertex="1" parent="1">
+          <mxGeometry x="70" y="70" width="520" height="105" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cmp_wmov" value="&lt;b&gt;«component»&lt;br&gt;WebAppMovilAprendiz&lt;/b&gt;&lt;hr&gt;Provee: &lt;b&gt;IUiAutorregistro&lt;/b&gt;&lt;br&gt;Requiere: IFachadaAsistencia, IGeolocationNavegador" style="shape=component;align=left;spacingLeft=30;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11.5;" vertex="1" parent="1">
+          <mxGeometry x="860" y="70" width="520" height="105" as="geometry"/>
+        </mxCell>
+
+        <!-- Logica -->
+        <mxCell id="cmp_auth" value="&lt;b&gt;«component» ModuloAutenticacion&lt;/b&gt;&lt;hr&gt;Provee: &lt;b&gt;IAutenticacion&lt;/b&gt;&lt;br&gt;Requiere: IPersistenciaDatos&lt;br&gt;&lt;i&gt;Clases: Persona, UsuarioSistema&lt;/i&gt;" style="shape=component;align=left;spacingLeft=30;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="290" height="125" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cmp_acad" value="&lt;b&gt;«component» ModuloGestionAcademica&lt;/b&gt;&lt;hr&gt;Provee: &lt;b&gt;IGestionAcademica&lt;/b&gt;&lt;br&gt;Requiere: IAutenticacion, IPersistenciaDatos&lt;br&gt;&lt;i&gt;Clases: ProgramaFormacion, SedeFormacion, FichaFormacion, Aprendiz, AsignacionInstructor&lt;/i&gt;" style="shape=component;align=left;spacingLeft=30;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="360" y="290" width="320" height="135" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cmp_asis" value="&lt;b&gt;«component» ModuloControlAsistencia&lt;/b&gt;&lt;hr&gt;Provee: &lt;b&gt;IFachadaAsistencia&lt;/b&gt;&lt;br&gt;Requiere: IValidacionGeoRed, IPersistenciaDatos&lt;br&gt;&lt;i&gt;Clases: FachadaControlAsistencia, SesionAsistencia, RegistroAsistencia, NovedadContingencia, IEstrategiaRegistro + 3 impl, CalculadorTardanza&lt;/i&gt;" style="shape=component;align=left;spacingLeft=30;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="710" y="290" width="390" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cmp_rep" value="&lt;b&gt;«component» ModuloReportesAuditoria&lt;/b&gt;&lt;hr&gt;Provee: &lt;b&gt;IReportesAuditoria&lt;/b&gt;&lt;br&gt;Requiere: IAutenticacion, IPersistenciaDatos&lt;br&gt;&lt;i&gt;Clases: ServicioReportes&lt;/i&gt;" style="shape=component;align=left;spacingLeft=30;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="290" width="340" height="125" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cmp_geo" value="&lt;b&gt;«component» ModuloValidacionGeoRed&lt;/b&gt;&lt;hr&gt;Provee: &lt;b&gt;IValidacionGeoRed&lt;/b&gt;&lt;br&gt;Requiere: IGeolocationNavegador&lt;br&gt;&lt;i&gt;Clases: ValidadorGeocerca&lt;/i&gt;" style="shape=component;align=left;spacingLeft=30;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="485" width="340" height="115" as="geometry"/>
+        </mxCell>
+
+        <!-- Datos -->
+        <mxCell id="cmp_pdo" value="&lt;b&gt;«component» ModuloPersistenciaPDO&lt;/b&gt;&lt;hr&gt;Provee: &lt;b&gt;IPersistenciaDatos&lt;/b&gt;&lt;br&gt;Requiere: IMariaDB&lt;br&gt;&lt;i&gt;Contrato: IRepositorioAsistencia (PDO nativo)&lt;/i&gt;" style="shape=component;align=left;spacingLeft=30;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#9673a6;fontSize=11.5;" vertex="1" parent="1">
+          <mxGeometry x="340" y="610" width="540" height="115" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cmp_db" value="&lt;b&gt;«datastore» MariaDB 10.11 InnoDB&lt;/b&gt;&lt;br&gt;Provee: IMariaDB (TCP 3306)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=14;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="450" y="780" width="320" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Dependencias -->
+        <mxCell id="d1" value="usa IAutenticacion" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_wui" target="cmp_auth"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="d2" value="usa IGestionAcademica" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_wui" target="cmp_acad"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="d3" value="usa IFachadaAsistencia" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_wui" target="cmp_asis"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="d4" value="usa IReportesAuditoria" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_wui" target="cmp_rep"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="d5" value="usa IFachadaAsistencia" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_wmov" target="cmp_asis"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="d6" value="usa IValidacionGeoRed" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_asis" target="cmp_geo"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="d7" value="usa IPersistenciaDatos" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_auth" target="cmp_pdo"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="d8" value="usa IPersistenciaDatos" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_acad" target="cmp_pdo"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="d9" value="usa IPersistenciaDatos" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_asis" target="cmp_pdo"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="d10" value="usa IPersistenciaDatos" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_rep" target="cmp_pdo"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="d11" value="usa IMariaDB" style="endArrow=open;dashed=1;html=1;" edge="1" parent="1" source="cmp_pdo" target="cmp_db"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
