@@ -25,9 +25,10 @@ Ruta de entrega en mi fork:
 
 | # | Artefacto | Qué cambié y por qué | Enlace al commit |
 | :- | :--- | :--- | :--- |
-| 1 | `00-insumo-srs-base.md` y `04-matriz-rf-casos-uso.md` | Consolidé las necesidades dispersas de semana 16/17 en **12 RF** (`RF-01`–`RF-12`) y **6 RNF** (`RNF-01`–`RNF-06`) separados, explicando por qué los RNF no son casos de uso (`C3` de `Rubricas_G1.md`). | Día 1 (`2026-11-22`) · se enlazará commit exacto en revisión Día 2 |
-| 2 | `03-diagrama-casos-uso.drawio` / `.png` / `.svg` | Amplié el diagrama de semana 16 (que tenía solo `Instructor` y 5 CU con 3 pasos de UI) a **12 casos de uso** con verbo + objeto, frontera del sistema, 3 actores primarios y 2 secundarios fuera de ella (`C4`). | Día 1 (`2026-11-22`) · se enlazará commit exacto en revisión Día 2 |
-| 3 | `03-diagrama-casos-uso.*` y `03-justificacion-relaciones-cu.md` | Corregí la granularidad de `«include»` hacia subprocesos reales (`CU-05`, `CU-06`) e incorporé **4 relaciones `«extend»`** (`CU-09` tardanza, `CU-10` contingencia) con puntos de extensión, flecha hacia el caso base y justificación de 1 línea (`C4`). | Día 1 (`2026-11-22`) · se enlazará commit exacto en revisión Día 2 |
+| 1 | `00-insumo-srs-base.md` y `04-matriz-rf-casos-uso.md` | Consolidé las necesidades dispersas de semana 16/17 en **12 RF** (`RF-01`–`RF-12`) y **6 RNF** (`RNF-01`–`RNF-06`) separados, explicando por qué los RNF no son casos de uso (`C3` de `Rubricas_G1.md`). | [b788032](https://github.com/andressalinasvargas/ADSO-3413974/commit/b7880329509b0dd5828c2c9914cbf3ffda15d539) |
+| 2 | `03-diagrama-casos-uso.drawio` / `.png` / `.svg` | Amplié el diagrama de semana 16 (que tenía solo `Instructor` y 5 CU con 3 pasos de UI) a **12 casos de uso** con verbo + objeto, frontera del sistema, 3 actores primarios y 2 secundarios fuera de ella (`C4`). | [b788032](https://github.com/andressalinasvargas/ADSO-3413974/commit/b7880329509b0dd5828c2c9914cbf3ffda15d539) |
+| 3 | `03-diagrama-casos-uso.*` y `03-justificacion-relaciones-cu.md` | Corregí la granularidad de `«include»` hacia subprocesos reales (`CU-05`, `CU-06`) e incorporé **4 relaciones `«extend»`** (`CU-09` tardanza, `CU-10` contingencia) con puntos de extensión, flecha hacia el caso base y justificación de 1 línea (`C4`). | [b788032](https://github.com/andressalinasvargas/ADSO-3413974/commit/b7880329509b0dd5828c2c9914cbf3ffda15d539) |
+| 4 | `04-matriz-rf-casos-uso.md` y `README.md` | Agregué la auditoría inversa `Caso de Uso → RF` (`12/12` sin casos huérfanos) para habilitar la transición hacia diseño (Guía 2) y completé los enlaces directos al commit publicado del Día 1 (`C3`, `C5`). | Día 2 (`2026-11-23`) · revisión cruzada de cierre |
 
 ## 4. Qué construí nuevo
 
@@ -52,7 +53,7 @@ Ruta de entrega en mi fork:
 - [x] Declaro que lo que tomé de mi trabajo del año está identificado en la sección 2.
 - [x] Entiendo que el sábado 28 de noviembre de 2026 el instructor me hará **3 preguntas orales** sobre mis productos (una del producto 1, una del producto 2 y una tercera a su elección) y que, si respondo bien menos de 2, el producto sobre el que fallé queda con tope de 50.
 
-Firma: `@andressalinasvargas` · Fecha: `2026-11-22`
+Firma: `@andressalinasvargas` · Fecha: `2026-11-23`
 
 ## 7. Uso de inteligencia artificial
 
@@ -62,6 +63,6 @@ Firma: `@andressalinasvargas` · Fecha: `2026-11-22`
 
 ## 8. Autocontrol antes del push
 
-- [ ] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega *(Día 1 publicado hoy `2026-11-22`; Día 2 pendiente para completar el mínimo de 2 días distintos antes del sábado 28)*.
+- [x] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega *(Día 1: `2026-11-22` [`b788032`] · Día 2: `2026-11-23`, revisión de trazabilidad inversa y enlaces a commits)*.
 - [x] No subí el marco documental del instructor, plantillas sin diligenciar ni archivos de otras personas.
 - [x] No incluí datos personales reales ni de terceros.

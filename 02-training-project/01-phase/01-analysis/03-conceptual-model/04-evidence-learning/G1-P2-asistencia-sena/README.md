@@ -25,9 +25,10 @@ Ruta de entrega en mi fork:
 
 | # | Artefacto | Qué cambié y por qué | Enlace al commit |
 | :- | :--- | :--- | :--- |
-| 1 | `04-modelo-dominio.*` y `04-modelo-dominio-descripcion.md` | Transformé el diagrama de semana 16 (3 clases con métodos y claves `id*`) en un **Modelo de Dominio** puro con **11 clases conceptuales** sin métodos ni claves técnicas, generalización `Persona` y 2 clases de asociación (`C3` de `Rubricas_G1.md`). | Día 1 (`2026-11-22`) · se enlazará commit exacto en revisión Día 2 |
-| 2 | `03-plantillas-casos-uso.md` | Expandí las descripciones de semana 17 en **4 plantillas extendidas** (`CU-03`, `CU-04`, `CU-08`, `CU-12`) con precondiciones estrictas previas, ≥ 6 pasos, flujos alternos, excepciones y redacción libre de SQL/PHP (`C2`). | Día 1 (`2026-11-22`) · se enlazará commit exacto en revisión Día 2 |
-| 3 | `06-prototipo-inicial/*` | Rotulé 4 pantallas derivadas de los mockups de semana 17 con su caso de uso (`CU-03`, `CU-04`, `CU-08`, `CU-12`) y requisitos cubiertos, vinculándolas a las plantillas y matriz (`C5`). | Día 1 (`2026-11-22`) · se enlazará commit exacto en revisión Día 2 |
+| 1 | `04-modelo-dominio.*` y `04-modelo-dominio-descripcion.md` | Transformé el diagrama de semana 16 (3 clases con métodos y claves `id*`) en un **Modelo de Dominio** puro con **11 clases conceptuales** sin métodos ni claves técnicas, generalización `Persona` y 2 clases de asociación (`C3` de `Rubricas_G1.md`). | [9209ff2](https://github.com/andressalinasvargas/ADSO-3413974/commit/9209ff23ec6cb8c56d1399f4192aac006d3844ea) |
+| 2 | `03-plantillas-casos-uso.md` | Expandí las descripciones de semana 17 en **4 plantillas extendidas** (`CU-03`, `CU-04`, `CU-08`, `CU-12`) con precondiciones estrictas previas, ≥ 6 pasos, flujos alternos, excepciones y redacción libre de SQL/PHP (`C2`). | [9209ff2](https://github.com/andressalinasvargas/ADSO-3413974/commit/9209ff23ec6cb8c56d1399f4192aac006d3844ea) |
+| 3 | `06-prototipo-inicial/*` | Rotulé 4 pantallas derivadas de los mockups de semana 17 con su caso de uso (`CU-03`, `CU-04`, `CU-08`, `CU-12`) y requisitos cubiertos, vinculándolas a las plantillas y matriz (`C5`). | [9209ff2](https://github.com/andressalinasvargas/ADSO-3413974/commit/9209ff23ec6cb8c56d1399f4192aac006d3844ea) |
+| 4 | `08-registro-ajustes.md`, `10-informe-analisis.md` y `README.md` | Registré el cierre de verificación del Día 2 (`H-07`), validé consistencia del MER hacia diseño lógico (Guía 2) y enlacé los commits exactos publicados del Día 1 (`b788032` y `9209ff2`). | Día 2 (`2026-11-23`) · revisión final de entrega |
 
 ## 4. Qué construí nuevo
 
@@ -55,7 +56,7 @@ Ruta de entrega en mi fork:
 - [x] Declaro que lo que tomé de mi trabajo del año está identificado en la sección 2.
 - [x] Entiendo que el sábado 28 de noviembre de 2026 el instructor me hará **3 preguntas orales** sobre mis productos (una del producto 1, una del producto 2 y una tercera a su elección) y que, si respondo bien menos de 2, el producto sobre el que fallé queda con tope de 50.
 
-Firma: `@andressalinasvargas` · Fecha: `2026-11-22`
+Firma: `@andressalinasvargas` · Fecha: `2026-11-23`
 
 ## 7. Uso de inteligencia artificial
 
@@ -65,6 +66,6 @@ Firma: `@andressalinasvargas` · Fecha: `2026-11-22`
 
 ## 8. Autocontrol antes del push
 
-- [ ] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega *(Día 1 publicado hoy `2026-11-22`; Día 2 pendiente antes del sábado 28)*.
+- [x] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega *(Día 1: `2026-11-22` [`9209ff2`] · Día 2: `2026-11-23`, cierre `H-07` y enlaces a commits)*.
 - [x] No subí el marco documental del instructor, plantillas sin diligenciar ni archivos de otras personas.
 - [x] No incluí datos personales reales ni de terceros.

@@ -2,7 +2,7 @@
 
 **Proyecto:** `asistencia-sena` · **Ficha:** 3413974 (ADSO)  
 **Producto:** G1-P2 · Modelo de análisis y verificación  
-**Autor:** `@andressalinasvargas` · **Fecha:** 2026-11-22
+**Autor:** `@andressalinasvargas` · **Fecha:** 2026-11-23
 
 ---
 
@@ -35,12 +35,13 @@ A partir de los insumos de levantamiento trabajados durante el año (`03-execute
 
 ## 3. Resultado de la Verificación y Ajustes Realizados
 
-Los artefactos fueron auditados mediante la lista de chequeo [07-lista-chequeo-validacion.md](07-lista-chequeo-validacion.md) compuesta por **18 criterios verificables** (5 de cobertura y trazabilidad). A partir de la comparación contra los borradores de semanas 16–17 se documentaron y corrigieron **6 hallazgos (`H-01` a `H-06`)** en [08-registro-ajustes.md](08-registro-ajustes.md):
+Los artefactos fueron auditados mediante la lista de chequeo [07-lista-chequeo-validacion.md](07-lista-chequeo-validacion.md) compuesta por **18 criterios verificables** (5 de cobertura y trazabilidad). A partir de la comparación contra los borradores de semanas 16–17 y el cierre del Día 2 se documentaron y corrigieron **7 hallazgos (`H-01` a `H-07`)** en [08-registro-ajustes.md](08-registro-ajustes.md):
 
-1. Se amplió el diagrama de casos de uso de 5 casos (un solo actor y pasos de UI) a **12 casos de uso**, 3 actores primarios, 2 secundarios y relaciones `«include»`/`«extend»` justificadas (`H-01`, `H-03`).
-2. Se separaron formalmente `RF-01`–`RF-12` y `RNF-01`–`RNF-06` con trazabilidad al 100 % (`H-02`).
-3. Se depuraron términos técnicos en plantillas y se transformó el diagrama de 3 clases con métodos de semana 16 en un **Modelo de Dominio de 11 clases conceptuales** con generalización (`Persona`) y clases de asociación (`H-04`).
-4. Se formalizó el **MER en notación Pata de Gallo** con 9 entidades, resolución N:M (`ASIGNACION_INSTRUCTOR_FICHA`, `REGISTRO_ASISTENCIA`) y entidad débil (`NOVEDAD_CONTINGENCIA`) (`H-05`).
-5. Se rotularon las 4 pantallas de prototipo de semana 17 con su caso de uso y requisitos (`H-06`).
+1. Se amplió el diagrama de casos de uso de 5 casos (un solo actor y pasos de UI) a **12 casos de uso**, 3 actores primarios, 2 secundarios y relaciones `«include»`/`«extend»` justificadas (`H-01`, `H-03`, commit `b788032`).
+2. Se separaron formalmente `RF-01`–`RF-12` y `RNF-01`–`RNF-06` con trazabilidad al 100 % (`H-02`, commit `b788032`).
+3. Se depuraron términos técnicos en plantillas y se transformó el diagrama de 3 clases con métodos de semana 16 en un **Modelo de Dominio de 11 clases conceptuales** con generalización (`Persona`) y clases de asociación (`H-04`, commit `9209ff2`).
+4. Se formalizó el **MER en notación Pata de Gallo** con 9 entidades, resolución N:M (`ASIGNACION_INSTRUCTOR_FICHA`, `REGISTRO_ASISTENCIA`) y entidad débil (`NOVEDAD_CONTINGENCIA`) (`H-05`, commit `9209ff2`).
+5. Se rotularon las 4 pantallas de prototipo de semana 17 con su caso de uso y requisitos (`H-06`, commit `9209ff2`).
+6. En el cierre del Día 2 (`2026-11-23`), se completó la verificación inversa `CU → RF` (`12/12` sin huérfanos), la validación de entidades del MER hacia diseño y los enlaces directos a los commits del Día 1 (`H-07`).
 
 Tras aplicar los ajustes, la **segunda verificación obtuvo 18 / 18 criterios cumplidos (100 %)**, confirmando consistencia bidireccional entre requisitos, modelos conceptuales, flujo de actividades, datos y prototipos de interfaz.

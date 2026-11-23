@@ -38,3 +38,26 @@ Los requisitos no funcionales (`RNF-01` a `RNF-06`) **no se modelan como casos d
 | **RNF-04** | Usabilidad y Accesibilidad Móvil | Aplica sobre `CU-04` y `CU-05` (operación móvil en ≤ 3 pasos y mensajes claros en español). |
 | **RNF-05** | Disponibilidad y Contingencia | Aplica sobre `CU-04` (código de respaldo), `CU-08` y `CU-10` (garantía de registro ante fallas de red o accesibilidad). |
 | **RNF-06** | Integridad y Trazabilidad de Auditoría | Aplica sobre `CU-06`, `CU-09`, `CU-10` y `CU-12` (registro inmutable de marca de tiempo, canal, tardanza y estado de red). |
+
+---
+
+## 3. Verificación Inversa (`Caso de Uso → RF`) — Auditoría Día 2 (`2026-11-23`)
+
+Para confirmar que no existen casos de uso huérfanos ni objetivos fuera del alcance antes de pasar a diseño (Guía 2), se valida la trazabilidad en sentido inverso sobre los **12 casos de uso**:
+
+| ID CU | Caso de Uso | Actor(es) | Requisito(s) Funcional(es) que atiende | RNF transversales asociados | Estado |
+| :--- | :--- | :--- | :--- | :--- | :---: |
+| **CU-01** | Autenticar usuario | Instructor, Coordinador Académico | `RF-01` | `RNF-01` | ✅ Trazado |
+| **CU-02** | Gestionar aprendices y credenciales QR | Instructor | `RF-02` | `RNF-02` | ✅ Trazado |
+| **CU-03** | Abrir sesión de asistencia | Instructor | `RF-03` | `RNF-01` | ✅ Trazado |
+| **CU-04** | Registrar asistencia por QR o código | Aprendiz | `RF-05` | `RNF-03`, `RNF-04`, `RNF-05` | ✅ Trazado |
+| **CU-05** | Validar ubicación y consentimiento de datos | *(Incluido en CU-04)* · Servicio GPS | `RF-06` | `RNF-02`, `RNF-04` | ✅ Trazado |
+| **CU-06** | Verificar vigencia de sesión y pertenencia a ficha | *(Incluido en CU-04, CU-07, CU-08)* | `RF-04`, `RF-07` | `RNF-06` | ✅ Trazado |
+| **CU-07** | Registrar asistencia mediante escáner QR | Instructor | `RF-08` | `RNF-03` | ✅ Trazado |
+| **CU-08** | Registrar asistencia por contingencia manual | Instructor | `RF-09` | `RNF-01`, `RNF-05` | ✅ Trazado |
+| **CU-09** | Calcular y registrar tardanza | *(Extiende a CU-04, CU-07, CU-08)* | `RF-10` | `RNF-06` | ✅ Trazado |
+| **CU-10** | Documentar novedad de contingencia | *(Extiende a CU-08)* | `RF-09` | `RNF-05`, `RNF-06` | ✅ Trazado |
+| **CU-11** | Cerrar sesión de asistencia | Instructor, Temporizador del Sistema | `RF-11` | `RNF-01` | ✅ Trazado |
+| **CU-12** | Consultar historial y generar reportes | Instructor, Coordinador Académico | `RF-12` | `RNF-03`, `RNF-06` | ✅ Trazado |
+
+**Resultado de verificación bidireccional (`2026-11-23`):** `12 / 12` requisitos funcionales cubiertos y `12 / 12` casos de uso justificados (`0` casos huérfanos), validando la coherencia de entrada para los artefactos de diseño de la Guía 2.
