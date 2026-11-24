@@ -2,7 +2,7 @@
 
 **Producto:** G1-P2 · Modelo de análisis y verificación  
 **Alcance evaluado:** Artefactos de `G1-P1-asistencia-sena` y `G1-P2-asistencia-sena` frente a `Rubricas_G1.md`  
-**Responsable de verificación:** `@andressalinasvargas` · **Fecha:** 2026-11-22
+**Responsable de verificación:** `@andressalinasvargas` · **Fecha:** 2026-11-22 *(segunda verificación: 2026-11-23)*
 
 ---
 
