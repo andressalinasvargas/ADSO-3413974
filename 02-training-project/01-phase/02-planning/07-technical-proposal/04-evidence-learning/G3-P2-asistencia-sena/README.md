@@ -7,9 +7,9 @@
 | **Producto** | P2 · Propuesta técnica y validación (`RAP 593062` y `RAP 593061`) |
 | **Usuario de GitHub del autor** | `@andressalinasvargas` |
 | **Ficha** | `3413974` |
-| **Variante del escenario asignada (A, B, C o D)** | *Pendiente de asignación oficial por el instructor* *(Commit 1 establece la arquitectura de despliegue trazable a presupuesto `B3` y el marco contractual/TdR/ANS `B6`; los cálculos de proveedores `B1`, presupuesto `B2`, propuesta `B3`, presentación `B4`, acta de validación `B5` y `v1.1` `B7` se completarán en Commits 2 y 3 con la variante confirmada)* |
+| **Variante del escenario asignada (A, B, C o D)** | **Variante B *(provisional hasta confirmación del instructor en Día 3)***: `120` usuarios totales, `30` concurrentes pico, `2` sedes físicas, disponibilidad `≥ 99,5 %`, tope Año 1 **`$70.000.000 COP`**. El libro [`02-presupuesto-proyecto.xlsx`](02-presupuesto-proyecto.xlsx) recalcula automáticamente cualquier cambio a `A`, `C` o `D` en `1_Parametros!B3`. *(Pendientes únicamente acta real `B5` y propuesta `v1.1` `B7` para Día 3)* |
 | **Caso de estudio (nombre del proyecto de mi fork)** | Sistema Web de Control de Asistencia SENA (`asistencia-sena`) |
-| **Fecha de la última actualización** | `2026-11-23` |
+| **Fecha de la última actualización** | `2026-11-24` |
 | **Plazo de entrega** | A más tardar el sábado 5 de diciembre de 2026 a las 6:00 a. m. |
 
 ---
@@ -29,33 +29,37 @@
 
 | Artefacto | Qué cambié o construí | Por qué (necesidad del caso o criterio de la rúbrica) |
 | :--- | :--- | :--- |
+| **B1. Análisis comparativo de proveedores** | Construí el comparativo en `2` categorías (`Nube FT-SW-02` y `Lectores QR 2D FT-HW-02`) con `3` alternativas reales por categoría, pesos exactos al `100 %`, normalización TRM `$4.000` sin IVA y TCO `36` meses seleccionando DigitalOcean y Zebra DS2208-SR. | Cumple `C1` de `Rubricas_G3.md` y alimenta directamente la hoja `5_Comparativo_TCO` de `B2` explicando el descarte técnico-económico de las demás opciones. |
+| **B2. Presupuesto con fórmulas `.xlsx`** | Construí [`02-presupuesto-proyecto.xlsx`](02-presupuesto-proyecto.xlsx) en `5` hojas con fórmulas vivas (`=INDEX/MATCH`, `=SUM`, `=SUMIF`, `=IF`), trazabilidad `1:1` a nodos `N1`–`N7` (incluyendo exclusiones `$0`), matriz de `7` riesgos con reserva cubierta (`$3.000.000`), `IVA 19 %`, margen `18 %` sobre precio (`$65.268.598` vs. tope `$70.000.000`) y flujo `36` meses (`TCO $67.883.550`). | Cumple `C2` y el orden estricto del `Anexo D` sin valores pegados ni mezclas de margen vs. recargo. |
 | **Diagrama de arquitectura y despliegue (`B3`)** | Ajusté el diagrama de `G2-P1/A6` (`4` nodos) añadiendo `[N3]` Borde DNS/Proxy TLS, `[N6]` Respaldos externos S3 cifrados y `[N7]` Monitoreo externo ANS, etiquetando cada nodo con su vínculo o exclusión en el presupuesto `B2`. | Cumple el requisito de diagrama propio ajustado en `B3` (`C3`) y garantiza trazabilidad 1:1 con los rubros de `B2` (`C2`). |
+| **B3. Propuesta técnica y económica `v1.0`** | Redacté las `12` secciones ejecutivas, técnicas, comerciales y contractuales en [`03-propuesta-tecnica-v1.0.md`](03-propuesta-tecnica-v1.0.md), integrando EDT de `12` tareas (`T01`–`T12`) con cálculo CPM (`ES/EF/LS/LF`, holguras y ruta crítica de `40` días hábiles), `7` riesgos y pagos `30/40/30 %`. | Cumple `C3` de `Rubricas_G3.md` como documento autocontenido para negociación y posterior ajuste a `v1.1`. |
+| **B4. Presentación de negociación** | Elaboré `10` diapositivas orientadas al interés del cliente con guion de `10` minutos, declaración de propósito, posición ideal (`$65,27 M`), mínima (`$59,47 M`), MAAN y `4` objeciones respondidas en [`04-presentacion-negociacion.md`](04-presentacion-negociacion.md). | Cumple `C4` preparando la sesión real de validación `B5`. |
 | **B6. Contrato, TdR y ANS** | Construí desde cero la lista de verificación contractual (`14` elementos), la matriz de cumplimiento de TdR (`8` requisitos) y el ANS con `4` métricas medibles (`disponibilidad`, `p95 ≤ 2,0 s`, `RPO ≤ 24 h`, `RTO ≤ 2 h`) con ventana, fuente de medición y compensaciones. | Cumple `C7` de `Rubricas_G3.md` al 100 % sin adjetivos vagos y con alineación a Ley 1581/2012, Decreto 1074/2015 y Ley 23/1982. |
 
 ---
 
 ## 4. Enlaces a los entregables (Producto 2)
 
-- [ ] **B1.** Análisis comparativo de proveedores (`2` categorías, `3` alternativas reales cada una, TCO 36 meses): *Programado para Día 2 / Commit 2*
-- [ ] **B2.** Presupuesto de software y hardware (hoja de cálculo `.xlsx` con fórmulas, trazabilidad a `N1`–`N7` y margen): *Programado para Día 2 / Commit 2*
-- [ ] **B3.** Propuesta técnica (`12` secciones, `6`–`12` páginas, EDT con ruta crítica y `≥ 6` riesgos) versión `1.0` — **Diagrama ajustado ya listo:** [03-diagrama-arquitectura-despliegue-g3.drawio](03-diagrama-arquitectura-despliegue-g3.drawio) · [03-diagrama-arquitectura-despliegue-g3.svg](03-diagrama-arquitectura-despliegue-g3.svg)
-- [ ] **B4.** Presentación a la contraparte (`8`–`12` diapositivas o guion de 10 min con propósito de negociación): *Programado para Día 2 / Commit 2*
-- [ ] **B5.** Acta de validación con contraparte real (`≥ 4` sugerencias clasificadas y `≥ 2` ajustes cuantificados, fechada antes del 5 de dic): *Programado para Día 3 / Commit 3*
+- [x] **B1.** Análisis comparativo de proveedores (`2` categorías, `3` alternativas reales cada una, criterios `100 %`, TCO `36` meses): [01-comparativo-proveedores.md](01-comparativo-proveedores.md)
+- [x] **B2.** Presupuesto de software y hardware (`.xlsx` con fórmulas vivas en `5` hojas, trazabilidad `N1`–`N7`, Anexo D y flujo `36` meses): [02-presupuesto-proyecto.xlsx](02-presupuesto-proyecto.xlsx)
+- [x] **B3.** Propuesta técnica versión `1.0` (`12` secciones, EDT `12` tareas con ruta crítica `40` d, `7` riesgos): [03-propuesta-tecnica-v1.0.md](03-propuesta-tecnica-v1.0.md) · Diagrama: [03-diagrama-arquitectura-despliegue-g3.drawio](03-diagrama-arquitectura-despliegue-g3.drawio) · [03-diagrama-arquitectura-despliegue-g3.svg](03-diagrama-arquitectura-despliegue-g3.svg)
+- [x] **B4.** Presentación a la contraparte (`10` diapositivas, guion `10` min, estrategia de negociación y `4` objeciones): [04-presentacion-negociacion.md](04-presentacion-negociacion.md)
+- [ ] **B5.** Acta de validación con contraparte real (`≥ 4` sugerencias clasificadas y `≥ 2` ajustes cuantificados, fechada antes del 5 de dic): *Programado para Día 3 / Commit 3 tras confirmación de variante oficial y reunión con compañero/contraparte*
 - [x] **B6.** Lista de verificación para contrato (`14` elementos), matriz de TdR (`8` requisitos) y ANS (`4` métricas medibles): [06-contrato-tdr-ans.md](06-contrato-tdr-ans.md)
-- [ ] **B7.** Propuesta ajustada versión `1.1` con control de cambios: *Programado para Día 3 / Commit 3*
+- [ ] **B7.** Propuesta ajustada versión `1.1` con control de cambios: *Programado para Día 3 / Commit 3 posterior al acta `B5`*
 
 ---
 
-## 5. Autoevaluación de mínimos (estado en avance — Día 1)
+## 5. Autoevaluación de mínimos (estado al cierre del Día 2)
 
 | Mínimo | Mi conteo actual |
 | :--- | :--- |
-| `[P2]` Alternativas por categoría / criterios que suman 100 % | *Pendiente Día 2 (objetivo: `2` cat. × `3` alt. / `sí`)* |
-| `[P2]` Riesgos en la matriz (`≥ 6`) / tareas de la EDT (`≥ 10` con ruta crítica) | *Pendiente Día 2* |
-| `[P2]` Contrato (`≥ 10` elementos) / TdR (`≥ 6`) / ANS (`≥ 3` métricas medibles) | `14` / `8` / `4` |
-| `[P2]` Sugerencias clasificadas (`≥ 4`) / ajustes de parámetros (`≥ 2`) | *Pendiente reunión de validación `B5`* |
-| `[P2]` Fecha del acta de validación (anterior a la entrega) | *Pendiente (antes del `2026-12-05`)* |
-| Mis hojas de cálculo usan fórmulas | *Pendiente `B2` (se construirá con fórmulas vivas)* |
+| `[P2]` Alternativas por categoría / criterios que suman 100 % | `2` cat. × `3` alt. / **`sí` (`100 %`)** |
+| `[P2]` Riesgos en la matriz (`≥ 6`) / tareas de la EDT (`≥ 10` con ruta crítica) | **`7`** / **`12`** *(ruta crítica `40 d`)* |
+| `[P2]` Contrato (`≥ 10` elementos) / TdR (`≥ 6`) / ANS (`≥ 3` métricas medibles) | **`14`** / **`8`** / **`4`** |
+| `[P2]` Sugerencias clasificadas (`≥ 4`) / ajustes de parámetros (`≥ 2`) | *Pendiente reunión de validación `B5` (Día 3)* |
+| `[P2]` Fecha del acta de validación (anterior a la entrega) | *Pendiente (programada antes del `2026-12-05`)* |
+| Mis hojas de cálculo usan fórmulas | **`sí`** (`02-presupuesto-proyecto.xlsx`: `INDEX/MATCH`, `SUM`, `SUMIF`, `IF`) |
 
 ---
 
@@ -63,9 +67,9 @@
 
 | Fecha | Qué hice ese día | Commits |
 | :--- | :--- | :--- |
-| `2026-11-23` (Día 1 — Commit 1) | Evolucioné el diagrama de arquitectura/despliegue de `G2` a `7` nodos productivos (`N1`–`N7`) para `B3`/`B2`, redacté `06-contrato-tdr-ans.md` (`B6`) y creé el `README.md` de `G3-P2`. | Commit 1 (`feat(g3-p2): crear diagrama de despliegue B3, marco contrato-TdR-ANS B6 y README inicial`) |
-| *Día 2 (programado)* | Elaborar comparativo de proveedores con cotizaciones verificadas (`B1`), presupuesto `.xlsx` (`B2`), propuesta técnica `v1.0` (`B3`) y presentación de negociación (`B4`). | Commit 2 (pendiente) |
-| *Día 3 (programado)* | Realizar validación con contraparte real, documentar acta (`B5`), propagar ajustes a `B2`/`B6` y emitir propuesta ajustada `v1.1` (`B7`). | Commit 3 (pendiente) |
+| `2026-11-23` (Día 1 — Commit 1) | Evolucioné el diagrama de arquitectura/despliegue de `G2` a `7` nodos productivos (`N1`–`N7`) para `B3`/`B2`, redacté `06-contrato-tdr-ans.md` (`B6`) y creé el `README.md` inicial de `G3-P2`. | `af106d1` (`feat(g3-p2): crear diagrama de despliegue B3, marco contrato-TdR-ANS B6 y README inicial`) |
+| `2026-11-24` (Día 2 — Commit 2) | Elaboré el comparativo de proveedores con TCO 36m (`B1`), el libro Excel presupuestal con fórmulas vivas (`B2`), la propuesta técnica `v1.0` de 12 secciones con EDT/CPM (`B3`), la presentación de negociación (`B4`) y actualicé el `README.md` en escenario provisional Variante B. | Commit 2 (`feat(g3-p2): agregar comparativo B1, presupuesto Excel B2, propuesta v1.0 B3 y presentacion B4`) |
+| *Día 3 (programado antes `2026-12-05`)* | Confirmar variante oficial asignada por el instructor, realizar reunión de validación con contraparte real, documentar acta (`B5`), propagar ajustes a `B2`/`B6` y emitir propuesta ajustada `v1.1` (`B7`). | Commit 3 (pendiente) |
 
 ---
 
@@ -73,8 +77,10 @@
 
 | Fuente (nombre y enlace) | Fecha de consulta | Para qué la usé |
 | :--- | :--- | :--- |
-| Función Pública — Ley 1581 de 2012 (`https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981`) y Decreto 1074 de 2015 (`https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=76608`) | `2026-11-23` | Cláusula contractual de transmisión de datos y cumplimiento `TdR-03` en `B6`. |
-| Función Pública — Ley 23 de 1982 (`https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=3431`) y WIPO Lex — Decisión 351 (`https://www.wipolex.wipo.int/es/text/169152`) | `2026-11-23` | Cláusula de cesión escrita de derechos patrimoniales y reserva de derechos morales en `B6`. |
+| Función Pública — Ley 1581 de 2012 (`https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981`) y Decreto 1074 de 2015 (`https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=76608`) | `2026-11-23` | Cláusula contractual de transmisión de datos y cumplimiento `TdR-03` en `B3`/`B6`. |
+| Función Pública — Ley 23 de 1982 (`https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=3431`) y WIPO Lex — Decisión 351 (`https://www.wipolex.wipo.int/es/text/169152`) | `2026-11-23` | Cláusula de cesión escrita de derechos patrimoniales y reserva de derechos morales en `B3`/`B6`. |
+| DigitalOcean Pricing (`https://www.digitalocean.com/pricing/droplets`, `https://www.digitalocean.com/pricing/spaces-object-storage`), AWS Lightsail (`https://aws.amazon.com/lightsail/pricing/`), Hetzner (`https://www.hetzner.com/cloud`) | `2026-11-24` | Tarifas públicas de cómputo VPS y S3 para normalización TCO `36` meses en `B1` y `B2`. |
+| Zebra DS2200 Series (`https://www.zebra.com/us/en/products/spec-sheets/scanners/general-purpose-scanners/ds2200-series.html`), Honeywell Voyager 1470g (`https://automation.honeywell.com/us/en/products/productivity-products/barcode-scanners/general-duty/voyager-1470g`), Datalogic QuickScan QD2500 (`https://www.datalogic.com/eng/retail-manufacturing-transportation-logistics-healthcare/general-purpose-handheld-scanners/quickscan-qd2500-pd-915.html`) | `2026-11-24` | Especificaciones técnicas y comparación de lectores QR 2D USB (`FT-HW-02`) en `B1`. |
 
 ---
 
@@ -82,14 +88,14 @@
 
 | Herramienta | Para qué la usé | Qué parte del producto | Cómo verifiqué el resultado |
 | :--- | :--- | :--- | :--- |
-| Antigravity (asistente IA) | Apoyo en estructuración de cláusulas contractuales, métricas ANS, generación XML del diagrama `.drawio`/`.svg` evolucionado desde `G2-P1` y verificación contra `Rubricas_G3.md`. | `03-diagrama-arquitectura-despliegue-g3.*`, `06-contrato-tdr-ans.md` y `README.md`. | Revisé que el diagrama sea una evolución propia del de `G2-P1` con protocolos y nodos `N1`–`N7` trazables a `B2`, que las 4 métricas de ANS sean medibles sin adjetivos vagos y que no haya datos personales reales. |
+| Antigravity (asistente IA) | Apoyo en estructuración de cláusulas contractuales, métricas ANS, generación XML del diagrama `.drawio`/`.svg` evolucionado desde `G2-P1`, generación automatizada en Python (`openpyxl`) del libro `02-presupuesto-proyecto.xlsx` con fórmulas vivas y redacción de `B1`/`B3`/`B4`. | `01-comparativo-proveedores.md`, `02-presupuesto-proyecto.xlsx`, `03-propuesta-tecnica-v1.0.md`, `03-diagrama-arquitectura-despliegue-g3.*`, `04-presentacion-negociacion.md`, `06-contrato-tdr-ans.md` y `README.md`. | Verifiqué todas las fórmulas del `.xlsx` (`INDEX/MATCH`, `SUM`, `SUMIF`, `IF`) contra el Anexo D, comprobé manualmente el cálculo de ruta crítica CPM (`40` d), sumas al `100 %` de criterios en `B1` y la ausencia total de datos personales reales o actas ficticias. |
 
 ---
 
 ## 9. Declaración de autoría
 
-Declaro que este producto es de mi autoría, que lo elaboré reutilizando y ajustando el trabajo que realicé durante el año en mi fork, que las fuentes están citadas, que los usos de IA están declarados arriba y que puedo explicar cada decisión y cada cálculo en la verificación oral del sábado 5 de diciembre de 2026. Si trabajé con compañeros de equipo, lo indico aquí: nada (trabajo individual; la contraparte de validación en `B5` se identificará únicamente por su usuario de GitHub).
+Declaro que este producto es de mi autoría, que lo elaboré reutilizando y ajustando el trabajo que realicé durante el año en mi fork, que las fuentes están citadas, que los usos de IA están declarados arriba y que puedo explicar cada decisión y cada cálculo en la verificación oral del sábado 5 de diciembre de 2026. Si trabajé con compañeros de equipo, lo indico aquí: nada (trabajo individual; la contraparte de validación en `B5` se ejecutará e identificará únicamente por su usuario de GitHub en el Día 3).
 
 Declaro además que no incluí datos personales reales ni documentos reales de terceros en este repositorio público.
 
-Usuario de GitHub: `@andressalinasvargas` · Fecha: `2026-11-23`
+Usuario de GitHub: `@andressalinasvargas` · Fecha: `2026-11-24`
