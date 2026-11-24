@@ -7,9 +7,9 @@
 | **Producto** | P1 · Especificaciones técnicas (`RAP 593060`) |
 | **Usuario de GitHub del autor** | `@andressalinasvargas` |
 | **Ficha** | `3413974` |
-| **Variante del escenario asignada (A, B, C o D)** | *Pendiente de asignación oficial por el instructor* *(Commit 1 cubre `A1` y `A3`, independientes de variante; `A2`, `A4`, `A5` y `A6` se parametrizarán en Commits 2 y 3 con la variante asignada)* |
+| **Variante del escenario asignada (A, B, C o D)** | *Variante B adoptada como escenario provisional (`120` usuarios, `30` concurrentes, `2` sedes, `99,5 %` disp., tope `$70.000.000`)* *(parametrizada dinámicamente con `INDEX/MATCH` en `.xlsx` para `A`–`D` y pendiente de confirmación oficial del instructor en Día 3)* |
 | **Caso de estudio (nombre del proyecto de mi fork)** | Sistema Web de Control de Asistencia SENA (`asistencia-sena`) |
-| **Fecha de la última actualización** | `2026-11-23` |
+| **Fecha de la última actualización** | `2026-11-24` |
 | **Plazo de entrega** | A más tardar el sábado 5 de diciembre de 2026 a las 6:00 a. m. |
 
 ---
@@ -34,29 +34,32 @@ Si algún artefacto no existe en mi fork (formato formal de ficha técnica `A1`,
 | **A1. Formato de ficha técnica** | Construí desde cero un formato propio de **15 campos** basado en `ISO/IEC/IEEE 29148:2018` e `ISO/IEC 25010:2023`, con subtabla obligatoria de valor, unidad y método de verificación y regla explícita de neutralidad de marcas. | Cumple `C1` de `Rubricas_G3.md` (`≥ 12` campos y estándar declarado) y sirve como plantilla reutilizable en `A2` y en la prueba de desempeño. |
 | **A3. Referente técnico y normativo** | Construí tabla verificada de **5 referentes legales y técnicos** (`Ley 1581/2012 + Decreto 1074/2015`, `Ley 23/1982`, `Decisión Andina 351/1993`, `WCAG 2.2 / ISO/IEC 25010:2023` y `Ley 1273/2009`), separando la normativa interna del proyecto (`GOB-01`–`GOB-04`) y explicando transmisión vs. transferencia de datos. | Cumple `C3` de `Rubricas_G3.md` al 100 % con fuentes oficiales verificadas el `2026-11-23` y evita confundir normas internas con leyes vigentes. |
 | **A4. Dimensionamiento de licencias e inventario** | Construí tabla de **8 componentes** con fórmulas parametrizadas para variantes `A`–`D`, inventario real de **6 dependencias** auditadas del código (`Dockerfile`, `docker-compose.yml`, `e2e/package.json`, `sesion.php`) con análisis copyleft (`MariaDB GPL v2`), alerta de CDN (`qrcodejs`) y decisión justificada de licencia propia. | Cumple `C4` de `Rubricas_G3.md` (`≥ 6` componentes, `≥ 5` dependencias con compatibilidad y licencia propia decidida con fundamento legal). |
+| **A2. Fichas técnicas diligenciadas** | Diligencié **`4` fichas técnicas** (`FT-SW-01`, `FT-SW-02`, `FT-INF-01`, `FT-HW-02`) usando los `15` campos de `A1`, con `6`–`7` características medibles (valor, unidad y método de verificación) cada una y **neutralidad de marcas**. | Cumple `C2` de `Rubricas_G3.md` (`2` software/servicio y `2` hardware/infraestructura trazadas a `RF`/`RNF` y Variante B provisional). |
+| **A5. Estimación de condiciones técnicas** | Documenté **`7` parámetros medibles** (`CAP-01`–`CAP-07`: usuarios, almacenamiento a 36 meses, ancho de banda, disponibilidad `99,5 %`, `p95 ≤ 2,0 s`, `RPO ≤ 24 h`, `RTO ≤ 2 h`) con fórmulas, supuestos y matriz `A`–`D`. | Cumple `C5` de `Rubricas_G3.md` en coherencia exacta con las fichas `A2` y el ANS de `G3-P2/B6`. |
+| **A6. Estimación preliminar económica** | Construí libro Excel con **fórmulas vivas** (`INDEX/MATCH`, `SUM`, `SUMIF`, `IF`) en `4` hojas (`11` módulos por horas = `390 h`, costos a `12` y `36` meses, Directo/Indirecto, Único/Recurrente, rango `±15 %` y verificación de tope) más resumen `.md`. | Cumple `C6` de `Rubricas_G3.md` y permite recálculo inmediato al confirmar la variante oficial en Día 3. |
 
 ---
 
 ## 4. Enlaces a los entregables (Producto 1)
 
 - [x] **A1.** Formato de ficha técnica (`15` campos, estándar base declarado): [01-formato-ficha-tecnica.md](01-formato-ficha-tecnica.md)
-- [ ] **A2.** Fichas técnicas diligenciadas (`4` fichas: `2` software/servicio y `2` hardware/infraestructura, `≥ 6` características medibles c/u): *Programado para Commit 2 (pendiente confirmación de variante)*
+- [x] **A2.** Fichas técnicas diligenciadas (`4` fichas: `2` software/servicio y `2` hardware/infraestructura, `6`–`7` características medibles c/u, sin marcas): [02-fichas-tecnicas.md](02-fichas-tecnicas.md)
 - [x] **A3.** Referente técnico (`5` referentes legales y técnicos verificados con enlace y fecha + separación de normativa interna): [03-referente-tecnico-normativo.md](03-referente-tecnico-normativo.md)
 - [x] **A4.** Dimensionamiento de licencias (`8` componentes parametrizados) e inventario real de dependencias (`6` dependencias verificadas) + decisión de licencia propia: [04-dimensionamiento-licencias.md](04-dimensionamiento-licencias.md)
-- [ ] **A5.** Estimación de condiciones técnicas (`≥ 5` parámetros derivados de la variante): *Programado para Día 2 / Commit 3*
-- [ ] **A6.** Estimación preliminar de condiciones económicas (hoja de cálculo `.xlsx` con fórmulas vivas a 12 y 36 meses): *Programado para Día 2 / Commit 3*
+- [x] **A5.** Estimación de condiciones técnicas (`7` parámetros medibles derivados de la variante con fórmulas y matriz `A`–`D`): [05-condiciones-tecnicas.md](05-condiciones-tecnicas.md)
+- [x] **A6.** Estimación preliminar de condiciones económicas (libro Excel con fórmulas vivas a 12 y 36 meses + guía): [06-estimacion-economica.xlsx](06-estimacion-economica.xlsx) · [06-estimacion-economica.md](06-estimacion-economica.md)
 
 ---
 
-## 5. Autoevaluación de mínimos (estado en avance — Día 1, Commit 2)
+## 5. Autoevaluación de mínimos (estado en avance — Día 2)
 
 | Mínimo | Mi conteo actual |
 | :--- | :--- |
 | `[P1]` Formato de ficha técnica (`≥ 12` campos + estándar base) | `15` campos (`ISO/IEC/IEEE 29148` + `ISO/IEC 25010:2023`) |
-| `[P1]` Fichas diligenciadas / características medibles por ficha | *Pendiente Día 2 (objetivo: `4` / `≥ 6`)* |
+| `[P1]` Fichas diligenciadas / características medibles por ficha | `4` fichas (`2` SW/servicio + `2` HW/infraestructura) / `6`–`7` características medibles c/u |
 | `[P1]` Referentes técnicos (`≥ 4`) / incluyen Ley 1581/2012, Ley 23/1982, Decisión Andina 351 y estándar | `5` / `sí` (incluye además `Ley 1273/2009`) |
 | `[P1]` Componentes de licencias / dependencias inventariadas | `8` / `6` *(incluye análisis copyleft y licencia propia)* |
-| `[P1]` Parámetros técnicos (`≥ 5`) / hoja económica con fórmulas vivas | *Pendiente Día 2 / Commit 3* |
+| `[P1]` Parámetros técnicos (`≥ 5`) / hoja económica con fórmulas vivas | `7` parámetros (`CAP-01`–`CAP-07`) / `sí` (`06-estimacion-economica.xlsx` con `INDEX/MATCH`, `SUM`, `SUMIF`, `IF` a `12` y `36` meses) |
 
 ---
 
@@ -65,8 +68,9 @@ Si algún artefacto no existe en mi fork (formato formal de ficha técnica `A1`,
 | Fecha | Qué hice ese día | Commits |
 | :--- | :--- | :--- |
 | `2026-11-23` (Día 1 — Commit 1) | Diseñé el formato propio de ficha técnica (`A1`), verifiqué fuentes oficiales para el referente técnico-normativo (`A3`) y creé el `README.md` inicial de `G3-P1`. | [`f79d3cb`](https://github.com/andressalinasvargas/ADSO-3413974/commit/f79d3cb) |
-| `2026-11-23` (Día 1 — Commit 2) | Audité las dependencias reales del código (`Dockerfile`, `docker-compose.yml`, `e2e/package.json`, `sesion.php`) y construí `04-dimensionamiento-licencias.md` (`A4`) con `8` componentes, `6` dependencias y licencia propia. | Commit 2 (`feat(g3-p1): agregar dimensionamiento de licencias e inventario de dependencias A4`) |
-| *Día 2 (programado)* | Diligenciar `4` fichas técnicas (`A2`), estimar parámetros de capacidad (`A5`) y construir hoja de cálculo con fórmulas vivas (`A6`) con la variante asignada por el instructor. | Commit 3 y Commit 4 (pendientes) |
+| `2026-11-23` (Día 1 — Commit 2) | Audité las dependencias reales del código (`Dockerfile`, `docker-compose.yml`, `e2e/package.json`, `sesion.php`) y construí `04-dimensionamiento-licencias.md` (`A4`) con `8` componentes, `6` dependencias y licencia propia. | [`6ff37af`](https://github.com/andressalinasvargas/ADSO-3413974/commit/6ff37af) |
+| `2026-11-24` (Día 2 — Commit 3) | Diligencié `4` fichas técnicas (`A2`), estimé `7` condiciones técnicas de capacidad y servicio (`A5`) y construí el libro económico con fórmulas vivas a 12 y 36 meses (`A6`) bajo escenario provisional Variante B. | Commit 3 (`feat(g3-p1): agregar fichas tecnicas A2, condiciones tecnicas A5 y hoja economica A6 con formulas`) |
+| *Día 3 (programado antes del `2026-12-05`)* | Fijar la variante definitiva asignada por el instructor en `1_Parametros_Variante!B3` (si difiere de B) y propagar eventuales ajustes posteriores a la validación `B5` de `G3-P2`. | Commit 4 (pendiente confirmación variante / `B5`) |
 
 ---
 
@@ -87,7 +91,7 @@ Si algún artefacto no existe en mi fork (formato formal de ficha técnica `A1`,
 
 | Herramienta | Para qué la usé | Qué parte del producto | Cómo verifiqué el resultado |
 | :--- | :--- | :--- | :--- |
-| Antigravity (asistente IA) | Apoyo en estructuración de la plantilla de 15 campos (`A1`), organización de la tabla comparativa normativa (`A3`) y búsqueda de enlaces oficiales estatales. | `01-formato-ficha-tecnica.md`, `03-referente-tecnico-normativo.md` y borrador `README.md`. | Verifiqué cada URL oficial de Función Pública, SUIN-Juriscol, WIPO Lex y W3C en fuentes oficiales el `2026-11-23`, comprobé que la normativa interna del proyecto quedara separada de la normatividad legal y validé que cada fila cumpla `Rubricas_G3.md`. |
+| Antigravity (asistente IA) | Apoyo en estructuración de la plantilla de 15 campos (`A1`), fichas técnicas (`A2`), organización normativa (`A3`), parámetros técnicos (`A5`) y generación del libro `.xlsx` (`A6`). | `01-formato-ficha-tecnica.md`, `02-fichas-tecnicas.md`, `03-referente-tecnico-normativo.md`, `05-condiciones-tecnicas.md`, `06-estimacion-economica.*` y `README.md`. | Verifiqué cada URL oficial el `2026-11-23`, comprobé neutralidad de marcas en `A2`, validé las fórmulas `INDEX/MATCH`/`SUM`/`SUMIF`/`IF` en `06-estimacion-economica.xlsx` y confirmé coherencia numérica con `G3-P2/B2`. |
 
 ---
 
@@ -97,4 +101,4 @@ Declaro que este producto es de mi autoría, que lo elaboré reutilizando y ajus
 
 Declaro además que no incluí datos personales reales ni documentos reales de terceros en este repositorio público.
 
-Usuario de GitHub: `@andressalinasvargas` · Fecha: `2026-11-23`
+Usuario de GitHub: `@andressalinasvargas` · Fecha: `2026-11-24`
