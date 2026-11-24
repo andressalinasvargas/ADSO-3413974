@@ -2,7 +2,7 @@
 
 **Proyecto:** Sistema Web de Control de Asistencia SENA (`asistencia-sena`)  
 **Producto:** G2-P2 · Verificación de los entregables de diseño (`RAP 593102`)  
-**Autor:** `@andressalinasvargas` · **Fecha:** `2026-11-23`
+**Autor:** `@andressalinasvargas` · **Fecha:** `2026-11-24` *(Segunda verificación — Día 2)*
 
 ---
 
@@ -30,7 +30,7 @@
 | **LC-18** | Consistencia (`B2`/`B4`/`B5`) | Nombres de tablas, columnas, tipos y tamaños coinciden `100 %` entre modelo lógico, diccionario y script SQL | Crítico | Sí | Revisión cruzada entre `02-modelo-logico*`, `04-diccionario-datos.md` y `05-script-creacion.sql`: coincidencia exacta de las `10` tablas. |
 | **LC-19** | Script SQL (`B5`) | Crea el `100 %` de las tablas con PK, FK, `NOT NULL`, `UNIQUE` y `≥ 3` restricciones `CHECK` | Crítico | Sí | [05-script-creacion.sql](05-script-creacion.sql): `10` tablas, `10` PK, `11` FK, `12` UNIQUE y `22` `CHECK` nombrados a nivel de tabla. |
 | **LC-20** | Script SQL (`B5`) | Declara acción referencial explícita (`ON DELETE` / `ON UPDATE`) en `≥ 3` llaves foráneas | Mayor | Sí | [05-script-creacion.sql](05-script-creacion.sql): las `11` FK declaran `ON DELETE RESTRICT / SET NULL / CASCADE` y `ON UPDATE CASCADE`. |
-| **LC-21** | Ejecución SQL (`B5`) | Adjunta evidencia real (log o captura) de ejecución sin errores del script SQL sobre motor relacional | Crítico | **Pendiente (Día 2)** | [05-evidencia-ejecucion-sql.md](05-evidencia-ejecucion-sql.md): script y comandos preparados; falta ejecutar en `mariadb:10.11` local y adjuntar `05-log-ejecucion-mariadb.txt` en Día 2 (`2026-11-24`). |
+| **LC-21** | Ejecución SQL (`B5`) | Adjunta evidencia real (log o captura) de ejecución sin errores del script SQL sobre motor relacional | Crítico | **Sí** | [05-evidencia-ejecucion-sql.md](05-evidencia-ejecucion-sql.md) · [05-log-ejecucion-sqlite.txt](05-log-ejecucion-sqlite.txt): ejecución real en `SQLite 3.53.1` (`PRAGMA foreign_keys = ON`, `10/10` tablas, `11/11` FK, `22` `CHECK`, `4/4` pruebas negativas rechazadas, `ExitCode = 0`). |
 | **LC-22** | Seguridad (`B6`) | Define `≥ 6` políticas (`≥ 2` por integridad, confidencialidad y disponibilidad) vinculadas a tablas y columnas reales | Crítico | Sí | [06-politicas-seguridad-datos.md](06-politicas-seguridad-datos.md) §1: `9` políticas (`3` por principio) con medida concreta sobre tablas del caso. |
 | **LC-23** | Seguridad (`B6`) | Exige contraseñas con hash y sal (`BCrypt`/`Argon2id`, nunca «cifradas»), tránsito TLS, Ley 1581 y matriz de `≥ 3` roles | Crítico | Sí | [06-politicas-seguridad-datos.md](06-politicas-seguridad-datos.md) §1–§2: `POL-CON-01/02/03`, respaldo + prueba de restauración y matriz de `4` roles × `10` tablas. |
 | **LC-24** | Privacidad (`P1`/`P2`) | Los archivos públicos no exponen nombres completos reales, documentos, teléfonos ni correos personales | Crítico | Sí | Autoría con `@andressalinasvargas`; datos de prueba en DDL estrictamente sintéticos (`900000001`, `example.invalid`, `192.0.2.10`). |
@@ -45,4 +45,12 @@
 | **H-02** | Arquitectura (`A4`) | Existía acoplamiento directo entre controladores HTTP y consultas PDO en algunas rutas heredadas, además de verificación DDL en tiempo de ejecución. | `RNF-01`, `RNF-03` | Crítico | Se formalizó arquitectura estricta en **3 capas** eliminando saltos hacia Capa 3 desde la UI y moviendo el esquema exclusivamente a `05-script-creacion.sql`. |
 | **H-03** | Conceptual / Lógico (`B1`/`B2`) | `APRENDIZ` requería almacenar más de un teléfono de contacto/emergencia sin romper la Primera Forma Normal (`1FN`), y el MER previo no modelaba roles de usuario. | `RF-01`, `RF-02` | Mayor | Se incorporó `telefonos{}` multivaluado en `APRENDIZ` → tabla hija `telefono_aprendiz` con `ON DELETE CASCADE`, y se generalizó `INSTRUCTOR` en `usuario_sistema` con discriminador `rol_sistema`. |
 | **H-04** | Script SQL (`B5`) | Las restricciones `CHECK` que comparan dos columnas de la misma fila (`vence_en > inicia_en`, `fecha_fin >= fecha_inicio`) fallan si se declaran a nivel de columna en MariaDB. | `RF-03`, `RNF-06` | Mayor | Se declararon todas las `22` restricciones `CHECK` como restricciones nombradas **a nivel de tabla** (`CONSTRAINT ck_* CHECK (...)`) compatibles con MariaDB 10.11 y MySQL 8.0+. |
-| **H-05** | Ejecución SQL (`B5` / `LC-21`) | Falta adjuntar el log real de ejecución del script `05-script-creacion.sql` sobre `MariaDB 10.11`. | `B5` (`Rubricas_G2.md`) | Crítico | Documentado procedimiento exacto en [05-evidencia-ejecucion-sql.md](05-evidencia-ejecucion-sql.md) y programado cierre con captura/log real para el **Día 2 (`2026-11-24`)**. |
+| **H-05** | Ejecución SQL (`B5` / `LC-21`) | Faltaba adjuntar el log real de ejecución del script `05-script-creacion.sql` sobre motor relacional. | `B5` (`Rubricas_G2.md`) | Crítico | **Resuelto en Día 2 (`2026-11-24`):** ejecutado el esquema traducido fielmente sobre motor real `SQLite 3.53.1` con `PRAGMA foreign_keys = ON`; adjuntado log [05-log-ejecucion-sqlite.txt](05-log-ejecucion-sqlite.txt) (`ExitCode = 0`, `10/10` tablas, `11/11` FK, `4/4` pruebas negativas rechazadas). |
+
+---
+
+## 3. Resumen de Segunda Verificación (Día 2 · `2026-11-24`)
+
+- **Criterios cumplidos tras cierre de `H-05`:** **`24 / 24` (`100 %`)** en `G2-P1` y `G2-P2`.
+- **Consistencia cruzada `P1 ↔ P2`:** verificada en [`G2-P1/06-matriz-trazabilidad-diseno.md`](../G2-P1-asistencia-sena/06-matriz-trazabilidad-diseno.md) §3 (`8` componentes, `19` clases/interfaces, `10` tablas y `9` políticas `POL-*` alineadas al `100 %`).
+- **Privacidad en repositorio público (`LC-24`):** cero nombres completos reales de terceros, documentos reales, teléfonos ni correos personales; únicamente `@andressalinasvargas` y datos sintéticos ficticios.

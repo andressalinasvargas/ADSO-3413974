@@ -1,0 +1,45 @@
+============================================================================
+B5 · Evidencia Real de Ejecución SQL sobre Motor Relacional (SQLite 3)
+Fecha y hora: 2026-11-24 10:33:36
+Motor ejecutado: SQLite 3.53.1 (PRAGMA foreign_keys = ON)
+Archivo fuente evaluado: 05-script-creacion.sql
+============================================================================
+
+1. AUDITORIA ESTRUCTURAL DEL SCRIPT FUENTE (05-script-creacion.sql)
+   - CREATE TABLE  : 10
+   - PRIMARY KEY   : 10
+   - FOREIGN KEY   : 11
+   - ON DELETE     : 11
+   - ON UPDATE     : 11
+   - UNIQUE        : 12
+   - CHECK         : 22
+   - INSERT INTO   : 10
+
+2. EJECUCION COMPLETA DDL + CARGA SINTETICA (PRAGMA foreign_keys = 1)
+   -> DDL ejecutado sin errores de sintaxis ni de integridad referencial (ExitCode = 0).
+   -> Restricciones activas en esquema traducido: PK=10, FK=11, UNIQUE=12, CHECK=22.
+
+3. VERIFICACION DE TABLAS CREADAS Y FILAS SINTETICAS (10 tablas)
+   - aprendiz                     | filas = 1 | FKs activas = 1
+   - asignacion_instructor_ficha  | filas = 1 | FKs activas = 2
+   - ficha                        | filas = 1 | FKs activas = 2
+   - novedad_contingencia         | filas = 1 | FKs activas = 1
+   - programa_formacion           | filas = 1 | FKs activas = 0
+   - registro_asistencia          | filas = 1 | FKs activas = 2
+   - sede                         | filas = 1 | FKs activas = 0
+   - sesion_asistencia            | filas = 1 | FKs activas = 2
+   - telefono_aprendiz            | filas = 1 | FKs activas = 1
+   - usuario_sistema              | filas = 1 | FKs activas = 0
+   Total de tablas creadas: 10 | Total de llaves foráneas verificadas: 11
+
+4. PRUEBAS NEGATIVAS DE RECHAZO DE RESTRICCIONES (Integridad / CHECK / UNIQUE / FK)
+   [OK RECHAZADA] Prueba 1 [CHECK ck_sesion_fechas]: vence_en <= inicia_en
+                  Motor respondió IntegrityError: CHECK constraint failed: ck_sesion_fechas
+   [OK RECHAZADA] Prueba 2 [UNIQUE uk_reg_aprendiz_sesion]: registro duplicado mismo aprendiz y sesion
+                  Motor respondió IntegrityError: UNIQUE constraint failed: registro_asistencia.id_aprendiz, registro_asistencia.id_sesion
+   [OK RECHAZADA] Prueba 3 [FK ON DELETE RESTRICT]: borrar programa_formacion referenciado por ficha
+                  Motor respondió IntegrityError: FOREIGN KEY constraint failed
+   [OK RECHAZADA] Prueba 4 [CHECK ck_reg_canal]: canal_registro fuera de dominio permitido
+                  Motor respondió IntegrityError: CHECK constraint failed: ck_reg_canal
+
+5. RESULTADO FINAL: 10/10 tablas | 11/11 FKs | 4/4 pruebas negativas rechazadas | ExitCode: 0
