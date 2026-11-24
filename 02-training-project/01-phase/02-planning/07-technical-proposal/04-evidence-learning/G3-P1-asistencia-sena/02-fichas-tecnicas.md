@@ -16,8 +16,8 @@
 | **1** | **Código de ficha** | `FT-SW-01` |
 | **2** | **Nombre del componente o servicio** | Aplicación Web de Control de Asistencia Institucional (`asistencia-sena`) — Software propio |
 | **3** | **Categoría** | `Software propio` |
-| **4** | **Versión, fecha y variante** | Versión `1.0` · `2026-11-24` · Variante `B` *(provisional)* |
-| **5** | **Descripción técnica y función** | Aplicación web de 3 capas en PHP 8.3 (POO con patrones GoF Estrategia y Fachada) y SQL/PDO sobre MariaDB 10.11 para apertura/cierre de sesiones de clase, autorregistro móvil por QR rotativo o código numérico de 6 dígitos con geocerca Haversine y consentimiento Ley 1581, registro por escáner QR 2D, contingencia manual con novedades, cálculo automático de tardanzas y reportes CSV. |
+| **4** | **Versión, fecha y variante** | Versión `1.1` *(propagada tras validación `B5`)* · `2026-11-24` · Variante `B` *(provisional)* |
+| **5** | **Descripción técnica y función** | Aplicación web de 3 capas en PHP 8.3 (POO con patrones GoF Estrategia y Fachada) y SQL/PDO sobre MariaDB 10.11 para apertura/cierre de sesiones de clase, autorregistro móvil por QR rotativo o código numérico de 6 dígitos con geocerca Haversine y consentimiento Ley 1581, registro por escáner QR 2D, contingencia manual con novedades, cálculo automático de tardanzas con tolerancia configurable por ficha (`5–30 min`, defecto `15 min`, ajuste `AJ-02`) y reportes CSV. |
 | **6** | **Ubicación en arquitectura y trazabilidad** | Contenedor `sena-asistencias-web` en nodo `[N4]` Servidor Aplicación (`03-diagrama-arquitectura-despliegue-g3.svg`); soporta `RF-01` a `RF-12` y `RNF-01` a `RNF-06`. |
 | **7** | **Cantidad y unidad de medida** | `1` sistema licenciado integral (`1` instancia desplegable en `1` contenedor web para Variantes A–C; `2` instancias detrás de balanceador en Variante D). |
 | **8** | **Características técnicas medibles** | Ver subtabla `FT-SW-01` (`7` características medibles a continuación). |
@@ -25,15 +25,15 @@
 | **10** | **Compatibilidad e interoperabilidad** | Protocolo `HTTP/HTTPS` (`TLS 1.2/1.3`), PHP `8.3+`, conector `PDO_MySQL` compatible con MariaDB `10.11+`, HTML5 `Geolocation API` y `BarcodeDetector`, exportación estándar `CSV UTF-8`, navegadores modernos (`Chrome`, `Edge`, `Firefox`, `Safari` móvil `≥ 390 px`). |
 | **11** | **Requisitos de seguridad y privacidad** | Contraseñas con hash y sal única (`BCrypt`/`Argon2id`), cookies de sesión `HttpOnly` + `SameSite=Lax`, protección CSRF en formularios de estado, sentencias preparadas PDO nativas, consentimiento explícito `consentimiento_datos = 1` obligatorio antes de capturar ubicación y bloqueo `.htaccess` (`HTTP 403`) sobre archivos sensibles. |
 | **12** | **Condiciones de licenciamiento** | Licencia Propietaria / Privativa con cesión escrita de derechos patrimoniales al contratante y reserva de derechos morales (`04-dimensionamiento-licencias.md` §3); dependencias OSS inventariadas (`PHP 3.01`, `Apache 2.0`, `MIT` auto-alojando `qrcode.min.js`). |
-| **13** | **Garantía, soporte y ANS** | Garantía de corrección de defectos de código de `6` meses sin costo; soporte operativo contratado a `12` meses; disponibilidad objetivo `≥ 99,5 %` mensual (`ANS-01`), latencia `p95 ≤ 2,0 s` (`ANS-02`), respuesta `P1 ≤ 30 min` y `RTO ≤ 2 h` (`ANS-04`). |
-| **14** | **Condiciones de entrega, instalación y mantenimiento** | Empaquetado reproducible en contenedor Docker (`Dockerfile` + `docker-compose.yml`), script DDL 3FN (`05-script-creacion.sql`), suite E2E automatizada aprobada (`100 %`), manuales técnicos/usuario y capacitación de `8 h` por sede (`2` sedes = `16 h`). |
+| **13** | **Garantía, soporte y ANS** | Garantía de corrección de defectos de código de `6` meses sin costo; soporte operativo contratado a `12` meses; disponibilidad objetivo `≥ 99,5 %` mensual (`ANS-01`), latencia `p95 ≤ 1,5 s` (`ANS-02` `v1.1` ajustado desde `2,0 s` en `B5`), respuesta `P1 ≤ 30 min` y `RTO ≤ 2 h` (`ANS-04`). |
+| **14** | **Condiciones de entrega, instalación y mantenimiento** | Empaquetado reproducible en contenedor Docker (`Dockerfile` + `docker-compose.yml`), script DDL 3FN (`05-script-creacion.sql`), suite E2E automatizada aprobada (`100 %`), manuales técnicos/usuario, `3` videocápsulas breves (`≤ 5 min`, `SUG-04`) y capacitación de `8 h` por sede (`2` sedes = `16 h`). |
 | **15** | **Observaciones, supuestos y exclusiones** | No exige instalación de aplicación nativa en teléfonos de aprendices (`TdR-01`). Excluye dispositivos finales (`[N1]`/`[N2]`) y requiere dominio `HTTPS 443` para habilitar cámara y geolocalización en navegadores. |
 
 #### Subtabla de Características Medibles — `FT-SW-01`
 
 | # | Característica técnica | Valor objetivo | Unidad | Método de verificación |
 | :- | :--- | :--- | :--- | :--- |
-| 1 | Tiempo de respuesta `p95` en registro de asistencia (`30` usuarios concurrentes) | `≤ 2,0` | segundos | Prueba de carga HTTP simulando `30` peticiones simultáneas sobre `registro.php` y `registrar_asistencia.php` |
+| 1 | Tiempo de respuesta `p95` en registro de asistencia (`30` usuarios concurrentes, `v1.1` `AJ-02`) | `≤ 1,5` *(antes `≤ 2,0`)* | segundos | Prueba de carga HTTP simulando `30` peticiones simultáneas sobre `registro.php` y `registrar_asistencia.php` con `PHP OPcache` y tuning `InnoDB` |
 | 2 | Capacidad de usuarios y sedes soportadas (Variante B) | `≥ 120` usuarios / `2` | usuarios / sedes | Prueba funcional con carga de `120` registros de aprendices distribuidos en `2` sedes |
 | 3 | Precisión máxima admitida de geocerca GPS (`Geolocation API`) | `≤ 100` (radio `300`) | metros | Prueba E2E verificando rechazo de registros con `precision > 100 m` o fuera del radio Haversine |
 | 4 | Tiempo de detección de duplicados por aprendiz y sesión (`SQLSTATE 23000`) | `100 %` rechazo (`1` fila) | % integridad | Prueba de doble envío concurrente contra restricción `uk_reg_aprendiz_sesion` en MariaDB |
@@ -50,8 +50,8 @@
 | **1** | **Código de ficha** | `FT-SW-02` |
 | **2** | **Nombre del componente o servicio** | Servicio de Servidor Privado Virtual (VPS) Linux, Almacenamiento Externo S3 y Monitoreo HTTP |
 | **3** | **Categoría** | `Servicio de software o nube` |
-| **4** | **Versión, fecha y variante** | Versión `1.0` · `2026-11-24` · Variante `B` *(provisional)* |
-| **5** | **Descripción técnica y función** | Servicio IaaS en la nube que aloja el proxy inverso TLS (`[N3]`), el servidor de aplicaciones Docker (`[N4]`) y la base de datos MariaDB (`[N5]`), complementado con almacenamiento de objetos compatible S3 (`[N6]`) para copias diarias cifradas fuera del servidor y servicio externo de monitoreo HTTP (`[N7]`). |
+| **4** | **Versión, fecha y variante** | Versión `1.1` *(propagada tras validación `B5`)* · `2026-11-24` · Variante `B` *(provisional)* |
+| **5** | **Descripción técnica y función** | Servicio IaaS en la nube que aloja el proxy inverso TLS (`[N3]`), el servidor de aplicaciones Docker (`[N4]`) y la base de datos MariaDB (`[N5]`), complementado con almacenamiento de objetos compatible S3 (`[N6]`) para `2` copias diarias cifradas (`02:00` y `14:00`) fuera del servidor y servicio externo de monitoreo HTTP (`[N7]`). |
 | **6** | **Ubicación en arquitectura y trazabilidad** | Nodos `[N3]`, `[N4]`, `[N5]`, `[N6]` y `[N7]` de `03-diagrama-arquitectura-despliegue-g3.svg`; soporta `RNF-01`, `RNF-03`, `RNF-05` y `RNF-06`. |
 | **7** | **Cantidad y unidad de medida** | `1` instancia VPS Linux (`N_srv = 1` en Variantes A–C; `2` en D) + `1` bucket S3 (`≥ 250 GB`) + `1` dominio DNS + `1` monitor HTTP, contratados por `12` meses (`36` meses en flujo TCO). |
 | **8** | **Características técnicas medibles** | Ver subtabla `FT-SW-02` (`6` características medibles a continuación). |
@@ -59,8 +59,8 @@
 | **10** | **Compatibilidad e interoperabilidad** | Sistema operativo Linux (`Ubuntu 24.04 LTS` o equivalente `x86_64`), Docker Engine CE + Compose v2, API S3 estándar (`HTTPS 443`), protocolo `ACME` para Let's Encrypt, salida SMTP/HTTPS para alertas de monitoreo. |
 | **11** | **Requisitos de seguridad y privacidad** | Firewall perimetral permitiendo únicamente puertos `443/tcp` (`HTTPS`), `80/tcp` (redirección ACME) y `SSH` restringido por llave pública; puerto `3306` cerrado a Internet; cifrado en reposo `AES-256` en almacenamiento S3 de respaldos; prohibición de transferencia comercial de datos. |
 | **12** | **Condiciones de licenciamiento** | Suscripción mensual de infraestructura en nube sin licenciamiento propietario por usuario final; el sistema operativo y Docker CE sobre Linux operan bajo licencias libres (`04-dimensionamiento-licencias.md`). |
-| **13** | **Garantía, soporte y ANS** | SLA de infraestructura del proveedor `≥ 99,9 %`; disponibilidad global del servicio web `≥ 99,5 %` mensual (`ANS-01`), `RPO ≤ 24 h` (`ANS-03`) y `RTO ≤ 2 h` (`ANS-04`). |
-| **14** | **Condiciones de entrega, instalación y mantenimiento** | Aprovisionamiento en región América (latencia `≤ 90 ms` a Colombia), configuración automatizada de cron `mysqldump` a las `02:00 a. m.` hacia S3, verificación diaria de checksums SHA-256 y prueba mensual de restauración. |
+| **13** | **Garantía, soporte y ANS** | SLA de infraestructura del proveedor `≥ 99,9 %`; disponibilidad global del servicio web `≥ 99,5 %` mensual (`ANS-01`), `RPO ≤ 12 h` (`ANS-03` `v1.1` ajustado desde `24 h` en `B5`) y `RTO ≤ 2 h` (`ANS-04`). |
+| **14** | **Condiciones de entrega, instalación y mantenimiento** | Aprovisionamiento en región América (latencia `≤ 90 ms` a Colombia), configuración automatizada de cron `mysqldump` a las `02:00 a. m.` y `02:00 p. m.` (`14:00`) hacia S3 (`60` snapshots en `30` días, `AJ-01`), verificación diaria de checksums SHA-256 y prueba mensual de restauración. |
 | **15** | **Observaciones, supuestos y exclusiones** | Precios de proveedores comparados en `G3-P2/B1` convertidos con TRM `$4.000/USD` sin IVA. Si la variante pasa a `D` (`99,9 %`), `N_srv` escala a `2` instancias activas. |
 
 #### Subtabla de Características Medibles — `FT-SW-02`
@@ -69,9 +69,9 @@
 | :- | :--- | :--- | :--- | :--- |
 | 1 | Disponibilidad mensual garantizada del servicio web (`ANS-01`) | `≥ 99,5` | % mensual | Reporte mensual del monitor HTTP externo `[N7]` con sondeo cada `60 s` |
 | 2 | Latencia de red promedio desde Colombia hacia región del VPS | `≤ 90` | milisegundos (`ms`) | Medición `ping` / `curl -w %{time_connect}` desde estación en Colombia |
-| 3 | Capacidad mínima del almacenamiento externo de respaldos S3 (`[N6]`) | `≥ 50` (base `250`) | GB | Consola/CLI de almacenamiento S3 y validación de retención `30` días diarios |
+| 3 | Capacidad mínima del almacenamiento externo de respaldos S3 (`[N6]`) | `≥ 50` (base `250`) | GB | Consola/CLI de almacenamiento S3 y validación de retención `30` días (`60` snapshots) |
 | 4 | Transferencia mensual de datos incluida sin cobro adicional | `≥ 2.000` | GB/mes (`2 TB`) | Especificación pública de plan contratado y panel de consumo de red |
-| 5 | Objetivo de Punto de Recuperación (`RPO`, `ANS-03`) | `≤ 24` | horas | Auditoría de ejecución diaria de respaldo cifrado `AES-256` en `[N6]` |
+| 5 | Objetivo de Punto de Recuperación (`RPO`, `ANS-03`, `v1.1` `AJ-01`) | `≤ 12` *(antes `≤ 24`)* | horas | Auditoría de doble ejecución diaria cifrada `AES-256` (`02:00` y `14:00`) en `[N6]` |
 | 6 | Objetivo de Tiempo de Recuperación (`RTO`, `ANS-04`) | `≤ 2` | horas | Acta mensual de simulacro de restauración completa desde bucket S3 |
 
 ---
