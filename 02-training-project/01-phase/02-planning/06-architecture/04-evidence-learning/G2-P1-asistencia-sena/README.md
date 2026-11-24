@@ -34,7 +34,7 @@
 | **A4.** Arquitectura del software | [03-arquitectura-software.md](03-arquitectura-software.md) · [`.drawio`](03-arquitectura-software.drawio) · [`.svg`](03-arquitectura-software.svg) | Nuevo | Definí estilo estricto en **3 capas** sin saltos de capa, protocolos entre capas y tabla de decisiones para `RNF-01` a `RNF-06` con alternativas descartadas. |
 | **A5.** Vista de componentes | [04-vista-componentes.md](04-vista-componentes.md) · [`.drawio`](04-vista-componentes.drawio) · [`.svg`](04-vista-componentes.svg) | Nuevo | Modelé **8 componentes** con interfaces provistas y requeridas nombradas, dependencias descendentes y mapeo de las 19 clases/interfaces hacia requisitos. |
 | **A6.** Vista de despliegue | [05-vista-despliegue.md](05-vista-despliegue.md) · [`.drawio`](05-vista-despliegue.drawio) · [`.svg`](05-vista-despliegue.svg) | Nuevo | Modelé **4 nodos** (`Cliente Escritorio`, `Cliente Móvil`, `Servidor Aplicación Apache/PHP Docker`, `Servidor Datos MariaDB Docker`) con protocolos (`HTTPS 443`, `TCP 3306` privado) y decisiones frente a RNF. |
-| **A7.** Matriz de trazabilidad análisis → diseño | [06-matriz-trazabilidad-diseno.md](06-matriz-trazabilidad-diseno.md) | [`G1-P2/09-matriz-trazabilidad.md`](../../../../01-analysis/03-conceptual-model/04-evidence-learning/G1-P2-asistencia-sena/09-matriz-trazabilidad.md) | Extendí la trazabilidad hacia clases (`A2`), tablas (`G2-P2`), componentes (`A5`) y decisiones (`A3`/`A4`/`A6`) al 100 %, más verificación inversa de las 19 clases. |
+| **A7.** Matriz de trazabilidad análisis → diseño | [06-matriz-trazabilidad-diseno.md](06-matriz-trazabilidad-diseno.md) | [`G1-P2/09-matriz-trazabilidad.md`](../../../../01-analysis/03-conceptual-model/04-evidence-learning/G1-P2-asistencia-sena/09-matriz-trazabilidad.md) | Extendí la trazabilidad hacia clases (`A2`), tablas (`G2-P2`), componentes (`A5`) y decisiones (`A3`/`A4`/`A6`) al 100 %, más verificación inversa de las 19 clases y auditoría cruzada `P1 ↔ P2` contra políticas `POL-*` (`2026-11-24`). |
 
 **Qué reutilicé (resumen):**
 Partí del SRS consolidado (`G1-P1`), del informe de análisis y modelo de dominio (`G1-P2`) y del boceto original de 3 clases de la semana 16 (`Diagramas_UML_Asistencia_SENA.drawio`), conservando las reglas reales del llamado a lista en SENA (QR rotativo, código numérico de 6 dígitos, geocerca, contingencia y Ley 1581).
@@ -64,8 +64,8 @@ Diseñé desde cero la aplicación de los patrones GoF **Estrategia** y **Fachad
 
 | Día | Qué avancé (mensaje del commit) |
 | :--- | :--- |
-| `2026-11-23` (Día 1) | `feat(g2-p1): agregar ficha, diagrama de clases con GoF, arquitectura, componentes, despliegue y trazabilidad` |
-| `2026-11-24` (Día 2 — programado) | Revisión cruzada contra `G2-P2` (`LC-01` a `LC-24`) y registro de ajustes finales previos a la entrega del sábado 28 de noviembre |
+| `2026-11-23` (Día 1) | [`0edb683`](https://github.com/andressalinasvargas/ADSO-3413974/commit/0edb683) — `feat(g2-p1): agregar ficha, diagrama de clases con GoF, arquitectura, componentes, despliegue y trazabilidad` |
+| `2026-11-24` (Día 2) | `docs(g2-p1): completar trazabilidad cruzada P1-P2 y cierre Dia 2` — Revisión cruzada `8` componentes / `19` clases contra `10` tablas y `9` políticas `POL-*` de `G2-P2` ([06-matriz-trazabilidad-diseno.md](06-matriz-trazabilidad-diseno.md) §3), verificando `24/24` criterios cumplidos |
 
 ---
 
@@ -89,4 +89,4 @@ Diseñé desde cero la aplicación de los patrones GoF **Estrategia** y **Fachad
 
 Declaro que los artefactos de esta carpeta son de mi autoría, que lo que reutilicé de mi trabajo del año o de otras fuentes está indicado en la sección 3, que no entregué como propio material del instructor ni de otros aprendices, y que puedo explicar cada artefacto en la verificación oral.
 
-Usuario de GitHub: `@andressalinasvargas`  Fecha: `2026-11-23`
+Usuario de GitHub: `@andressalinasvargas`  Fecha: `2026-11-24`

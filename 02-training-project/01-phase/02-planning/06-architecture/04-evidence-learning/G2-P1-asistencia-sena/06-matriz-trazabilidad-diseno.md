@@ -2,7 +2,7 @@
 
 **Proyecto:** Sistema Web de Control de Asistencia SENA (`asistencia-sena`)  
 **Producto:** G2-P1 · Artefactos de diseño (`RAP 593103`)  
-**Autor:** `@andressalinasvargas` · **Fecha:** `2026-11-23`  
+**Autor:** `@andressalinasvargas` · **Fecha:** `2026-11-24` *(Actualizada con trazabilidad cruzada P1 ↔ P2 en Día 2)*  
 **Cobertura verificada:** **12 / 12 RF (100 %)** · **6 / 6 RNF (100 %)** · **19 / 19 Clases/Interfaces trazadas (0 huérfanas)**.
 
 ---
@@ -57,3 +57,22 @@ Verificación de que **ninguna de las 19 clases o interfaces** de `A2` carece de
 | 17 | `IRepositorioAsistencia` (`<<interface>>`) | `ModuloPersistenciaPDO` | `RF-01`–`RF-12`, `RNF-01`, `RNF-03`, `RNF-06` | ✅ Trazada |
 | 18 | `ServicioReportes` | `ModuloReportesAuditoria` | `RF-12`, `RNF-03`, `RNF-06` | ✅ Trazada |
 | 19 | `FachadaControlAsistencia` | `ModuloControlAsistencia` | `RF-03`, `RF-04`, `RF-05`, `RF-07`, `RF-08`, `RF-09`, `RF-10`, `RF-11`, `RNF-01`, `RNF-05` | ✅ Trazada |
+
+---
+
+## 3. Trazabilidad Cruzada `P1 ↔ P2` (Verificación Día 2 · `2026-11-24`)
+
+Comprobación bidireccional entre los **8 componentes** / **19 clases e interfaces** de `G2-P1` y las **10 tablas relacionales** + **9 políticas de seguridad (`POL-*`)** definidas en `G2-P2`:
+
+| Componente (`A5`) | Clases / Interfaces asociadas (`A2`/`A3`) | Tabla(s) en `G2-P2` (`B2`/`B4`/`B5`) | Políticas de seguridad aplicadas (`G2-P2/B6`) | Verificación cruzada |
+| :--- | :--- | :--- | :--- | :---: |
+| **`WebAppInstructor`** | Controladores UI desktop (consumen `IAutenticacion`, `IGestionAcademica`, `IFachadaAsistencia`, `IReportesAuditoria`) | Indirecto vía lógica; sin acceso directo SQL a tablas | `POL-CON-02` (TLS 1.3, cookies `HttpOnly`), `POL-DIS-03` | ✅ Consistente |
+| **`WebAppMovilAprendiz`** | Vistas móviles HTML5 + Geolocation API (consumen `IFachadaAsistencia`) | Indirecto vía `FachadaControlAsistencia` | `POL-CON-02`, `POL-CON-03` (Ley 1581 y consentimiento previo), `POL-DIS-03` | ✅ Consistente |
+| **`ModuloAutenticacion`** | `Persona` (`{abstract}`), `UsuarioSistema` | `usuario_sistema` | `POL-CON-01` (hash+sal `BCrypt`/`Argon2id`), `POL-INT-02` (borrado lógico `activo`), `POL-CON-02` | ✅ Consistente |
+| **`ModuloGestionAcademica`** | `ProgramaFormacion`, `SedeFormacion`, `FichaFormacion`, `Aprendiz`, `AsignacionInstructor` | `programa_formacion`, `sede`, `ficha`, `aprendiz`, `telefono_aprendiz`, `asignacion_instructor_ficha` | `POL-INT-01` (`FK` y `CHECK` geocerca), `POL-INT-02` (borrado lógico), `POL-CON-03` | ✅ Consistente |
+| **`ModuloControlAsistencia`** | `FachadaControlAsistencia`, `SesionAsistencia`, `RegistroAsistencia`, `NovedadContingencia`, `IEstrategiaRegistro`, `EstrategiaMovilQr`, `EstrategiaEscanerQr`, `EstrategiaManualContingencia`, `CalculadorTardanza` | `sesion_asistencia`, `registro_asistencia`, `novedad_contingencia` | `POL-INT-01` (`CHECK` fechas/canal/tardanza, `ON DELETE CASCADE` solo en `novedad_contingencia`), `POL-INT-02` (`uk_reg_aprendiz_sesion`), `POL-INT-03`, `POL-DIS-03` | ✅ Consistente |
+| **`ModuloValidacionGeoRed`** | `ValidadorGeocerca` | `sede`, `registro_asistencia` | `POL-INT-01` (`ck_sede_lat`, `ck_sede_lng`, `ck_reg_precision`), `POL-INT-03` (`ip_origen`, `estado_red`), `POL-CON-03` | ✅ Consistente |
+| **`ModuloReportesAuditoria`** | `ServicioReportes` | Lectura sobre `programa_formacion`, `sede`, `ficha`, `aprendiz`, `sesion_asistencia`, `registro_asistencia`, `novedad_contingencia` | `POL-INT-03` (registros históricos inmutables), `POL-CON-01` (nunca expone `password_hash`), Matriz 4 roles (`Coordinador`) | ✅ Consistente |
+| **`ModuloPersistenciaPDO`** | `IRepositorioAsistencia` | Las `10` tablas en `05-script-creacion.sql` (`InnoDB`) | `POL-INT-01`, `POL-CON-02` (PDO nativo `ATTR_EMULATE_PREPARES => false`), `POL-DIS-01`, `POL-DIS-02` (respaldos `mysqldump` y prueba mensual) | ✅ Consistente |
+
+**Resultado de auditoría Día 2 (`2026-11-24`):** `8/8` componentes, `19/19` clases/interfaces, `10/10` tablas y `9/9` políticas de seguridad (`POL-INT-*`, `POL-CON-*`, `POL-DIS-*`) trazadas sin huérfanos ni saltos de capa (`24/24` criterios cumplidos en [`G2-P2/07-lista-chequeo-verificacion.md`](../G2-P2-asistencia-sena/07-lista-chequeo-verificacion.md)).
