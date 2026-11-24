@@ -33,6 +33,7 @@ Si algún artefacto no existe en mi fork (formato formal de ficha técnica `A1`,
 | :--- | :--- | :--- |
 | **A1. Formato de ficha técnica** | Construí desde cero un formato propio de **15 campos** basado en `ISO/IEC/IEEE 29148:2018` e `ISO/IEC 25010:2023`, con subtabla obligatoria de valor, unidad y método de verificación y regla explícita de neutralidad de marcas. | Cumple `C1` de `Rubricas_G3.md` (`≥ 12` campos y estándar declarado) y sirve como plantilla reutilizable en `A2` y en la prueba de desempeño. |
 | **A3. Referente técnico y normativo** | Construí tabla verificada de **5 referentes legales y técnicos** (`Ley 1581/2012 + Decreto 1074/2015`, `Ley 23/1982`, `Decisión Andina 351/1993`, `WCAG 2.2 / ISO/IEC 25010:2023` y `Ley 1273/2009`), separando la normativa interna del proyecto (`GOB-01`–`GOB-04`) y explicando transmisión vs. transferencia de datos. | Cumple `C3` de `Rubricas_G3.md` al 100 % con fuentes oficiales verificadas el `2026-11-23` y evita confundir normas internas con leyes vigentes. |
+| **A4. Dimensionamiento de licencias e inventario** | Construí tabla de **8 componentes** con fórmulas parametrizadas para variantes `A`–`D`, inventario real de **6 dependencias** auditadas del código (`Dockerfile`, `docker-compose.yml`, `e2e/package.json`, `sesion.php`) con análisis copyleft (`MariaDB GPL v2`), alerta de CDN (`qrcodejs`) y decisión justificada de licencia propia. | Cumple `C4` de `Rubricas_G3.md` (`≥ 6` componentes, `≥ 5` dependencias con compatibilidad y licencia propia decidida con fundamento legal). |
 
 ---
 
@@ -41,21 +42,21 @@ Si algún artefacto no existe en mi fork (formato formal de ficha técnica `A1`,
 - [x] **A1.** Formato de ficha técnica (`15` campos, estándar base declarado): [01-formato-ficha-tecnica.md](01-formato-ficha-tecnica.md)
 - [ ] **A2.** Fichas técnicas diligenciadas (`4` fichas: `2` software/servicio y `2` hardware/infraestructura, `≥ 6` características medibles c/u): *Programado para Commit 2 (pendiente confirmación de variante)*
 - [x] **A3.** Referente técnico (`5` referentes legales y técnicos verificados con enlace y fecha + separación de normativa interna): [03-referente-tecnico-normativo.md](03-referente-tecnico-normativo.md)
-- [ ] **A4.** Dimensionamiento de licencias (`≥ 6` componentes) e inventario de dependencias (`≥ 5`) + licencia propia: *Programado para Commit 2*
-- [ ] **A5.** Estimación de condiciones técnicas (`≥ 5` parámetros derivados de la variante): *Programado para Commit 3*
-- [ ] **A6.** Estimación preliminar de condiciones económicas (hoja de cálculo `.xlsx` con fórmulas vivas a 12 y 36 meses): *Programado para Commit 3*
+- [x] **A4.** Dimensionamiento de licencias (`8` componentes parametrizados) e inventario real de dependencias (`6` dependencias verificadas) + decisión de licencia propia: [04-dimensionamiento-licencias.md](04-dimensionamiento-licencias.md)
+- [ ] **A5.** Estimación de condiciones técnicas (`≥ 5` parámetros derivados de la variante): *Programado para Día 2 / Commit 3*
+- [ ] **A6.** Estimación preliminar de condiciones económicas (hoja de cálculo `.xlsx` con fórmulas vivas a 12 y 36 meses): *Programado para Día 2 / Commit 3*
 
 ---
 
-## 5. Autoevaluación de mínimos (estado en avance — Día 1)
+## 5. Autoevaluación de mínimos (estado en avance — Día 1, Commit 2)
 
 | Mínimo | Mi conteo actual |
 | :--- | :--- |
 | `[P1]` Formato de ficha técnica (`≥ 12` campos + estándar base) | `15` campos (`ISO/IEC/IEEE 29148` + `ISO/IEC 25010:2023`) |
-| `[P1]` Fichas diligenciadas / características medibles por ficha | *Pendiente Commit 2 (objetivo: `4` / `≥ 6`)* |
+| `[P1]` Fichas diligenciadas / características medibles por ficha | *Pendiente Día 2 (objetivo: `4` / `≥ 6`)* |
 | `[P1]` Referentes técnicos (`≥ 4`) / incluyen Ley 1581/2012, Ley 23/1982, Decisión Andina 351 y estándar | `5` / `sí` (incluye además `Ley 1273/2009`) |
-| `[P1]` Componentes de licencias / dependencias inventariadas | *Pendiente Commit 2 (objetivo: `≥ 6` / `≥ 5`)* |
-| `[P1]` Parámetros técnicos (`≥ 5`) / hoja económica con fórmulas vivas | *Pendiente Commit 3* |
+| `[P1]` Componentes de licencias / dependencias inventariadas | `8` / `6` *(incluye análisis copyleft y licencia propia)* |
+| `[P1]` Parámetros técnicos (`≥ 5`) / hoja económica con fórmulas vivas | *Pendiente Día 2 / Commit 3* |
 
 ---
 
@@ -63,9 +64,9 @@ Si algún artefacto no existe en mi fork (formato formal de ficha técnica `A1`,
 
 | Fecha | Qué hice ese día | Commits |
 | :--- | :--- | :--- |
-| `2026-11-23` (Día 1) | Diseñé el formato propio de ficha técnica (`A1`), investigué y verifiqué fuentes oficiales para el referente técnico-normativo (`A3`) y estructuré el `README.md` inicial de `G3-P1`. | Commit 1 (`feat(g3-p1): crear formato de ficha tecnica A1, referente normativo A3 y README inicial`) |
-| *Día 2 (programado)* | Diligenciar `4` fichas técnicas (`A2`) y dimensionamiento de licencias + inventario de dependencias (`A4`) aplicando la variante asignada. | Commit 2 (pendiente) |
-| *Día 3 (programado)* | Estimar parámetros de capacidad (`A5`), construir hoja de cálculo con fórmulas vivas (`A6`) y completar autoevaluación final de `G3-P1`. | Commit 3 (pendiente) |
+| `2026-11-23` (Día 1 — Commit 1) | Diseñé el formato propio de ficha técnica (`A1`), verifiqué fuentes oficiales para el referente técnico-normativo (`A3`) y creé el `README.md` inicial de `G3-P1`. | [`f79d3cb`](https://github.com/andressalinasvargas/ADSO-3413974/commit/f79d3cb) |
+| `2026-11-23` (Día 1 — Commit 2) | Audité las dependencias reales del código (`Dockerfile`, `docker-compose.yml`, `e2e/package.json`, `sesion.php`) y construí `04-dimensionamiento-licencias.md` (`A4`) con `8` componentes, `6` dependencias y licencia propia. | Commit 2 (`feat(g3-p1): agregar dimensionamiento de licencias e inventario de dependencias A4`) |
+| *Día 2 (programado)* | Diligenciar `4` fichas técnicas (`A2`), estimar parámetros de capacidad (`A5`) y construir hoja de cálculo con fórmulas vivas (`A6`) con la variante asignada por el instructor. | Commit 3 y Commit 4 (pendientes) |
 
 ---
 
