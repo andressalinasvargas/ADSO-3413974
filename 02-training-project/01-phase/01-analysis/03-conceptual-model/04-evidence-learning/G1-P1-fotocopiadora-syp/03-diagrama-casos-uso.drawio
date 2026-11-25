@@ -1,0 +1,56 @@
+<mxfile host="app.diagrams.net" modified="2026-11-25T14:00:00.000Z" agent="SyP-G1-Generator" version="24.7.17">
+  <diagram id="diag-1" name="Casos de Uso Fotocopiadora SyP">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1480" pageHeight="1020" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" value="«sistema» Plataforma Web y Gestión Comercial Fotocopiadora SyP" style="shape=rect;whiteSpace=wrap;html=1;verticalAlign=top;align=center;fontStyle=1;fillColor=#F9FAFB;strokeColor=#1E293B;strokeWidth=2;rounded=1;" vertex="1" parent="1"><mxGeometry x="260" y="48" width="920" height="932" as="geometry" /></mxCell>
+        <mxCell id="act_vis" value="Visitante" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="105" y="215" width="40" height="70" as="geometry" /></mxCell>
+        <mxCell id="act_cli" value="Cliente Registrado" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="105" y="565" width="40" height="70" as="geometry" /></mxCell>
+        <mxCell id="act_adm" value="Administrador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="105" y="820" width="40" height="70" as="geometry" /></mxCell>
+        <mxCell id="act_pay" value="«actor»
+Pasarela de Pagos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#334155;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1264" y="294" width="132" height="52" as="geometry" /></mxCell>
+        <mxCell id="act_msg" value="«actor»
+Servicio de Mensajería" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#334155;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1264" y="674" width="132" height="52" as="geometry" /></mxCell>
+        <mxCell id="CU_01" value="CU-01 Consultar inicio y catálogo de productos" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="333" y="94" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_02" value="CU-02 Gestionar carrito de compras
+---
+PE: selección de cotización" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="333" y="204" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_03" value="CU-03 Confirmar pedido de compra" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="333" y="324" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_04" value="CU-04 Generar cotización formal" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="333" y="434" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_05" value="CU-05 Consultar documento comercial" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="798" y="379" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_06" value="CU-06 Autenticar cuenta de usuario" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="798" y="584" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_07" value="CU-07 Gestionar perfil e historial comercial" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="333" y="584" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_08" value="CU-08 Enviar consulta de contacto" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="333" y="689" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_09" value="CU-09 Solicitar servicio técnico y diagnóstico" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="333" y="789" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_10" value="CU-10 Reportar contadores de renting" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="798" y="484" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_11" value="CU-11 Administrar catálogo y operaciones comerciales
+---
+PE: actualización de estado" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="578" y="874" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="CU_12" value="CU-12 Gestionar notificaciones de estado" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="818" y="734" width="284" height="72" as="geometry" /></mxCell>
+        <mxCell id="e10" value="" style="endArrow=block;endFill=0;strokeColor=#1F2937;html=1;" edge="1" parent="1" source="act_cli" target="act_vis"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e11" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_vis" target="CU_01"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e12" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_vis" target="CU_02"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e13" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_vis" target="CU_03"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e14" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_vis" target="CU_04"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e15" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_vis" target="CU_06"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e16" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_vis" target="CU_08"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e17" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_vis" target="CU_09"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e18" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_cli" target="CU_07"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e19" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_cli" target="CU_10"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e20" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_cli" target="CU_12"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e21" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_adm" target="CU_11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e22" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="act_adm" target="CU_12"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e23" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="CU_03" target="act_pay"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e24" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="CU_03" target="act_msg"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e25" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="CU_08" target="act_msg"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e26" value="" style="endArrow=none;strokeColor=#475569;html=1;" edge="1" parent="1" source="CU_09" target="act_msg"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e27" value="«include»" style="endArrow=open;dashed=1;strokeColor=#991B1B;html=1;" edge="1" parent="1" source="CU_03" target="CU_05"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e28" value="«include»" style="endArrow=open;dashed=1;strokeColor=#991B1B;html=1;" edge="1" parent="1" source="CU_04" target="CU_05"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e29" value="«include»" style="endArrow=open;dashed=1;strokeColor=#991B1B;html=1;" edge="1" parent="1" source="CU_10" target="CU_06"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e30" value="«extend»" style="endArrow=open;dashed=1;strokeColor=#1D4ED8;html=1;" edge="1" parent="1" source="CU_04" target="CU_02"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="290" y="470" /><mxPoint x="290" y="240" /></Array></mxGeometry></mxCell>
+        <mxCell id="e31" value="«extend»" style="endArrow=open;dashed=1;strokeColor=#1D4ED8;html=1;" edge="1" parent="1" source="CU_12" target="CU_11"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
