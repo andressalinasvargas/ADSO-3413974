@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" modified="2026-11-25T14:00:00.000Z" agent="SyP-G1-Generator" version="24.7.17">
+  <diagram id="diag-1" name="Actividad CU-09 Servicio Técnico">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1260" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l1" value="Cliente" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="340" height="920" as="geometry" /></mxCell>
+        <mxCell id="l2" value="Sistema Fotocopiadora SyP" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="380" y="48" width="520" height="920" as="geometry" /></mxCell>
+        <mxCell id="l3" value="Administrador / Taller" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="900" y="48" width="320" height="920" as="geometry" /></mxCell>
+        <mxCell id="s" value="" style="ellipse;fillColor=#111827;" vertex="1" parent="l1"><mxGeometry x="160" y="50" width="22" height="22" as="geometry" /></mxCell>
+        <mxCell id="a1" value="Ingresar a servicio técnico" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l1"><mxGeometry x="65" y="96" width="210" height="44" as="geometry" /></mxCell>
+        <mxCell id="d1" value="¿Autodiagnóstico?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;" vertex="1" parent="l1"><mxGeometry x="145" y="165" width="50" height="50" as="geometry" /></mxCell>
+        <mxCell id="a2" value="Mostrar guía SC / simulador (2a)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;" vertex="1" parent="l2"><mxGeometry x="130" y="225" width="250" height="48" as="geometry" /></mxCell>
+        <mxCell id="a3" value="Diligenciar solicitud técnica" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l1"><mxGeometry x="65" y="275" width="210" height="48" as="geometry" /></mxCell>
+        <mxCell id="d2" value="¿Datos completos?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;" vertex="1" parent="l2"><mxGeometry x="85" y="345" width="50" height="50" as="geometry" /></mxCell>
+        <mxCell id="d3" value="¿Cobertura?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;" vertex="1" parent="l2"><mxGeometry x="290" y="415" width="50" height="50" as="geometry" /></mxCell>
+        <mxCell id="d4" value="¿Canal activo?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;" vertex="1" parent="l2"><mxGeometry x="145" y="520" width="50" height="50" as="geometry" /></mxCell>
+        <mxCell id="fk" value="" style="shape=rect;fillColor=#0F172A;" vertex="1" parent="l2"><mxGeometry x="85" y="625" width="330" height="8" as="geometry" /></mxCell>
+        <mxCell id="p1" value="Asignar código y estado Pendiente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;" vertex="1" parent="l2"><mxGeometry x="60" y="675" width="210" height="50" as="geometry" /></mxCell>
+        <mxCell id="p2" value="Recibir aviso en taller" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;" vertex="1" parent="l3"><mxGeometry x="45" y="675" width="230" height="50" as="geometry" /></mxCell>
+        <mxCell id="jn" value="" style="shape=rect;fillColor=#0F172A;" vertex="1" parent="l2"><mxGeometry x="85" y="760" width="330" height="8" as="geometry" /></mxCell>
+        <mxCell id="end" value="" style="ellipse;shape=doubleEllipse;fillColor=#111827;" vertex="1" parent="l1"><mxGeometry x="158" y="825" width="24" height="24" as="geometry" /></mxCell>
+        <mxCell id="be1" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="s" target="a1"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be2" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="a1" target="d1"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be3" value="[Sí 2a]" style="endArrow=classic;html=1;" edge="1" parent="1" source="d1" target="a2"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be4" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="a2" target="a3"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be5" value="[No]" style="endArrow=classic;html=1;" edge="1" parent="1" source="d1" target="a3"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be6" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="a3" target="d2"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be7" value="[Completos]" style="endArrow=classic;html=1;" edge="1" parent="1" source="d2" target="d3"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be8" value="[OK]" style="endArrow=classic;html=1;" edge="1" parent="1" source="d3" target="d4"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be9" value="[Disponible]" style="endArrow=classic;html=1;" edge="1" parent="1" source="d4" target="fk"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be10" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="fk" target="p1"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be11" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="fk" target="p2"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be12" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="p1" target="jn"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be13" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="p2" target="jn"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="be14" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="jn" target="end"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

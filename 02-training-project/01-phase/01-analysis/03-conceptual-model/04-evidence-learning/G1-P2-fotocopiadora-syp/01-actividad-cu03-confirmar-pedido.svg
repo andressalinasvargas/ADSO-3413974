@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="1130" viewBox="0 0 1260 1130">
+<defs>
+      <marker id="arrow-solid" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1F2937" />
+      </marker>
+      <marker id="arrow-open" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M 1 2 L 10 6 L 1 10" fill="none" stroke="#374151" stroke-width="1.6" />
+      </marker>
+      <marker id="gen-tri" viewBox="0 0 14 14" refX="12" refY="7" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+        <path d="M 1 1.5 L 12 7 L 1 12.5 z" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.6" />
+      </marker>
+      <marker id="diamond-filled" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="12" markerHeight="9" orient="auto">
+        <path d="M 1 6 L 7 1.5 L 13 6 L 7 10.5 z" fill="#1F2937" stroke="#1F2937" stroke-width="1" />
+      </marker>
+      <marker id="diamond-open" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="12" markerHeight="9" orient="auto">
+        <path d="M 1 6 L 7 1.5 L 13 6 L 7 10.5 z" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.4" />
+      </marker>
+      <!-- Crow's Foot markers -->
+      <marker id="cf-one" viewBox="0 0 14 14" refX="12" refY="7" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+        <line x1="6" y1="2" x2="6" y2="12" stroke="#1F2937" stroke-width="1.7" />
+        <line x1="10" y1="2" x2="10" y2="12" stroke="#1F2937" stroke-width="1.7" />
+      </marker>
+      <marker id="cf-zero-one" viewBox="0 0 18 14" refX="16" refY="7" markerWidth="13" markerHeight="11" orient="auto-start-reverse">
+        <circle cx="5" cy="7" r="3.4" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.6" />
+        <line x1="12" y1="2" x2="12" y2="12" stroke="#1F2937" stroke-width="1.7" />
+      </marker>
+      <marker id="cf-one-many" viewBox="0 0 18 14" refX="16" refY="7" markerWidth="13" markerHeight="11" orient="auto-start-reverse">
+        <line x1="5" y1="2" x2="5" y2="12" stroke="#1F2937" stroke-width="1.7" />
+        <path d="M 16 2 L 8 7 L 16 12" fill="none" stroke="#1F2937" stroke-width="1.6" />
+      </marker>
+      <marker id="cf-zero-many" viewBox="0 0 20 14" refX="18" refY="7" markerWidth="15" markerHeight="11" orient="auto-start-reverse">
+        <circle cx="4.5" cy="7" r="3.3" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.6" />
+        <path d="M 18 2 L 9 7 L 18 12" fill="none" stroke="#1F2937" stroke-width="1.6" />
+      </marker>
+    </defs>
+<rect width="1260" height="1130" fill="#FFFFFF" />
+<text x="630.0" y="24.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#0F172A" ><tspan x="630.0" dy="0">Diagrama de Actividades · CU-03 Confirmar pedido de compra</tspan></text>
+<rect x="40" y="48" width="340" height="1062" fill="#FAFAFA" stroke="#334155" stroke-width="1.6" />
+<rect x="40" y="48" width="340" height="34" fill="#E2E8F0" stroke="#334155" stroke-width="1.6" />
+<text x="210.0" y="65.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A" ><tspan x="210.0" dy="0">Cliente</tspan></text>
+<rect x="380" y="48" width="500" height="1062" fill="#FAFAFA" stroke="#334155" stroke-width="1.6" />
+<rect x="380" y="48" width="500" height="34" fill="#E2E8F0" stroke="#334155" stroke-width="1.6" />
+<text x="630.0" y="65.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A" ><tspan x="630.0" dy="0">Sistema Fotocopiadora SyP</tspan></text>
+<rect x="880" y="48" width="340" height="1062" fill="#FAFAFA" stroke="#334155" stroke-width="1.6" />
+<rect x="880" y="48" width="340" height="34" fill="#E2E8F0" stroke="#334155" stroke-width="1.6" />
+<text x="1050.0" y="65.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A" ><tspan x="1050.0" dy="0">Pasarela de Pagos</tspan></text>
+<circle cx="210" cy="112" r="11" fill="#111827" />
+<polyline points="210,123 210,146" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="100.0" y="148.0" width="220" height="44" rx="12" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.6" />
+<text x="210" y="163.25" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="210" dy="0">Iniciar confirmación desde</tspan><tspan x="210" dy="13.5">carrito</tspan></text>
+<polyline points="210,192 210,232" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<polygon points="210,232 234,256 210,280 186,256" fill="#FEF3C7" stroke="#92400E" stroke-width="1.7" />
+<rect x="132" y="211" width="156" height="17" rx="4" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="210" y="219.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#78350F" ><tspan x="210" dy="0">¿Carrito vacío?</tspan></text>
+<polyline points="186,256 118,256 118,315" fill="none" stroke="#B91C1C" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="66" y="233" width="108" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="120" y="241.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#B91C1C" ><tspan x="120" dy="0">[Sí (1b)]</tspan></text>
+<rect x="51.0" y="317.0" width="142" height="54" rx="12" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1.6" />
+<text x="122" y="337.25" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="122" dy="0">Informar carrito vacío e</tspan><tspan x="122" dy="13.5">impedir cierre</tspan></text>
+<circle cx="122" cy="412" r="11" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2" />
+<circle cx="122" cy="412" r="6" fill="#B91C1C" />
+<polyline points="122,371 122,401" fill="none" stroke="#B91C1C" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<polyline points="234,256 485,256 485,200" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="281" y="233" width="108" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="335" y="241.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#1F2937" ><tspan x="335" dy="0">[No]</tspan></text>
+<rect x="510.0" y="142.0" width="240" height="46" rx="12" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.6" />
+<text x="630" y="158.25" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="630" dy="0">Mostrar resumen con</tspan><tspan x="630" dy="13.5">subtotal, IVA y envío</tspan></text>
+<polyline points="485,200 485,165 510,165" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<polyline points="630,188 630,215 275,215 275,315" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="201.0" y="316.0" width="148" height="56" rx="12" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.6" />
+<text x="275" y="337.25" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="275" dy="0">Ingresar datos de entrega</tspan><tspan x="275" dy="13.5">y elegir medio de pago</tspan></text>
+<polyline points="349,344 480,344" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="495.0" y="319.0" width="260" height="50" rx="12" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.6" />
+<text x="625" y="330.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="625" dy="0">Validar existencias,</tspan><tspan x="625" dy="13.5">precios y calcular total</tspan><tspan x="625" dy="13.5">COP</tspan></text>
+<polyline points="625,369 625,412" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<polygon points="625,412 649,436 625,460 601,436" fill="#FEF3C7" stroke="#92400E" stroke-width="1.7" />
+<rect x="547" y="391" width="156" height="17" rx="4" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="625" y="399.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#78350F" ><tspan x="625" dy="0">¿Existencias y precios válidos?</tspan></text>
+<polyline points="649,436 765,436 765,478" fill="none" stroke="#B91C1C" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="691" y="413" width="108" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="745" y="421.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#B91C1C" ><tspan x="745" dy="0">[No válidos (3b)]</tspan></text>
+<rect x="670.0" y="480.0" width="190" height="52" rx="12" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1.6" />
+<text x="765" y="499.25" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="765" dy="0">Rechazar pedido y señalar</tspan><tspan x="765" dy="13.5">producto agotado</tspan></text>
+<circle cx="765" cy="566" r="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2" />
+<circle cx="765" cy="566" r="5.5" fill="#B91C1C" />
+<polyline points="765,532 765,556" fill="none" stroke="#B91C1C" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<polyline points="601,436 510,436 510,591" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="476" y="413" width="108" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="530" y="421.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#1F2937" ><tspan x="530" dy="0">[Válidos]</tspan></text>
+<polygon points="510,591 534,615 510,639 486,615" fill="#FEF3C7" stroke="#92400E" stroke-width="1.7" />
+<rect x="432" y="570" width="156" height="17" rx="4" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="510" y="578.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#78350F" ><tspan x="510" dy="0">¿Medio de pago?</tspan></text>
+<polyline points="486,615 445,615 445,725 480,725" fill="none" stroke="#1D4ED8" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="401" y="663" width="108" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="455" y="671.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" ><tspan x="455" dy="0">[Coordinación (4a)]</tspan></text>
+<rect x="480.0" y="697.0" width="180" height="56" rx="12" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.6" />
+<text x="570" y="711.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="570" dy="0">Registrar pedido pendiente</tspan><tspan x="570" dy="13.5">de pago y ofrecer</tspan><tspan x="570" dy="13.5">Mensajería</tspan></text>
+<polyline points="570,753 570,835" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<polyline points="534,615 1050,615 1050,650" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="741" y="592" width="108" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="795" y="600.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#1F2937" ><tspan x="795" dy="0">[En línea]</tspan></text>
+<rect x="935.0" y="653.0" width="230" height="50" rx="12" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.6" />
+<text x="1050" y="671.25" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="1050" dy="0">Solicitar y evaluar</tspan><tspan x="1050" dy="13.5">autorización de pago</tspan></text>
+<polyline points="1050,703 1050,745" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<polygon points="1050,745 1074,769 1050,793 1026,769" fill="#FEF3C7" stroke="#92400E" stroke-width="1.7" />
+<rect x="972" y="724" width="156" height="17" rx="4" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="1050" y="732.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#78350F" ><tspan x="1050" dy="0">¿Pago aprobado?</tspan></text>
+<polyline points="1074,769 1165,769 1165,835" fill="none" stroke="#B91C1C" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="1086" y="746" width="108" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="1140" y="754.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#B91C1C" ><tspan x="1140" dy="0">[Rechazado (6b)]</tspan></text>
+<rect x="1022.5" y="840.0" width="175" height="52" rx="12" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1.6" />
+<text x="1110" y="859.25" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="1110" dy="0">Informar rechazo y</tspan><tspan x="1110" dy="13.5">permitir reintento</tspan></text>
+<circle cx="1110" cy="928" r="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2" />
+<circle cx="1110" cy="928" r="5.5" fill="#B91C1C" />
+<polyline points="1110,892 1110,918" fill="none" stroke="#B91C1C" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<polyline points="1026,769 705,769 705,835" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="811" y="746" width="108" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.94" />
+<text x="865" y="754.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#1F2937" ><tspan x="865" dy="0">[Aprobado]</tspan></text>
+<rect x="460" y="835" width="330" height="8" rx="3" fill="#0F172A" />
+<polyline points="525,843 525,878" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<polyline points="725,843 725,878" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="420.0" y="882.0" width="190" height="50" rx="12" fill="#ECFDF5" stroke="#047857" stroke-width="1.6" />
+<text x="515" y="900.25" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="515" dy="0">Generar código y</tspan><tspan x="515" dy="13.5">comprobante (CU-05)</tspan></text>
+<rect x="640.0" y="882.0" width="190" height="50" rx="12" fill="#ECFDF5" stroke="#047857" stroke-width="1.6" />
+<text x="735" y="900.25" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="735" dy="0">Emitir notificación de</tspan><tspan x="735" dy="13.5">nuevo pedido (CU-12)</tspan></text>
+<polyline points="515,932 515,968" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<polyline points="735,932 735,968" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="460" y="968" width="330" height="8" rx="3" fill="#0F172A" />
+<polyline points="625,976 625,1015" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<rect x="490.0" y="1018.0" width="270" height="46" rx="12" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.6" />
+<text x="625" y="1027.5" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#0F172A" ><tspan x="625" dy="0">Limpiar carrito y</tspan><tspan x="625" dy="13.5">presentar confirmación al</tspan><tspan x="625" dy="13.5">cliente</tspan></text>
+<polyline points="490,1041 210,1041" fill="none" stroke="#1F2937" stroke-width="1.6" marker-end="url(#arrow-solid)" />
+<circle cx="185" cy="1041" r="13" fill="#FFFFFF" stroke="#111827" stroke-width="2" />
+<circle cx="185" cy="1041" r="7.5" fill="#111827" />
+</svg>

@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" modified="2026-11-25T14:00:00.000Z" agent="SyP-G1-Generator" version="24.7.17">
+  <diagram id="diag-1" name="Actividad CU-03 Confirmar Pedido">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1260" pageHeight="1130" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l1" value="Cliente" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#334155;" vertex="1" parent="1"><mxGeometry x="40" y="48" width="340" height="960" as="geometry" /></mxCell>
+        <mxCell id="l2" value="Sistema Fotocopiadora SyP" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#334155;" vertex="1" parent="1"><mxGeometry x="380" y="48" width="500" height="960" as="geometry" /></mxCell>
+        <mxCell id="l3" value="Pasarela de Pagos" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#334155;" vertex="1" parent="1"><mxGeometry x="880" y="48" width="340" height="960" as="geometry" /></mxCell>
+        <mxCell id="s" value="" style="ellipse;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="l1"><mxGeometry x="160" y="50" width="22" height="22" as="geometry" /></mxCell>
+        <mxCell id="a1" value="Iniciar confirmación desde carrito" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l1"><mxGeometry x="65" y="100" width="210" height="44" as="geometry" /></mxCell>
+        <mxCell id="d1" value="¿Carrito vacío?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;" vertex="1" parent="l1"><mxGeometry x="145" y="170" width="50" height="50" as="geometry" /></mxCell>
+        <mxCell id="a2" value="Mostrar resumen con subtotal, IVA y envío" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l2"><mxGeometry x="130" y="95" width="240" height="46" as="geometry" /></mxCell>
+        <mxCell id="a3" value="Ingresar datos de entrega y elegir pago" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l1"><mxGeometry x="65" y="260" width="210" height="52" as="geometry" /></mxCell>
+        <mxCell id="a4" value="Validar existencias, precios y calcular total" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l2"><mxGeometry x="120" y="260" width="260" height="50" as="geometry" /></mxCell>
+        <mxCell id="d2" value="¿Válidos?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;" vertex="1" parent="l2"><mxGeometry x="225" y="340" width="50" height="50" as="geometry" /></mxCell>
+        <mxCell id="d3" value="¿En línea o 4a?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;" vertex="1" parent="l2"><mxGeometry x="110" y="420" width="50" height="50" as="geometry" /></mxCell>
+        <mxCell id="a5" value="Autorizar pago" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l3"><mxGeometry x="60" y="490" width="220" height="50" as="geometry" /></mxCell>
+        <mxCell id="d4" value="¿Aprobado?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;" vertex="1" parent="l3"><mxGeometry x="145" y="575" width="50" height="50" as="geometry" /></mxCell>
+        <mxCell id="fk" value="" style="shape=rect;fillColor=#0F172A;" vertex="1" parent="l2"><mxGeometry x="85" y="675" width="320" height="8" as="geometry" /></mxCell>
+        <mxCell id="p1" value="Generar comprobante (CU-05)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;" vertex="1" parent="l2"><mxGeometry x="40" y="720" width="180" height="48" as="geometry" /></mxCell>
+        <mxCell id="p2" value="Emitir notificación (CU-12)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;" vertex="1" parent="l2"><mxGeometry x="260" y="720" width="180" height="48" as="geometry" /></mxCell>
+        <mxCell id="jn" value="" style="shape=rect;fillColor=#0F172A;" vertex="1" parent="l2"><mxGeometry x="85" y="805" width="320" height="8" as="geometry" /></mxCell>
+        <mxCell id="a6" value="Limpiar carrito y mostrar confirmación" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l2"><mxGeometry x="110" y="855" width="260" height="46" as="geometry" /></mxCell>
+        <mxCell id="end" value="" style="ellipse;shape=doubleEllipse;fillColor=#111827;" vertex="1" parent="l1"><mxGeometry x="155" y="868" width="24" height="24" as="geometry" /></mxCell>
+        <mxCell id="ae1" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="s" target="a1"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae2" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="a1" target="d1"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae3" value="[No]" style="endArrow=classic;html=1;" edge="1" parent="1" source="d1" target="a2"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae4" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="a2" target="a3"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae5" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="a3" target="a4"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae6" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="a4" target="d2"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae7" value="[Válidos]" style="endArrow=classic;html=1;" edge="1" parent="1" source="d2" target="d3"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae8" value="[En línea]" style="endArrow=classic;html=1;" edge="1" parent="1" source="d3" target="a5"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae9" value="[4a Coordinación]" style="endArrow=classic;html=1;" edge="1" parent="1" source="d3" target="fk"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae10" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="a5" target="d4"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae11" value="[Aprobado]" style="endArrow=classic;html=1;" edge="1" parent="1" source="d4" target="fk"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae12" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="fk" target="p1"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae13" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="fk" target="p2"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae14" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="p1" target="jn"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae15" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="p2" target="jn"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae16" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="jn" target="a6"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="ae17" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="a6" target="end"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="1080" viewBox="0 0 1540 1080">
+<defs>
+      <marker id="arrow-solid" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1F2937" />
+      </marker>
+      <marker id="arrow-open" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M 1 2 L 10 6 L 1 10" fill="none" stroke="#374151" stroke-width="1.6" />
+      </marker>
+      <marker id="gen-tri" viewBox="0 0 14 14" refX="12" refY="7" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+        <path d="M 1 1.5 L 12 7 L 1 12.5 z" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.6" />
+      </marker>
+      <marker id="diamond-filled" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="12" markerHeight="9" orient="auto">
+        <path d="M 1 6 L 7 1.5 L 13 6 L 7 10.5 z" fill="#1F2937" stroke="#1F2937" stroke-width="1" />
+      </marker>
+      <marker id="diamond-open" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="12" markerHeight="9" orient="auto">
+        <path d="M 1 6 L 7 1.5 L 13 6 L 7 10.5 z" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.4" />
+      </marker>
+      <!-- Crow's Foot markers -->
+      <marker id="cf-one" viewBox="0 0 14 14" refX="12" refY="7" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+        <line x1="6" y1="2" x2="6" y2="12" stroke="#1F2937" stroke-width="1.7" />
+        <line x1="10" y1="2" x2="10" y2="12" stroke="#1F2937" stroke-width="1.7" />
+      </marker>
+      <marker id="cf-zero-one" viewBox="0 0 18 14" refX="16" refY="7" markerWidth="13" markerHeight="11" orient="auto-start-reverse">
+        <circle cx="5" cy="7" r="3.4" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.6" />
+        <line x1="12" y1="2" x2="12" y2="12" stroke="#1F2937" stroke-width="1.7" />
+      </marker>
+      <marker id="cf-one-many" viewBox="0 0 18 14" refX="16" refY="7" markerWidth="13" markerHeight="11" orient="auto-start-reverse">
+        <line x1="5" y1="2" x2="5" y2="12" stroke="#1F2937" stroke-width="1.7" />
+        <path d="M 16 2 L 8 7 L 16 12" fill="none" stroke="#1F2937" stroke-width="1.6" />
+      </marker>
+      <marker id="cf-zero-many" viewBox="0 0 20 14" refX="18" refY="7" markerWidth="15" markerHeight="11" orient="auto-start-reverse">
+        <circle cx="4.5" cy="7" r="3.3" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.6" />
+        <path d="M 18 2 L 9 7 L 18 12" fill="none" stroke="#1F2937" stroke-width="1.6" />
+      </marker>
+    </defs>
+<rect width="1540" height="1080" fill="#FFFFFF" />
+<text x="770.0" y="24.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#0F172A" ><tspan x="770.0" dy="0">Modelo Entidad-Relación (MER · Notación Crow&#x27;s Foot / Pata de gallo) · Fotocopiadora SyP</tspan></text>
+<polyline points="740,120 902,120" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-one)" marker-end="url(#cf-one-many)" />
+<rect x="738" y="97" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="820" y="105.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="820" dy="0">agrupa (1 : 1..*)</tspan></text>
+<polyline points="1177,155 1330,155 1330,240 1177,240" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-zero-many)" marker-end="url(#cf-zero-many)" />
+<rect x="1308" y="189" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="1390" y="197.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="1390" dy="0">compatible con (recursiva 0..* : 0..*)</tspan></text>
+<polyline points="328,210 410,210 410,390 445,390" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-zero-one)" marker-end="url(#cf-zero-many)" />
+<rect x="333" y="281" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="415" y="289.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="415" dy="0">realiza (0..1 : 0..*)</tspan></text>
+<polyline points="715,425 907,425" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-one)" marker-end="url(#cf-one-many)" />
+<rect x="730" y="403" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="812" y="411.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="812" dy="0">tiene (1 : 1..*)</tspan></text>
+<polyline points="1040,285 1040,385" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-one)" marker-end="url(#cf-zero-many)" />
+<rect x="1030" y="329" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="1112" y="337.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="1112" dy="0">figura en (1 : 0..*)</tspan></text>
+<polyline points="328,235 390,235 390,645 447,645" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-zero-one)" marker-end="url(#cf-zero-many)" />
+<rect x="313" y="461" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="395" y="469.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="395" dy="0">solicita (0..1 : 0..*)</tspan></text>
+<polyline points="712,665 907,665" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-one)" marker-end="url(#cf-one-many)" />
+<rect x="730" y="643" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="812" y="651.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="812" dy="0">contiene (1 : 1..*)</tspan></text>
+<polyline points="1172,265 1240,265 1240,670 1172,670" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-one)" marker-end="url(#cf-zero-many)" />
+<rect x="1220" y="531" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="1302" y="539.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="1302" dy="0">cotizado en (1 : 0..*)</tspan></text>
+<polyline points="200,275 200,445" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-zero-one)" marker-end="url(#cf-zero-many)" />
+<rect x="183" y="351" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="265" y="359.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="265" dy="0">envía (0..1 : 0..*)</tspan></text>
+<polyline points="72,230 35,230 35,745 80,745" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-one)" marker-end="url(#cf-zero-many)" />
+<rect x="26" y="626" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="108" y="634.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="108" dy="0">reporta (1 : 0..*)</tspan></text>
+<polyline points="72,190 18,190 18,955 77,955" fill="none" stroke="#1E293B" stroke-width="1.6"  marker-start="url(#cf-one)" marker-end="url(#cf-zero-many)" />
+<rect x="43" y="856" width="164" height="16" rx="3" fill="#FFFFFF" fill-opacity="0.92" />
+<text x="125" y="864.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#991B1B" ><tspan x="125" dy="0">recibe [identificadora] (1 : 0..*)</tspan></text>
+<rect x="72.5" y="148.0" width="255" height="124" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="72.5" y="148.0" width="255" height="28" rx="5" fill="#F1F5F9" stroke="#1E293B" stroke-width="1.7" />
+<text x="200" y="162.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="200" dy="0">USUARIO</tspan></text>
+<text x="82.5" y="188.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="82.5" dy="0">[PK] id_usuario</tspan></text>
+<text x="82.5" y="204.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#1F2937" ><tspan x="82.5" dy="0">[UK] correo_unico</tspan></text>
+<text x="82.5" y="220.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="82.5" dy="0">• clave_cifrada</tspan></text>
+<text x="82.5" y="236.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="82.5" dy="0">• nombre_completo</tspan></text>
+<text x="82.5" y="252.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="82.5" dy="0">• telefono / rol / activo</tspan></text>
+<rect x="500.0" y="66.0" width="240" height="108" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="500.0" y="66.0" width="240" height="28" rx="5" fill="#F1F5F9" stroke="#1E293B" stroke-width="1.7" />
+<text x="620" y="80.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="620" dy="0">CATEGORIA</tspan></text>
+<text x="510.0" y="106.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="510.0" dy="0">[PK] id_categoria</tspan></text>
+<text x="510.0" y="122.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#1F2937" ><tspan x="510.0" dy="0">[UK] slug_unico</tspan></text>
+<text x="510.0" y="138.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="510.0" dy="0">• nombre</tspan></text>
+<text x="510.0" y="154.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="510.0" dy="0">• orden_visual</tspan></text>
+<rect x="902.5" y="133.0" width="275" height="124" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="902.5" y="133.0" width="275" height="28" rx="5" fill="#F1F5F9" stroke="#1E293B" stroke-width="1.7" />
+<text x="1040" y="147.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="1040" dy="0">PRODUCTO</tspan></text>
+<text x="912.5" y="173.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="912.5" dy="0">[PK] id_producto</tspan></text>
+<text x="912.5" y="189.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#1D4ED8" ><tspan x="912.5" dy="0">[FK] id_categoria</tspan></text>
+<text x="912.5" y="205.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="912.5" dy="0">• nombre / marca / precio_cop</tspan></text>
+<text x="912.5" y="221.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="912.5" dy="0">• especificacion / estado_stock</tspan></text>
+<text x="912.5" y="237.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="912.5" dy="0">• velocidad_ppm / rendimiento</tspan></text>
+<rect x="445.0" y="320.0" width="270" height="140" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="445.0" y="320.0" width="270" height="28" rx="5" fill="#F1F5F9" stroke="#1E293B" stroke-width="1.7" />
+<text x="580" y="334.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="580" dy="0">PEDIDO</tspan></text>
+<text x="455.0" y="360.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="455.0" dy="0">[PK] id_pedido</tspan></text>
+<text x="455.0" y="376.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#1D4ED8" ><tspan x="455.0" dy="0">[FK] id_usuario (opcional)</tspan></text>
+<text x="455.0" y="392.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#1F2937" ><tspan x="455.0" dy="0">[UK] codigo_pedido_unico</tspan></text>
+<text x="455.0" y="408.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="455.0" dy="0">• datos_cliente / direccion / ciudad</tspan></text>
+<text x="455.0" y="424.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="455.0" dy="0">• subtotal / iva / total / metodo_pago</tspan></text>
+<text x="455.0" y="440.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="455.0" dy="0">• estado_pago / estado_envio</tspan></text>
+<rect x="907.5" y="383.0" width="265" height="124" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="907.5" y="383.0" width="265" height="28" rx="5" fill="#DBEAFE" stroke="#1E293B" stroke-width="1.7" />
+<text x="1040" y="397.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="1040" dy="0">DETALLE_PEDIDO</tspan></text>
+<text x="917.5" y="423.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="917.5" dy="0">[PK,FK] id_pedido</tspan></text>
+<text x="917.5" y="439.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="917.5" dy="0">[PK,FK] id_producto</tspan></text>
+<text x="917.5" y="455.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="917.5" dy="0">• cantidad</tspan></text>
+<text x="917.5" y="471.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="917.5" dy="0">• precio_unitario_pactado</tspan></text>
+<text x="917.5" y="487.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="917.5" dy="0">• subtotal_linea</tspan></text>
+<rect x="447.5" y="583.0" width="265" height="124" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="447.5" y="583.0" width="265" height="28" rx="5" fill="#F1F5F9" stroke="#1E293B" stroke-width="1.7" />
+<text x="580" y="597.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="580" dy="0">COTIZACION</tspan></text>
+<text x="457.5" y="623.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="457.5" dy="0">[PK] id_cotizacion</tspan></text>
+<text x="457.5" y="639.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#1D4ED8" ><tspan x="457.5" dy="0">[FK] id_usuario (opcional)</tspan></text>
+<text x="457.5" y="655.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#1F2937" ><tspan x="457.5" dy="0">[UK] codigo_cotizacion_unico</tspan></text>
+<text x="457.5" y="671.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="457.5" dy="0">• datos_solicitante / observaciones</tspan></text>
+<text x="457.5" y="687.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="457.5" dy="0">• subtotal / iva / total</tspan></text>
+<rect x="907.5" y="608.0" width="265" height="124" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="907.5" y="608.0" width="265" height="28" rx="5" fill="#DBEAFE" stroke="#1E293B" stroke-width="1.7" />
+<text x="1040" y="622.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="1040" dy="0">DETALLE_COTIZACION</tspan></text>
+<text x="917.5" y="648.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="917.5" dy="0">[PK,FK] id_cotizacion</tspan></text>
+<text x="917.5" y="664.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="917.5" dy="0">[PK,FK] id_producto</tspan></text>
+<text x="917.5" y="680.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="917.5" dy="0">• cantidad</tspan></text>
+<text x="917.5" y="696.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="917.5" dy="0">• precio_unitario_cotizado</tspan></text>
+<text x="917.5" y="712.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="917.5" dy="0">• subtotal_linea</tspan></text>
+<rect x="72.5" y="458.0" width="275" height="124" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="72.5" y="458.0" width="275" height="28" rx="5" fill="#F1F5F9" stroke="#1E293B" stroke-width="1.7" />
+<text x="210" y="472.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="210" dy="0">SOLICITUD_SERVICIO</tspan></text>
+<text x="82.5" y="498.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="82.5" dy="0">[PK] id_solicitud</tspan></text>
+<text x="82.5" y="514.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#1D4ED8" ><tspan x="82.5" dy="0">[FK] id_usuario (opcional)</tspan></text>
+<text x="82.5" y="530.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="82.5" dy="0">• equipo / tipo_servicio</tspan></text>
+<text x="82.5" y="546.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="82.5" dy="0">• fecha_deseada / franja_horaria</tspan></text>
+<text x="82.5" y="562.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="82.5" dy="0">• descripcion / estado_atencion</tspan></text>
+<rect x="80.0" y="683.0" width="260" height="124" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="80.0" y="683.0" width="260" height="28" rx="5" fill="#F1F5F9" stroke="#1E293B" stroke-width="1.7" />
+<text x="210" y="697.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="210" dy="0">REPORTE_CONTADOR</tspan></text>
+<text x="90.0" y="723.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="90.0" dy="0">[PK] id_reporte</tspan></text>
+<text x="90.0" y="739.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#1D4ED8" ><tspan x="90.0" dy="0">[FK] id_usuario (obligatoria)</tspan></text>
+<text x="90.0" y="755.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="90.0" dy="0">• modelo_equipo</tspan></text>
+<text x="90.0" y="771.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="90.0" dy="0">• contador_bn / contador_color</tspan></text>
+<text x="90.0" y="787.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="90.0" dy="0">• mes_reportado / observaciones</tspan></text>
+<rect x="73.5" y="897.0" width="273" height="116" rx="8" fill="#FFFBEB" stroke="#B45309" stroke-width="1.6" />
+<rect x="77.5" y="901.0" width="265" height="108" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="77.5" y="901.0" width="265" height="28" rx="5" fill="#FEF3C7" stroke="#1E293B" stroke-width="1.7" />
+<text x="210" y="915.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="210" dy="0">NOTIFICACION (Débil)</tspan></text>
+<text x="87.5" y="941.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="87.5" dy="0">[PK,FK] id_usuario (identificadora)</tspan></text>
+<text x="87.5" y="957.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="87.5" dy="0">[PK*] id_notificacion</tspan></text>
+<text x="87.5" y="973.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="87.5" dy="0">• titulo / mensaje / tipo</tspan></text>
+<text x="87.5" y="989.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="87.5" dy="0">• leida / fecha_creacion</tspan></text>
+<rect x="490.0" y="856.0" width="260" height="108" rx="5" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.7" />
+<rect x="490.0" y="856.0" width="260" height="28" rx="5" fill="#F1F5F9" stroke="#1E293B" stroke-width="1.7" />
+<text x="620" y="870.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700" fill="#0F172A" ><tspan x="620" dy="0">MENSAJE_CONTACTO</tspan></text>
+<text x="500.0" y="896.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" fill="#991B1B" ><tspan x="500.0" dy="0">[PK] id_mensaje</tspan></text>
+<text x="500.0" y="912.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="500.0" dy="0">• nombre / correo / telefono</tspan></text>
+<text x="500.0" y="928.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="500.0" dy="0">• asunto / mensaje</tspan></text>
+<text x="500.0" y="944.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="10.5" font-weight="400" fill="#1F2937" ><tspan x="500.0" dy="0">• leido / fecha_creacion</tspan></text>
+<rect x="860" y="830" width="635" height="215" rx="10" fill="#F8FAFC" stroke="#475569" stroke-width="1.5" />
+<text x="1177" y="852.0" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#0F172A" ><tspan x="1177" dy="0">Leyenda Declarada · Notación Pata de Gallo (Crow&#x27;s Foot)</tspan></text>
+<text x="882" y="885.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="500" fill="#1E293B" ><tspan x="882" dy="0">||   Uno obligatorio (participación total 1..1)</tspan></text>
+<text x="882" y="913.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="500" fill="#1E293B" ><tspan x="882" dy="0">o|   Cero o uno opcional (participación parcial 0..1)</tspan></text>
+<text x="882" y="941.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="500" fill="#1E293B" ><tspan x="882" dy="0">|&lt;   Uno o muchos obligatorio (participación total 1..*)</tspan></text>
+<text x="882" y="969.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="500" fill="#1E293B" ><tspan x="882" dy="0">o&lt;   Cero o muchos opcional (participación parcial 0..*)</tspan></text>
+<text x="882" y="997.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="500" fill="#1E293B" ><tspan x="882" dy="0">Doble borde = Entidad débil (NOTIFICACION depende de USUARIO) · Azul = Asociativa N:M resuelta</tspan></text>
+<text x="882" y="1023.0" text-anchor="start" dominant-baseline="central" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="11" font-weight="500" fill="#1E293B" ><tspan x="882" dy="0">Recursiva en PRODUCTO = compatibilidad entre equipos e insumos/repuestos · MENSAJE_CONTACTO autónoma</tspan></text>
+</svg>
