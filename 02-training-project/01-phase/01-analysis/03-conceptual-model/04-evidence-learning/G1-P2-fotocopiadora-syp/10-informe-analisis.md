@@ -1,6 +1,6 @@
 # Informe de Análisis · Fotocopiadora SyP
 
-**Guía 1 · Modelo conceptual (Producto 2)** · Autor: `@andressalinasvargas` · Fecha: `2026-11-25`
+**Guía 1 · Modelo conceptual (Producto 2)** · Autor: `@andressalinasvargas` · Última verificación (Día 2): `2026-11-26`
 
 ---
 
@@ -32,4 +32,4 @@ La caracterización de 4 aspectos en [01-caracterizacion-y-metodologias.md](../G
 Se aplicó la lista de chequeo de `18` criterios verificables (`5` de cobertura y trazabilidad) en [07-lista-chequeo-validacion.md](07-lista-chequeo-validacion.md):
 
 - **Primera verificación (`2026-11-25`)**: `12 / 18` criterios aprobados y `6` hallazgos (`H-01` a `H-06`) identificados: enlaces faltantes de `RF-06`/`RF-12` en matriz Anexo C, inclusión explícita de `ReporteContador` en dominio, sincronización exacta de ramas alternas/excepciones entre actividades y plantillas, eliminación de validaciones dentro de precondiciones y de un término técnico en `CU-11`, adición de relación recursiva en `PRODUCTO` en el MER y sanitización total de ejemplos ficticios sin PII.
-- **Segunda verificación (`2026-11-25`)**: tras documentar y corregir todos los hallazgos en [08-registro-ajustes.md](08-registro-ajustes.md), se obtuvo **`18 / 18` criterios cumplidos (`100 %`)**, `12 / 12` requisitos trazados en [09-matriz-trazabilidad.md](09-matriz-trazabilidad.md) y `0` coincidencias de información personal o detalles de implementación en el análisis.
+- **Segunda verificación (Día 2 · `2026-11-26`)**: tras documentar y corregir todos los hallazgos en [08-registro-ajustes.md](08-registro-ajustes.md), se revalidó el paquete completo obteniendo **`18 / 18` criterios cumplidos (`100 %`)**, `12 / 12` requisitos trazados en [09-matriz-trazabilidad.md](09-matriz-trazabilidad.md) y `0` coincidencias de información personal o detalles de implementación en el análisis.

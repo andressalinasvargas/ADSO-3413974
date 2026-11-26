@@ -2,8 +2,8 @@
 
 Formato diligenciado conforme al **Anexo B** de `Plantilla_README_Entrega_G1.md`, evaluando **`18` criterios verificables** (`Sí`/`No` con evidencia concreta), de los cuales **`5`** corresponden a **cobertura y trazabilidad** (`C-01` a `C-05`).
 
-- **Primera verificación:** `2026-11-25` → **12 / 18 cumplen**, **6 hallazgos detectados (`H-01` a `H-06`)**.
-- **Segunda verificación (post-correcciones en [08-registro-ajustes.md](08-registro-ajustes.md)):** `2026-11-25` → **18 / 18 cumplen (`100 %`)**.
+- **Primera verificación (Día 1):** `2026-11-25` → **12 / 18 cumplen**, **6 hallazgos detectados (`H-01` a `H-06`)**.
+- **Segunda verificación (Día 2, post-correcciones en [08-registro-ajustes.md](08-registro-ajustes.md)):** `2026-11-26` → **18 / 18 cumplen (`100 %`)**.
 
 ---
 

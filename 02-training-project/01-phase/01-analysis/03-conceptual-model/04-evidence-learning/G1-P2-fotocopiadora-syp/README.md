@@ -59,7 +59,7 @@ Fecha límite de la guía: **sábado 28 de noviembre de 2026 a las 6:00 a. m.**
 - [x] Declaro que lo que tomé de mi equipo o de otra fuente está identificado en la sección 2.
 - [x] Entiendo que el sábado 28 de noviembre de 2026 el instructor me hará **3 preguntas orales** sobre mis productos (una del producto 1, una del producto 2 y una tercera a su elección) y que, si respondo bien menos de 2, el producto sobre el que fallé queda con tope de 50.
 
-Firma (usuario de GitHub y fecha): `@andressalinasvargas` · `2026-11-25`
+Firma (usuario de GitHub y fecha): `@andressalinasvargas` · `2026-11-26`
 
 ## 7. Uso de inteligencia artificial
 
@@ -69,6 +69,6 @@ Firma (usuario de GitHub y fecha): `@andressalinasvargas` · `2026-11-25`
 
 ## 8. Autocontrol antes del push
 
-- [ ] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega *(Día 1 publicado el `2026-11-25`; pendiente segundo commit de revisión en Día 2 antes del sábado `2026-11-28` a las 6:00 a. m.)*.
+- [x] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega *(Día 1: `2026-11-25` [`ccdbe30`, `a21333a`] · Día 2: `2026-11-26`, segunda verificación y cierre de informe/lista de chequeo)*.
 - [x] No subí el marco documental del instructor, plantillas sin diligenciar ni archivos de otras personas.
 - [x] Hice `push` y comprobé en GitHub que la carpeta está publicada.

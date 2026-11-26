@@ -17,6 +17,6 @@ Documento diligenciado según el **Anexo D** de `Plantilla_README_Entrega_G1.md`
 
 ---
 
-## Resultado de la Segunda Verificación
+## Resultado de la Segunda Verificación (Día 2 · `2026-11-26`)
 
-Tras aplicar los `6` ajustes anteriores, se ejecutó nuevamente la inspección sobre todos los artefactos de `G1-P1-fotocopiadora-syp/` y `G1-P2-fotocopiadora-syp/`, confirmando **18 / 18 criterios aprobados** y consistencia completa de trazabilidad.
+Tras aplicar los `6` ajustes anteriores, se ejecutó la segunda verificación integral en Día 2 (`2026-11-26`) sobre todos los artefactos de `G1-P1-fotocopiadora-syp/` y `G1-P2-fotocopiadora-syp/`, confirmando **18 / 18 criterios aprobados (`100 %`)**, `0` enlaces rotos y consistencia completa de trazabilidad.
