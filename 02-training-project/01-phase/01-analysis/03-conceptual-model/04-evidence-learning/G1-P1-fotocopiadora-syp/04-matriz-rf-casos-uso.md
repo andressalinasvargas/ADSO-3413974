@@ -49,3 +49,10 @@ Esta matriz verifica la cobertura completa entre los requisitos funcionales cons
 ## 3. Distinción Explícita de Requisitos No Funcionales (`RNF`)
 
 Los requisitos `RNF-01` a `RNF-08` (usabilidad, responsividad desde 320 px, accesibilidad WCAG 2.2 AA, rendimiento WebP/caché, seguridad/privacidad, contingencia sin conexión, localización COP y verificabilidad automatizada) **no aparecen como óvalos de caso de uso**, pues restringen transversalmente cómo deben operar los casos `CU-01` a `CU-12` y se documentan en sus reglas de negocio, criterios de diseño y listas de validación en `G1-P2-fotocopiadora-syp/`.
+
+---
+
+## 4. Cierre de Verificación (Día 2 · `2026-11-26`)
+
+- **Cobertura `RF → CU` verificada en segunda revisión:** `12 / 12` (`100 %`), sin casos de uso huérfanos en la auditoría inversa (`12 / 12`).
+- **Trazabilidad cruzada hacia Producto 2:** todos los `12 RF` enlazan con [09-matriz-trazabilidad.md](../G1-P2-fotocopiadora-syp/09-matriz-trazabilidad.md) de `G1-P2-fotocopiadora-syp/`.

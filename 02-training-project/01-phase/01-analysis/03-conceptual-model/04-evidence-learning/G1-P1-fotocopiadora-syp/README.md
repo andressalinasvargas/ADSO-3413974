@@ -29,7 +29,7 @@ Fecha límite de la guía: **sábado 28 de noviembre de 2026 a las 6:00 a. m.**
 | 1 | [00-insumo-srs-base.md](00-insumo-srs-base.md) y [04-matriz-rf-casos-uso.md](04-matriz-rf-casos-uso.md) | Incorporé los requisitos actualizados del proyecto (paginación de 12 en 12, comparador, prevención de doble envío, privacidad en cotizaciones/pedidos, exportación segura y notificaciones) y separé explícitamente `12 RF` de `8 RNF` explicando por qué los RNF no son casos de uso (`C3` de `Rubricas_G1.md`). | [`4c00ba4`](https://github.com/andressalinasvargas/ADSO-3413974/commit/4c00ba4) |
 | 2 | [01-caracterizacion-y-metodologias.md](01-caracterizacion-y-metodologias.md) y [02-plan-actividades-analisis.md](02-plan-actividades-analisis.md) | Construí desde la realidad del equipo pequeño (`2` integrantes) la caracterización de 4 aspectos, la matriz de 4 metodologías con 5 criterios propios y un plan Scrum de 8 actividades priorizadas con responsable, fecha y entregable (`C1` y `C2` de `Rubricas_G1.md`). | [`4c00ba4`](https://github.com/andressalinasvargas/ADSO-3413974/commit/4c00ba4) |
 | 3 | [03-diagrama-casos-uso.drawio](03-diagrama-casos-uso.drawio) y [03-justificacion-relaciones-cu.md](03-justificacion-relaciones-cu.md) | Organicé los objetivos en `12` casos de uso verbo + objeto agrupando operaciones CRUD triviales en `CU-11`, tracé frontera del sistema con 3 actores primarios (`Cliente Registrado --|> Visitante`) y 2 secundarios externos, y corregí el sentido y justificación de 3 `«include»` y 2 `«extend»` con puntos de extensión (`C4` de `Rubricas_G1.md`). | [`4c00ba4`](https://github.com/andressalinasvargas/ADSO-3413974/commit/4c00ba4) |
-| 4 | [04-matriz-rf-casos-uso.md](04-matriz-rf-casos-uso.md) | Añadí auditoría inversa `Caso de Uso → RF` (`12/12`, 0 casos huérfanos) para garantizar trazabilidad limpia hacia diseño (`C3`). | [`4c00ba4`](https://github.com/andressalinasvargas/ADSO-3413974/commit/4c00ba4) |
+| 4 | [04-matriz-rf-casos-uso.md](04-matriz-rf-casos-uso.md) | Añadí auditoría inversa `Caso de Uso → RF` (`12/12`, 0 casos huérfanos) para garantizar trazabilidad limpia hacia diseño (`C3`) y cierre de verificación cruzada en Día 2 (`2026-11-26`). | [`4c00ba4`](https://github.com/andressalinasvargas/ADSO-3413974/commit/4c00ba4) |
 
 ## 4. Qué construí nuevo
 
@@ -56,7 +56,7 @@ Fecha límite de la guía: **sábado 28 de noviembre de 2026 a las 6:00 a. m.**
 - [x] Declaro que lo que tomé de mi equipo o de otra fuente está identificado en la sección 2.
 - [x] Entiendo que el sábado 28 de noviembre de 2026 el instructor me hará **3 preguntas orales** sobre mis productos (una del producto 1, una del producto 2 y una tercera a su elección) y que, si respondo bien menos de 2, el producto sobre el que fallé queda con tope de 50.
 
-Firma (usuario de GitHub y fecha): `@andressalinasvargas` · `2026-11-25`
+Firma (usuario de GitHub y fecha): `@andressalinasvargas` · `2026-11-26`
 
 ## 7. Uso de inteligencia artificial
 
@@ -66,6 +66,6 @@ Firma (usuario de GitHub y fecha): `@andressalinasvargas` · `2026-11-25`
 
 ## 8. Autocontrol antes del push
 
-- [ ] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega *(Día 1 publicado el `2026-11-25`; pendiente segundo commit de revisión en Día 2 antes del sábado `2026-11-28` a las 6:00 a. m.)*.
+- [x] Hice commits propios en al menos 2 días distintos entre la publicación de la guía (sábado 21 de noviembre de 2026) y la entrega *(Día 1: `2026-11-25` [`4c00ba4`, `a21333a`] · Día 2: `2026-11-26`, verificación cruzada en matriz y cierre de entrega)*.
 - [x] No subí el marco documental del instructor, plantillas sin diligenciar ni archivos de otras personas.
 - [x] Hice `push` y comprobé en GitHub que la carpeta está publicada.
