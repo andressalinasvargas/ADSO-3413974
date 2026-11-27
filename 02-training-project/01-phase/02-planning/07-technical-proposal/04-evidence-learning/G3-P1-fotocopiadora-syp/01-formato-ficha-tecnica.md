@@ -12,7 +12,7 @@
 - **Trazabilidad del proyecto:**
   - Origen funcional y no funcional (`G1-P1`): [`00-insumo-srs-base.md`](../../../../01-analysis/03-conceptual-model/04-evidence-learning/G1-P1-fotocopiadora-syp/00-insumo-srs-base.md) (`12 RF` `RF-01`–`RF-12`, `8 RNF` `RNF-01`–`RNF-08`, `5` actores).
   - Origen arquitectónico (`G2-P1`): [Arquitectura Hexagonal y vistas](../../../06-architecture/04-evidence-learning/G2-P1-fotocopiadora-syp/03-arquitectura-software.md) (`24` elementos OO, patrones **Comando** y **Fábrica Abstracta**, `7` componentes y `5` nodos).
-  - Origen de persistencia (`G2-P2`): [Modelo lógico y DDL verificado](../../../06-architecture/04-evidence-learning/G2-P2-fotocopiadora-syp/02-modelo-logico-y-transformacion.md) (`12` tablas en `3FN`).
+  - Origen de persistencia y gobierno (`G2-P2`): [Modelo lógico y DDL verificado](../../../06-architecture/04-evidence-learning/G2-P2-fotocopiadora-syp/02-modelo-logico-y-transformacion.md) (`12` tablas en `3FN`) y [`06-politicas-seguridad-datos.md`](../../../06-architecture/04-evidence-learning/G2-P2-fotocopiadora-syp/06-politicas-seguridad-datos.md) (`9` políticas `POL-INT-01..03`, `POL-CON-01..03`, `POL-DIS-01..03`).
 
 ---
 
@@ -23,31 +23,31 @@
 | **1** | **Código y nombre del módulo** | Identificador único (`FT-SYP-XXX`) y nombre funcional del componente o artefacto. | Nomenclatura consistente con `G2-P1` y `G3`. |
 | **2** | **Versión, fecha y estado** | Número semántico (`vX.Y`), fecha ISO (`AAAA-MM-DD`) y estado (`Borrador`, `En validación`, `Aprobado`). | Control de cambios registrado en el campo 15. |
 | **3** | **Responsable técnico / rol** | Rol responsable del diseño, mantenimiento y verificación del componente (sin exponer PII). | Trazable a roles del proyecto ADSO. |
-| **4** | **Propósito y alcance funcional** | Objetivo operativo del componente dentro de Fotocopiadora SyP y límites de responsabilidad. | Debe corresponder a un puerto o adaptador definido en `G2-P1`. |
+| **4** | **Propósito y alcance funcional** | Objetivo operativo del componente dentro de Fotocopiadora SyP y límites de responsabilidad. | Debe corresponder a un componente o puerto definido en `G2-P1`. |
 | **5** | **Trazabilidad de requisitos (RF / RNF)** | Lista explícita de códigos `RF-01`..`RF-12` y `RNF-01`..`RNF-08` atendidos por el módulo. | Cobertura verificable contra `00-insumo-srs-base.md`. |
-| **6** | **Actores y permisos de acceso** | Actores autorizados (`Visitante`, `Cliente Registrado`, `Administrador`, `Pasarela de Pagos`, `Servicio de Mensajería`) y alcance CRUD/RBAC. | Alineado con políticas `GOB-SYP-01..04`. |
-| **7** | **Interfaces de entrada y salida (API / UI)** | Contratos de entrada/salida, códigos HTTP (`200`, `201`, `400`, `401`, `403`, `404`, `422`), payloads JSON y formatos documentales (`PDF`, `CSV`). | Sin dependencias exclusivas de cliente propietario. |
+| **6** | **Actores y permisos de acceso** | Actores autorizados (`Visitante`, `Cliente Registrado`, `Administrador`, `Pasarela de Pagos`, `Servicio de Mensajería`) y alcance CRUD/RBAC. | Alineado con `POL-INT-01..03`, `POL-CON-01..03`, `POL-DIS-01..03`. |
+| **7** | **Interfaces de entrada y salida (API / UI)** | Contratos de entrada/salida, códigos HTTP (`200`, `201`, `400`, `401`, `403`, `404`, `422`), payloads JSON y formatos documentales (`PDF imprimible`, `CSV`). | Sin dependencias exclusivas de cliente propietario. |
 | **8** | **Modelo de datos y persistencia** | Tablas involucradas del esquema de `12` tablas (`G2-P2`), llaves primarias/foráneas y reglas de integridad. | Verificable mediante DDL y pruebas negativas SQL. |
 | **9** | **Patrón de diseño y estilo arquitectónico** | Ubicación en la Arquitectura Hexagonal (núcleo de dominio, puerto de entrada/salida o adaptador) y patrón OO aplicado (**Comando** / **Fábrica Abstracta**). | Coherencia exacta con `02-diagrama-clases.svg` y `03-arquitectura-software.svg`. |
 | **10** | **Dimensionamiento y capacidad (Escenario B provisional)** | Concurrencia esperada (`30` usuarios concurrentes / `120` usuarios activos mensuales / `2` sedes), volumen de datos y cotas de latencia. | Parametrizado para ajuste en `A4` y `G3-P2`. |
-| **11** | **Atributos de calidad (ISO/IEC 25010:2023)** | Métricas objetivo de desempeño (`p95 <= 1,5 s`), disponibilidad (`99,5 %` escenario B), usabilidad (`WCAG 2.2 AA`) y mantenibilidad. | Medible por pruebas automatizadas y monitoreo. |
-| **12** | **Controles de seguridad y privacidad** | Cifrado en tránsito (`TLS 1.3`), hash de credenciales (`bcrypt`), autenticación (`JWT`), validación de entradas y tratamiento de datos (`Ley 1581/2012`). | Mapeado a OWASP ASVS y `06-politicas-seguridad-datos.md`. |
-| **13** | **Dependencias técnicas y licenciamiento** | Módulos/bibliotecas requeridas con licencia abierta permisiva (`MIT`, `BSD-3-Clause`, `Apache-2.0`) o protocolo estándar, sin vendor lock-in. | Sin licencias copyleft que restrinjan la cesión patrimonial. |
-| **14** | **Criterios de aceptación y pruebas** | Casos de prueba unitarios, de integración o SQL (`pytest`, Playwright, SQLite/PostgreSQL) con umbral mínimo de aprobación. | Evidencia reproducible antes de paso a producción. |
+| **11** | **Atributos de calidad (ISO/IEC 25010:2023)** | Métricas objetivo de desempeño (`p95 <= 1,5 s`), disponibilidad (`99,5 %` escenario B), accesibilidad (`WCAG 2.2 AA` / `RNF-03`) y mantenibilidad. | Medible por pruebas automatizadas y monitoreo. |
+| **12** | **Controles de seguridad y privacidad** | Cifrado en tránsito (`TLS 1.3`), hash+sal (`BCrypt`), autenticación (`PyJWT` en cookie `HttpOnly` `syp_session`), enmascaramiento `is_owner`, políticas `POL-CON-01..03` y tratamiento `Ley 1581/2012`. | Mapeado a OWASP ASVS y `06-politicas-seguridad-datos.md`. |
+| **13** | **Dependencias técnicas y licenciamiento** | Módulos/bibliotecas requeridas con licencia abierta permisiva (`MIT`, `BSD-3-Clause`, `Apache-2.0`, `Unlicense`) o protocolo estándar, sin vendor lock-in. | Sin licencias copyleft que restrinjan la cesión patrimonial. |
+| **14** | **Criterios de aceptación y pruebas** | Casos de prueba unitarios, de integración o SQL (`pytest`, `Playwright`, `node --check`, SQLite/PostgreSQL) con umbral mínimo de aprobación. | Evidencia reproducible antes de paso a producción. |
 | **15** | **Historial de revisiones y vigencia** | Registro cronológico de ajustes (`Versión`, `Fecha`, `Motivo del cambio`, `Validación aplicada`). | Requerido antes de cierre de fase o firma de contrato. |
 
 ---
 
 ## 3. Mapa de aplicación del formato a los módulos de Fotocopiadora SyP
 
-Como referencia para el diligenciamiento completo de las fichas operativas (programado para el **Día 2** en `02-fichas-tecnicas-aplicacion.md`), los cuatro bloques del sistema se estructuran así:
+Como referencia para el diligenciamiento completo de las fichas operativas (programado para el **Día 2** en `02-fichas-tecnicas-aplicacion.md`), los cuatro bloques funcionales se alinean 1:1 con los `7` componentes, `24` elementos OO y `12` tablas de `G2`:
 
-| Código de ficha | Módulo del sistema | Requisitos trazados (`G1-P1`) | Tablas principales (`G2-P2`) | Patrón / puerto (`G2-P1`) |
+| Código de ficha | Módulo del sistema | Requisitos trazados (`G1-P1`) | Tablas principales (`G2-P2`) | Componentes, interfaces y patrones (`G2-P1`) |
 |---|---|---|---|---|
-| `FT-SYP-001` | **Catálogo, Compatibilidad y Carrito** | `RF-01`, `RF-02`, `RF-03`, `RNF-01`, `RNF-05` | `categoria`, `producto`, `compatibilidad_producto` | Puerto `PuertoCatalogoProductos` + `AdaptadorRepositorioPg` |
-| `FT-SYP-002` | **Pedidos, Pagos y Cotizaciones PDF** | `RF-04`, `RF-05`, `RF-06`, `RF-07`, `RNF-02`, `RNF-06` | `pedido`, `detalle_pedido`, `cotizacion`, `detalle_cotizacion` | Patrón **Comando** (`ComandoCrearPedido`, `ComandoGenerarCotizacion`) + **Fábrica Abstracta** (`FabricaDocumentoPdf`) |
-| `FT-SYP-003` | **Servicio Técnico, Contadores y Contacto** | `RF-08`, `RF-09`, `RF-10`, `RF-11`, `RNF-03`, `RNF-04` | `solicitud_servicio`, `reporte_contador`, `mensaje_contacto` | Puerto `PuertoServicioTecnico` + `ComandoRegistrarContador` |
-| `FT-SYP-004` | **Identidad, Seguridad, Notificaciones y Despliegue** | `RF-12`, `RNF-02`, `RNF-07`, `RNF-08` | `usuario`, `notificacion` | Puerto `PuertoNotificaciones` + `PuertoAutenticacionJwt` |
+| `FT-SYP-001` | **Catálogo, Compatibilidad y Carrito** | `RF-01`, `RF-02`, `RF-03`, `RF-04`, `RNF-01`, `RNF-04`, `RNF-06` | `categoria`, `producto`, `compatibilidad_producto` | `WebCatalogoPWA`, `NucleoPedidosCotizaciones`, `AdaptadorPersistenciaSQL` (`IRepositorioComercial`) |
+| `FT-SYP-002` | **Pedidos, Pagos y Cotizaciones** | `RF-05`, `RF-06`, `RNF-05`, `RNF-06`, `RNF-07` | `pedido`, `detalle_pedido`, `cotizacion`, `detalle_cotizacion` | `NucleoPedidosCotizaciones`: **Comando** (`IComandoOperacion`, `ComandoConfirmarPedido`, `ComandoEmitirCotizacion`) + **Fábrica Abstracta** (`IFabricaEntregaComercial`, `FabricaEntregaPedido`, `FabricaEntregaCotizacion`) |
+| `FT-SYP-003` | **Servicio Técnico, Contadores y Contacto** | `RF-08`, `RF-09`, `RF-10`, `RNF-02`, `RNF-03`, `RNF-06` | `solicitud_servicio`, `reporte_contador`, `mensaje_contacto` | `NucleoServicioRenting`, `AdaptadorPersistenciaSQL` + **Comando** (`ComandoRadicarSolicitud`) |
+| `FT-SYP-004` | **Identidad, Administración, Notificaciones y Exportación** | `RF-07`, `RF-11`, `RF-12`, `RNF-05`, `RNF-08` | `usuario`, `notificacion` | `NucleoIdentidadAcceso`, `PanelAdminWeb`, `NucleoNotificacionesExport` (`ExportadorCsvSeguro`) |
 
 ---
 

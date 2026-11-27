@@ -29,8 +29,8 @@
 | Artefacto | Archivo en esta carpeta | Origen (ruta en mi fork o «nuevo») | Qué construí / estado actual |
 | :--- | :--- | :--- | :--- |
 | **B1.** Análisis de requerimientos y alcance económico | *Programado Día 2* | Pendiente | Consolidación de alcance CAPEX/OPEX en escenario B. (**Pendiente Día 2**) |
-| **B2.** Cotizaciones y fuentes de precios | *Programado Día 2* | Pendiente | Evidencia comparativa de precios de nube, dominio, SMTP y horas de desarrollo. (**Pendiente Día 2**) |
-| **B3.** Diagrama de arquitectura de despliegue (`7` nodos `[N1]`–`[N7]`) | [03-diagrama-arquitectura-despliegue-g3.drawio](03-diagrama-arquitectura-despliegue-g3.drawio) · [`.svg`](03-diagrama-arquitectura-despliegue-g3.svg) | Evolución desde [`G2-P1/05-vista-despliegue.svg`](../../../06-architecture/04-evidence-learning/G2-P1-fotocopiadora-syp/05-vista-despliegue.svg) | Ampliado de `5` a **`7` nodos** (`[N1]` WAF/DNS, `[N2]` Proxy Inverso, `[N3]` API ASGI FastAPI, `[N4]` Worker PDF/SMTP, `[N5]` PostgreSQL 16, `[N6]` Storage backups `AES-256`, `[N7]` Observabilidad y SMTP) trazables a presupuesto y ANS. (**Diagrama completado Día 1**; tabla de costos en Día 2) |
+| **B2.** Cotizaciones y fuentes de precios | *Programado Día 2* | Pendiente | Evidencia comparativa de precios de nube, dominio, monitoreo y horas de desarrollo. (**Pendiente Día 2**) |
+| **B3.** Diagrama de arquitectura de despliegue (`7` nodos `[N1]`–`[N7]`) | [03-diagrama-arquitectura-despliegue-g3.drawio](03-diagrama-arquitectura-despliegue-g3.drawio) · [`.svg`](03-diagrama-arquitectura-despliegue-g3.svg) | Evolución desde [`G2-P1/05-vista-despliegue.svg`](../../../06-architecture/04-evidence-learning/G2-P1-fotocopiadora-syp/05-vista-despliegue.svg) | Ampliado de `5` a **`7` nodos** (`[N1]` Navegador Cliente PWA excluido, `[N2]` Estación Administrador excluida, `[N3]` Borde DNS + Proxy TLS 1.3, `[N4]` Servidor Aplicación API Docker, `[N5]` Servidor Base de Datos Privado PostgreSQL 16, `[N6]` Respaldos Externos S3 Cifrados `AES-256`, `[N7]` Monitoreo Externo y Alertas ANS cada `60 s`) trazables a presupuesto y ANS. (**Diagrama completado Día 1**; tabla de costos en Día 2) |
 | **B4.** Presupuesto consolidado (tope `$70.000.000 COP`) | *Programado Día 2* | Pendiente | Presupuesto detallado bajo **Escenario B provisional**. (**Pendiente Día 2**) |
 | **B5.** Acta de verificación técnica y económica | *Programado Día 3* | Pendiente | Validación cruzada final entre `G3-P1` y `G3-P2`. (**Pendiente Día 3**) |
 | **B6.** Marco contractual, TdR y ANS | [06-contrato-tdr-ans.md](06-contrato-tdr-ans.md) | Nuevo | **`14`** elementos esenciales del contrato, **`8`** TdR específicos (`TdR-01`–`TdR-08`) y **`4`** métricas ANS medibles (`ANS-01` `99,5 %`, `ANS-02` `p95 <= 1,5 s`, `ANS-03` `RPO <= 24 h`, `ANS-04` `P1 <= 30 min` / `RTO <= 2 h`). (**Completado Día 1**) |
@@ -55,6 +55,7 @@
 | Día | Qué avancé (mensaje del commit) |
 | :--- | :--- |
 | `2026-11-27` (Día 1) | `feat(g3-p2): crear diagrama de despliegue 7 nodos B3, marco contrato-TdR-ANS B6 y README inicial de fotocopiadora-syp` — Generación de diagrama `B3` (`[N1]`–`[N7]`) y documento contractual/ANS `B6`. |
+| `2026-11-27` (Día 1) | `fix(g3): alinear nomenclatura de nodos N1-N7, politicas POL y trazabilidad RF/RNF con G2 y diagramas SVG` — Alineación exacta de nodos `[N1]`–`[N7]`, `TdR-01`–`TdR-08` y políticas `POL-*`. |
 | *Día 2 (programado)* | Incorporación de `B1`, `B2`, descripción detallada `B3` y presupuesto `B4` en Escenario B. |
 | *Día 3 (programado antes `2026-12-05 06:00 a. m.`)* | Cierre con acta `B5` y propuesta consolidada `B7`, completando entregas escalonadas en múltiples días calendario. |
 
