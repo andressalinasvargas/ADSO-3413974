@@ -1,0 +1,46 @@
+============================================================================
+B5 · Evidencia Real de Ejecucion SQL sobre Motor Relacional (SQLite 3)
+Fecha y hora: 2026-11-27 10:45:55
+Motor ejecutado: SQLite 3.53.1 (PRAGMA foreign_keys = ON)
+Archivo fuente evaluado: 05-script-creacion.sql
+============================================================================
+
+1. AUDITORIA ESTRUCTURAL DEL SCRIPT FUENTE (05-script-creacion.sql)
+   - CREATE TABLE  : 12
+   - PRIMARY KEY   : 12
+   - FOREIGN KEY   : 12
+   - ON DELETE     : 12
+   - ON UPDATE     : 12
+   - UNIQUE        : 7
+   - CHECK         : 33
+   - INSERT INTO   : 13
+
+2. EJECUCION COMPLETA DDL + CARGA SINTETICA (PRAGMA foreign_keys = 1)
+   -> DDL ejecutado sin errores de sintaxis ni integridad referencial (ExitCode = 0).
+
+3. VERIFICACION DE TABLAS CREADAS Y FILAS SINTETICAS (12 tablas)
+   - categoria                  | filas = 1  | FKs activas = 0
+   - compatibilidad_producto    | filas = 1  | FKs activas = 2
+   - cotizacion                 | filas = 1  | FKs activas = 1
+   - detalle_cotizacion         | filas = 1  | FKs activas = 2
+   - detalle_pedido             | filas = 1  | FKs activas = 2
+   - mensaje_contacto           | filas = 1  | FKs activas = 0
+   - notificacion               | filas = 1  | FKs activas = 1
+   - pedido                     | filas = 1  | FKs activas = 1
+   - producto                   | filas = 2  | FKs activas = 1
+   - reporte_contador           | filas = 1  | FKs activas = 1
+   - solicitud_servicio         | filas = 1  | FKs activas = 1
+   - usuario                    | filas = 1  | FKs activas = 0
+   Total de tablas creadas: 12 | Total de llaves foraneas verificadas: 12
+
+4. PRUEBAS NEGATIVAS DE RECHAZO DE RESTRICCIONES (CHECK / UNIQUE / FK)
+   [OK RECHAZADA] Prueba 1 [CHECK ck_comp_distintos]: compatibilidad de un producto consigo mismo (id_equipo = id_insumo)
+                  Motor respondio IntegrityError: CHECK constraint failed: ck_comp_distintos
+   [OK RECHAZADA] Prueba 2 [UNIQUE uk_rep_usuario_eq_mes]: doble reporte de contador para el mismo cliente, equipo y mes
+                  Motor respondio IntegrityError: UNIQUE constraint failed: reporte_contador.id_usuario, reporte_contador.modelo_equipo, reporte_contador.mes_reportado
+   [OK RECHAZADA] Prueba 3 [FK ON DELETE RESTRICT]: eliminar categoria referenciada por productos activos
+                  Motor respondio IntegrityError: FOREIGN KEY constraint failed
+   [OK RECHAZADA] Prueba 4 [CHECK ck_ped_tot]: total menor que el subtotal en pedido
+                  Motor respondio IntegrityError: CHECK constraint failed: ck_ped_tot
+
+5. RESULTADO FINAL: 12/12 tablas | 12/12 FKs | 4/4 pruebas negativas rechazadas | ExitCode: 0

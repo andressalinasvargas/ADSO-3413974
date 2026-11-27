@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#334155"/></marker>
+<marker id="inherit" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><polygon points="0 0, 11 5, 0 10" fill="#FFFFFF" stroke="#334155" stroke-width="1.5"/></marker>
+<marker id="compose" markerWidth="12" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="6 0, 12 4, 6 8, 0 4" fill="#1E293B"/></marker>
+<marker id="agg" markerWidth="12" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="6 0, 12 4, 6 8, 0 4" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.3"/></marker>
+</defs>
+<rect width="1100" height="560" fill="#F8FAFC"/>
+<text x="20" y="30" font-size="16" font-weight="700" fill="#0F172A">G2-P2 (B2) · Modelo Logico Relacional (12 Tablas, PK, FK y Restricciones)</text>
+<line x1="140" y1="230" x2="140" y2="195" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="84" y="197" width="112" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="140" y="208" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK ON DEL CASCADE</text>
+<line x1="545" y1="132" x2="505" y2="117" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="466" y="109" width="118" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="525" y="120" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK ON DEL RESTRICT</text>
+<line x1="820" y1="122" x2="780" y2="132" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="747" y="112" width="106" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="800" y="123" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK N:M recursiva</text>
+<line x1="295" y1="297" x2="255" y2="130" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="216" y="198" width="118" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="275" y="209" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK ON DEL SET NULL</text>
+<line x1="570" y1="287" x2="530" y2="297" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="494" y="277" width="112" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="550" y="288" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK ON DEL CASCADE</text>
+<line x1="682" y1="225" x2="662" y2="200" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="613" y="197" width="118" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="672" y="208" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK ON DEL RESTRICT</text>
+<line x1="412" y1="405" x2="140" y2="195" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="217" y="285" width="118" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="276" y="296" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK ON DEL SET NULL</text>
+<line x1="570" y1="467" x2="530" y2="470" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="494" y="453" width="112" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="550" y="464" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK ON DEL CASCADE</text>
+<line x1="682" y1="405" x2="662" y2="200" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="613" y="287" width="118" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="672" y="298" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK ON DEL RESTRICT</text>
+<line x1="830" y1="290" x2="255" y2="130" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="483" y="195" width="118" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="542" y="206" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK ON DEL SET NULL</text>
+<line x1="830" y1="447" x2="255" y2="130" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="483" y="273" width="118" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="542" y="284" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">FK ON DEL RESTRICT</text>
+<rect x="25" y="65" width="230" height="130" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="25" y="65" width="230" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="25" y="83" width="230" height="8" fill="#1E3A8A"/>
+<text x="140" y="82" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">usuario</text>
+<text x="33" y="107" font-size="10.5" fill="#0F172A">PK id_usuario BIGINT</text>
+<text x="33" y="122" font-size="10.5" fill="#0F172A">correo_unico VARCHAR(160) UQ</text>
+<text x="33" y="137" font-size="10.5" fill="#0F172A">clave_hash VARCHAR(255)</text>
+<text x="33" y="152" font-size="10.5" fill="#0F172A">rol, activo, fecha_creacion</text>
+<rect x="25" y="230" width="230" height="120" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="25" y="230" width="230" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="25" y="248" width="230" height="8" fill="#1E3A8A"/>
+<text x="140" y="247" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">notificacion</text>
+<text x="33" y="272" font-size="10.5" fill="#0F172A">PK (id_usuario, id_notificacion)</text>
+<text x="33" y="287" font-size="10.5" fill="#0F172A">FK id_usuario -&gt; usuario</text>
+<text x="33" y="302" font-size="10.5" fill="#0F172A">titulo, mensaje, tipo, leida</text>
+<rect x="295" y="65" width="210" height="105" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="295" y="65" width="210" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="295" y="83" width="210" height="8" fill="#1E3A8A"/>
+<text x="400" y="82" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">categoria</text>
+<text x="303" y="107" font-size="10.5" fill="#0F172A">PK id_categoria INT</text>
+<text x="303" y="122" font-size="10.5" fill="#0F172A">slug_unico VARCHAR(60) UQ</text>
+<text x="303" y="137" font-size="10.5" fill="#0F172A">nombre, orden_visual</text>
+<rect x="545" y="65" width="235" height="135" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="545" y="65" width="235" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="545" y="83" width="235" height="8" fill="#1E3A8A"/>
+<text x="662" y="82" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">producto</text>
+<text x="553" y="107" font-size="10.5" fill="#0F172A">PK id_producto INT</text>
+<text x="553" y="122" font-size="10.5" fill="#0F172A">FK id_categoria -&gt; categoria</text>
+<text x="553" y="137" font-size="10.5" fill="#0F172A">codigo_sku UQ, nombre, marca</text>
+<text x="553" y="152" font-size="10.5" fill="#0F172A">precio_cop, estado_stock, activo</text>
+<rect x="820" y="65" width="250" height="115" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="1.8"/>
+<rect x="820" y="65" width="250" height="26" rx="8" fill="#047857"/>
+<rect x="820" y="83" width="250" height="8" fill="#047857"/>
+<text x="945" y="82" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">compatibilidad_producto</text>
+<text x="828" y="107" font-size="10.5" fill="#0F172A">PK (id_equipo, id_insumo)</text>
+<text x="828" y="122" font-size="10.5" fill="#0F172A">FK id_equipo -&gt; producto</text>
+<text x="828" y="137" font-size="10.5" fill="#0F172A">FK id_insumo -&gt; producto</text>
+<rect x="295" y="225" width="235" height="145" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="295" y="225" width="235" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="295" y="243" width="235" height="8" fill="#1E3A8A"/>
+<text x="412" y="242" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">pedido</text>
+<text x="303" y="267" font-size="10.5" fill="#0F172A">PK id_pedido BIGINT</text>
+<text x="303" y="282" font-size="10.5" fill="#0F172A">FK id_usuario NULL -&gt; usuario</text>
+<text x="303" y="297" font-size="10.5" fill="#0F172A">codigo_pedido UQ, nit, ciudad</text>
+<text x="303" y="312" font-size="10.5" fill="#0F172A">subtotal, iva, total, metodo_pago</text>
+<text x="303" y="327" font-size="10.5" fill="#0F172A">estado_pago, estado_envio</text>
+<rect x="570" y="225" width="225" height="125" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="570" y="225" width="225" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="570" y="243" width="225" height="8" fill="#1E3A8A"/>
+<text x="682" y="242" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">detalle_pedido</text>
+<text x="578" y="267" font-size="10.5" fill="#0F172A">PK (id_pedido, id_producto)</text>
+<text x="578" y="282" font-size="10.5" fill="#0F172A">FK id_pedido, FK id_producto</text>
+<text x="578" y="297" font-size="10.5" fill="#0F172A">cantidad, precio_pactado</text>
+<text x="578" y="312" font-size="10.5" fill="#0F172A">subtotal_linea</text>
+<rect x="295" y="405" width="235" height="130" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="295" y="405" width="235" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="295" y="423" width="235" height="8" fill="#1E3A8A"/>
+<text x="412" y="422" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">cotizacion</text>
+<text x="303" y="447" font-size="10.5" fill="#0F172A">PK id_cotizacion BIGINT</text>
+<text x="303" y="462" font-size="10.5" fill="#0F172A">FK id_usuario NULL -&gt; usuario</text>
+<text x="303" y="477" font-size="10.5" fill="#0F172A">codigo_cotizacion UQ</text>
+<text x="303" y="492" font-size="10.5" fill="#0F172A">subtotal, iva, total, vigencia</text>
+<rect x="570" y="405" width="225" height="125" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="570" y="405" width="225" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="570" y="423" width="225" height="8" fill="#1E3A8A"/>
+<text x="682" y="422" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">detalle_cotizacion</text>
+<text x="578" y="447" font-size="10.5" fill="#0F172A">PK (id_cotizacion, id_producto)</text>
+<text x="578" y="462" font-size="10.5" fill="#0F172A">FK id_cotizacion, FK id_producto</text>
+<text x="578" y="477" font-size="10.5" fill="#0F172A">cantidad, precio_cotizado</text>
+<text x="578" y="492" font-size="10.5" fill="#0F172A">subtotal_linea</text>
+<rect x="830" y="225" width="240" height="130" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="830" y="225" width="240" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="830" y="243" width="240" height="8" fill="#1E3A8A"/>
+<text x="950" y="242" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">solicitud_servicio</text>
+<text x="838" y="267" font-size="10.5" fill="#0F172A">PK id_solicitud BIGINT</text>
+<text x="838" y="282" font-size="10.5" fill="#0F172A">FK id_usuario NULL -&gt; usuario</text>
+<text x="838" y="297" font-size="10.5" fill="#0F172A">codigo_seg UQ, equipo, tipo</text>
+<text x="838" y="312" font-size="10.5" fill="#0F172A">fecha_deseada, estado</text>
+<rect x="830" y="385" width="240" height="125" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="830" y="385" width="240" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="830" y="403" width="240" height="8" fill="#1E3A8A"/>
+<text x="950" y="402" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">reporte_contador</text>
+<text x="838" y="427" font-size="10.5" fill="#0F172A">PK id_reporte BIGINT</text>
+<text x="838" y="442" font-size="10.5" fill="#0F172A">FK id_usuario NN -&gt; usuario</text>
+<text x="838" y="457" font-size="10.5" fill="#0F172A">modelo_equipo, contador_bn</text>
+<text x="838" y="472" font-size="10.5" fill="#0F172A">contador_color, periodo_mes</text>
+<rect x="25" y="395" width="230" height="115" rx="8" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="1.8"/>
+<rect x="25" y="395" width="230" height="26" rx="8" fill="#1E3A8A"/>
+<rect x="25" y="413" width="230" height="8" fill="#1E3A8A"/>
+<text x="140" y="412" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">mensaje_contacto</text>
+<text x="33" y="437" font-size="10.5" fill="#0F172A">PK id_mensaje BIGINT</text>
+<text x="33" y="452" font-size="10.5" fill="#0F172A">nombre, correo, asunto</text>
+<text x="33" y="467" font-size="10.5" fill="#0F172A">mensaje, leido, fecha_creacion</text>
+</svg>
