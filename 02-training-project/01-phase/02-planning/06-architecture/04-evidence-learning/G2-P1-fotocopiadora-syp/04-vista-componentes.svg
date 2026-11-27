@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#334155"/></marker>
+<marker id="inherit" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><polygon points="0 0, 11 5, 0 10" fill="#FFFFFF" stroke="#334155" stroke-width="1.5"/></marker>
+<marker id="compose" markerWidth="12" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="6 0, 12 4, 6 8, 0 4" fill="#1E293B"/></marker>
+<marker id="agg" markerWidth="12" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="6 0, 12 4, 6 8, 0 4" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.3"/></marker>
+</defs>
+<rect width="1000" height="480" fill="#F8FAFC"/>
+<text x="20" y="30" font-size="16" font-weight="700" fill="#0F172A">G2-P1 (A5) · Vista de Componentes e Interfaces (7 Componentes)</text>
+<line x1="270" y1="137" x2="360" y2="112" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="262" y="109" width="106" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="315" y="120" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">IIdentidadAcceso</text>
+<line x1="270" y1="137" x2="360" y2="252" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="271" y="179" width="88" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="315" y="190" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">IPedidosCotiz</text>
+<line x1="270" y1="137" x2="360" y2="395" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="262" y="251" width="106" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="315" y="262" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">IServicioRenting</text>
+<line x1="270" y1="302" x2="360" y2="112" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="262" y="192" width="106" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="315" y="203" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">IIdentidadAcceso</text>
+<line x1="270" y1="302" x2="360" y2="252" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="271" y="262" width="88" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="315" y="273" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">IPedidosCotiz</text>
+<line x1="270" y1="302" x2="700" y2="185" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="444" y="228" width="82" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="485" y="239" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">INotifExport</text>
+<line x1="620" y1="252" x2="700" y2="185" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="619" y="203" width="82" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="660" y="214" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">INotifExport</text>
+<line x1="620" y1="395" x2="700" y2="185" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="619" y="275" width="82" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="660" y="286" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">INotifExport</text>
+<line x1="620" y1="112" x2="700" y2="355" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="607" y="218" width="106" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="660" y="229" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">IPersistenciaSQL</text>
+<line x1="620" y1="252" x2="700" y2="355" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="607" y="288" width="106" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="660" y="299" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">IPersistenciaSQL</text>
+<line x1="620" y1="395" x2="700" y2="355" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="607" y="360" width="106" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="660" y="371" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">IPersistenciaSQL</text>
+<line x1="830" y1="240" x2="830" y2="295" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<rect x="777" y="252" width="106" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="830" y="263" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">IPersistenciaSQL</text>
+<rect x="30" y="80" width="240" height="115" rx="8" fill="#DBEAFE" stroke="#1E40AF" stroke-width="1.8"/>
+<rect x="30" y="80" width="240" height="26" rx="8" fill="#1E40AF"/>
+<rect x="30" y="98" width="240" height="8" fill="#1E40AF"/>
+<text x="150" y="97" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;component&gt;&gt; WebCatalogoPWA</text>
+<text x="38" y="122" font-size="10.5" fill="#0F172A">provee: IUiTiendaPublica</text>
+<text x="38" y="137" font-size="10.5" fill="#0F172A">req: IIdentidadAcceso,</text>
+<text x="38" y="152" font-size="10.5" fill="#0F172A">IPedidosCotiz, IServicioRenting</text>
+<rect x="30" y="245" width="240" height="115" rx="8" fill="#DBEAFE" stroke="#1E40AF" stroke-width="1.8"/>
+<rect x="30" y="245" width="240" height="26" rx="8" fill="#1E40AF"/>
+<rect x="30" y="263" width="240" height="8" fill="#1E40AF"/>
+<text x="150" y="262" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;component&gt;&gt; PanelAdminWeb</text>
+<text x="38" y="287" font-size="10.5" fill="#0F172A">provee: IUiAdministrativa</text>
+<text x="38" y="302" font-size="10.5" fill="#0F172A">req: IIdentidadAcceso,</text>
+<text x="38" y="317" font-size="10.5" fill="#0F172A">IPedidosCotiz, INotifExport</text>
+<rect x="360" y="60" width="260" height="105" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="1.8"/>
+<rect x="360" y="60" width="260" height="26" rx="8" fill="#B45309"/>
+<rect x="360" y="78" width="260" height="8" fill="#B45309"/>
+<text x="490" y="77" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;component&gt;&gt; NucleoIdentidadAcceso</text>
+<text x="368" y="102" font-size="10.5" fill="#0F172A">provee: IIdentidadAcceso</text>
+<text x="368" y="117" font-size="10.5" fill="#0F172A">req: IPersistenciaSQL</text>
+<text x="368" y="132" font-size="10.5" fill="#0F172A">BCrypt + JWT Cookie HttpOnly</text>
+<rect x="360" y="195" width="260" height="115" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="1.8"/>
+<rect x="360" y="195" width="260" height="26" rx="8" fill="#B45309"/>
+<rect x="360" y="213" width="260" height="8" fill="#B45309"/>
+<text x="490" y="212" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;component&gt;&gt; NucleoPedidosCotizaciones</text>
+<text x="368" y="237" font-size="10.5" fill="#0F172A">provee: IPedidosCotiz</text>
+<text x="368" y="252" font-size="10.5" fill="#0F172A">req: IIdentidadAcceso,</text>
+<text x="368" y="267" font-size="10.5" fill="#0F172A">IPersistenciaSQL, INotifExport</text>
+<rect x="360" y="340" width="260" height="110" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="1.8"/>
+<rect x="360" y="340" width="260" height="26" rx="8" fill="#B45309"/>
+<rect x="360" y="358" width="260" height="8" fill="#B45309"/>
+<text x="490" y="357" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;component&gt;&gt; NucleoServicioRenting</text>
+<text x="368" y="382" font-size="10.5" fill="#0F172A">provee: IServicioRenting</text>
+<text x="368" y="397" font-size="10.5" fill="#0F172A">req: IIdentidadAcceso,</text>
+<text x="368" y="412" font-size="10.5" fill="#0F172A">IPersistenciaSQL, INotifExport</text>
+<rect x="700" y="130" width="260" height="110" rx="8" fill="#F3E8FF" stroke="#6B21A8" stroke-width="1.8"/>
+<rect x="700" y="130" width="260" height="26" rx="8" fill="#6B21A8"/>
+<rect x="700" y="148" width="260" height="8" fill="#6B21A8"/>
+<text x="830" y="147" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;component&gt;&gt; NucleoNotificacionesExport</text>
+<text x="708" y="172" font-size="10.5" fill="#0F172A">provee: INotifExport</text>
+<text x="708" y="187" font-size="10.5" fill="#0F172A">req: IPersistenciaSQL</text>
+<text x="708" y="202" font-size="10.5" fill="#0F172A">CSV seguro + avisos de estado</text>
+<rect x="700" y="295" width="260" height="120" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="1.8"/>
+<rect x="700" y="295" width="260" height="26" rx="8" fill="#047857"/>
+<rect x="700" y="313" width="260" height="8" fill="#047857"/>
+<text x="830" y="312" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;component&gt;&gt; AdaptadorPersistenciaSQL</text>
+<text x="708" y="337" font-size="10.5" fill="#0F172A">provee: IPersistenciaSQL</text>
+<text x="708" y="352" font-size="10.5" fill="#0F172A">req: MotorRelacional</text>
+<text x="708" y="367" font-size="10.5" fill="#0F172A">12 tablas 3FN + integridad FK</text>
+</svg>

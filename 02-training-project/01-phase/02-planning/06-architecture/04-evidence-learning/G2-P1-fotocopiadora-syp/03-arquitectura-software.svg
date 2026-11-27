@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="440" viewBox="0 0 1450 440" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#334155"/></marker>
+<marker id="inherit" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><polygon points="0 0, 11 5, 0 10" fill="#FFFFFF" stroke="#334155" stroke-width="1.5"/></marker>
+<marker id="compose" markerWidth="12" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="6 0, 12 4, 6 8, 0 4" fill="#1E293B"/></marker>
+<marker id="agg" markerWidth="12" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="6 0, 12 4, 6 8, 0 4" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.3"/></marker>
+</defs>
+<rect width="1450" height="440" fill="#F8FAFC"/>
+<text x="20" y="30" font-size="16" font-weight="700" fill="#0F172A">G2-P1 (A4) · Arquitectura Hexagonal (Puertos y Adaptadores) — Fotocopiadora SyP</text>
+<line x1="270" y1="140" x2="330" y2="220" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="265" y="165" width="70" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="300" y="176" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">HTTPS JSON</text>
+<line x1="270" y1="290" x2="330" y2="220" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="259" y="240" width="82" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="300" y="251" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">HTTPS Cookie</text>
+<line x1="560" y1="220" x2="620" y2="220" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="534" y="205" width="112" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="590" y="216" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">IComandoOperacion</text>
+<line x1="890" y1="220" x2="950" y2="220" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="876" y="205" width="88" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="920" y="216" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">invoca puerto</text>
+<line x1="1220" y1="127" x2="1170" y2="220" stroke="#475569" stroke-width="1.6" marker-end="url(#inherit)"/>
+<rect x="1160" y="158" width="70" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="1195" y="169" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">implementa</text>
+<line x1="1220" y1="247" x2="1170" y2="220" stroke="#475569" stroke-width="1.6" marker-end="url(#inherit)"/>
+<rect x="1160" y="218" width="70" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="1195" y="229" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">implementa</text>
+<line x1="1220" y1="362" x2="1170" y2="220" stroke="#475569" stroke-width="1.6" marker-end="url(#inherit)"/>
+<rect x="1160" y="276" width="70" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="1195" y="287" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">implementa</text>
+<rect x="30" y="80" width="240" height="120" rx="8" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.8"/>
+<rect x="30" y="80" width="240" height="26" rx="8" fill="#1D4ED8"/>
+<rect x="30" y="98" width="240" height="8" fill="#1D4ED8"/>
+<text x="150" y="97" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">Adaptador Primario · PWA Web</text>
+<text x="38" y="122" font-size="10.5" fill="#0F172A">index, productos, cotizacion</text>
+<text x="38" y="137" font-size="10.5" fill="#0F172A">servicio-tecnico, sw.js offline</text>
+<rect x="30" y="235" width="240" height="110" rx="8" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.8"/>
+<rect x="30" y="235" width="240" height="26" rx="8" fill="#1D4ED8"/>
+<rect x="30" y="253" width="240" height="8" fill="#1D4ED8"/>
+<text x="150" y="252" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">Adaptador Primario · Admin SPA</text>
+<text x="38" y="277" font-size="10.5" fill="#0F172A">admin.html, login.html</text>
+<text x="38" y="292" font-size="10.5" fill="#0F172A">Panel KPI, CRUD y Export CSV</text>
+<rect x="330" y="140" width="230" height="160" rx="8" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.8"/>
+<rect x="330" y="140" width="230" height="26" rx="8" fill="#4338CA"/>
+<rect x="330" y="158" width="230" height="8" fill="#4338CA"/>
+<text x="445" y="157" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">Puertos de Entrada (API REST)</text>
+<text x="338" y="182" font-size="10.5" fill="#0F172A">FastAPI Routers (HTTP/JSON)</text>
+<text x="338" y="197" font-size="10.5" fill="#0F172A">Validacion Pydantic + JWT HttpOnly</text>
+<text x="338" y="212" font-size="10.5" fill="#0F172A">Anti-doble envio y RBAC</text>
+<rect x="620" y="110" width="270" height="220" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="1.8"/>
+<rect x="620" y="110" width="270" height="26" rx="8" fill="#B45309"/>
+<rect x="620" y="128" width="270" height="8" fill="#B45309"/>
+<text x="755" y="127" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">Nucleo Dominio &amp; Aplicacion</text>
+<text x="628" y="152" font-size="10.5" fill="#0F172A">Entidades (Persona, Pedido, Cotiz.)</text>
+<text x="628" y="167" font-size="10.5" fill="#0F172A">Comandos GoF + Fabrica Abstracta</text>
+<text x="628" y="182" font-size="10.5" fill="#0F172A">Calculador IVA 19% / Totales COP</text>
+<text x="628" y="197" font-size="10.5" fill="#0F172A">Enmascaramiento is_owner</text>
+<rect x="950" y="140" width="220" height="160" rx="8" fill="#D1FAE5" stroke="#047857" stroke-width="1.8"/>
+<rect x="950" y="140" width="220" height="26" rx="8" fill="#047857"/>
+<rect x="950" y="158" width="220" height="8" fill="#047857"/>
+<text x="1060" y="157" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">Puertos de Salida (Interfaces)</text>
+<text x="958" y="182" font-size="10.5" fill="#0F172A">IRepositorioComercial</text>
+<text x="958" y="197" font-size="10.5" fill="#0F172A">IExportadorCsvSeguro</text>
+<text x="958" y="212" font-size="10.5" fill="#0F172A">ICanalMensajeria</text>
+<rect x="1220" y="75" width="200" height="105" rx="8" fill="#ECFDF5" stroke="#065F46" stroke-width="1.8"/>
+<rect x="1220" y="75" width="200" height="26" rx="8" fill="#065F46"/>
+<rect x="1220" y="93" width="200" height="8" fill="#065F46"/>
+<text x="1320" y="92" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">Adaptador SQLAlchemy</text>
+<text x="1228" y="117" font-size="10.5" fill="#0F172A">PostgreSQL 16 / SQLite 3</text>
+<text x="1228" y="132" font-size="10.5" fill="#0F172A">12 tablas 3FN normalizadas</text>
+<rect x="1220" y="200" width="200" height="95" rx="8" fill="#ECFDF5" stroke="#065F46" stroke-width="1.8"/>
+<rect x="1220" y="200" width="200" height="26" rx="8" fill="#065F46"/>
+<rect x="1220" y="218" width="200" height="8" fill="#065F46"/>
+<text x="1320" y="217" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">Adaptador CSV &amp; Impresion</text>
+<text x="1228" y="242" font-size="10.5" fill="#0F172A">Sanitizador anti-formula CSV</text>
+<text x="1228" y="257" font-size="10.5" fill="#0F172A">Vista imprimible cotizacion</text>
+<rect x="1220" y="315" width="200" height="95" rx="8" fill="#ECFDF5" stroke="#065F46" stroke-width="1.8"/>
+<rect x="1220" y="315" width="200" height="26" rx="8" fill="#065F46"/>
+<rect x="1220" y="333" width="200" height="8" fill="#065F46"/>
+<text x="1320" y="332" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">Adaptador Mensajeria / Fallback</text>
+<text x="1228" y="357" font-size="10.5" fill="#0F172A">Canal WhatsApp oficial SyP</text>
+<text x="1228" y="372" font-size="10.5" fill="#0F172A">Respaldo estatico localStorage</text>
+</svg>

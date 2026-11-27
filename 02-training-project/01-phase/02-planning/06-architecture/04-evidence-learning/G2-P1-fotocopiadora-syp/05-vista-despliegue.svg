@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1310" height="390" viewBox="0 0 1310 390" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#334155"/></marker>
+<marker id="inherit" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><polygon points="0 0, 11 5, 0 10" fill="#FFFFFF" stroke="#334155" stroke-width="1.5"/></marker>
+<marker id="compose" markerWidth="12" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="6 0, 12 4, 6 8, 0 4" fill="#1E293B"/></marker>
+<marker id="agg" markerWidth="12" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="6 0, 12 4, 6 8, 0 4" fill="#FFFFFF" stroke="#1E293B" stroke-width="1.3"/></marker>
+</defs>
+<rect width="1310" height="390" fill="#F8FAFC"/>
+<text x="20" y="30" font-size="16" font-weight="700" fill="#0F172A">G2-P1 (A6) · Vista de Despliegue Base (5 Nodos y Protocolos)</text>
+<line x1="270" y1="130" x2="350" y2="210" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="248" y="155" width="124" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="310" y="166" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">HTTPS 443 (TLS 1.3)</text>
+<line x1="270" y1="290" x2="350" y2="210" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="248" y="235" width="124" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="310" y="246" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">HTTPS 443 (TLS 1.3)</text>
+<line x1="600" y1="210" x2="680" y2="210" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="575" y="195" width="130" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="640" y="206" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">HTTPS / FastAPI REST</text>
+<line x1="940" y1="210" x2="1020" y2="210" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="909" y="195" width="142" height="15" rx="3" fill="#F8FAFC" fill-opacity="0.92"/>
+<text x="980" y="206" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1E293B">TCP 5432 (Red Privada)</text>
+<rect x="30" y="70" width="240" height="120" rx="8" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<rect x="30" y="70" width="240" height="26" rx="8" fill="#1D4ED8"/>
+<rect x="30" y="88" width="240" height="8" fill="#1D4ED8"/>
+<text x="150" y="87" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;device&gt;&gt; NavegadorClientePWA</text>
+<text x="38" y="112" font-size="10.5" fill="#0F172A">Navegador Chrome/Edge/Safari</text>
+<text x="38" y="127" font-size="10.5" fill="#0F172A">dist/ HTML+CSS+JS + sw.js</text>
+<text x="38" y="142" font-size="10.5" fill="#0F172A">Fallback localStorage estatico</text>
+<rect x="30" y="235" width="240" height="110" rx="8" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.8"/>
+<rect x="30" y="235" width="240" height="26" rx="8" fill="#1D4ED8"/>
+<rect x="30" y="253" width="240" height="8" fill="#1D4ED8"/>
+<text x="150" y="252" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;device&gt;&gt; EstacionAdministrador</text>
+<text x="38" y="277" font-size="10.5" fill="#0F172A">Navegador Desktop SyP</text>
+<text x="38" y="292" font-size="10.5" fill="#0F172A">admin.html + exportacion CSV</text>
+<rect x="350" y="145" width="250" height="130" rx="8" fill="#F3E8FF" stroke="#6B21A8" stroke-width="1.8"/>
+<rect x="350" y="145" width="250" height="26" rx="8" fill="#6B21A8"/>
+<rect x="350" y="163" width="250" height="8" fill="#6B21A8"/>
+<text x="475" y="162" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;node&gt;&gt; BordeEstaticoRenderCDN</text>
+<text x="358" y="187" font-size="10.5" fill="#0F172A">Render CDN / Nginx TLS 1.3</text>
+<text x="358" y="202" font-size="10.5" fill="#0F172A">Terminacion HTTPS 443</text>
+<text x="358" y="217" font-size="10.5" fill="#0F172A">Cabeceras CSP/HSTS + dist/</text>
+<rect x="680" y="145" width="260" height="130" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="1.8"/>
+<rect x="680" y="145" width="260" height="26" rx="8" fill="#B45309"/>
+<rect x="680" y="163" width="260" height="8" fill="#B45309"/>
+<text x="810" y="162" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;container&gt;&gt; ServidorAPIFastAPIDocker</text>
+<text x="688" y="187" font-size="10.5" fill="#0F172A">Docker Python 3.12 + Uvicorn</text>
+<text x="688" y="202" font-size="10.5" fill="#0F172A">FastAPI + 9 Routers + BCrypt</text>
+<text x="688" y="217" font-size="10.5" fill="#0F172A">Rate limit y cookie HttpOnly</text>
+<rect x="1020" y="145" width="250" height="130" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="1.8"/>
+<rect x="1020" y="145" width="250" height="26" rx="8" fill="#047857"/>
+<rect x="1020" y="163" width="250" height="8" fill="#047857"/>
+<text x="1145" y="162" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">&lt;&lt;database&gt;&gt; MotorRelacionalPostgreSQL</text>
+<text x="1028" y="187" font-size="10.5" fill="#0F172A">PostgreSQL 16 (dev SQLite 3)</text>
+<text x="1028" y="202" font-size="10.5" fill="#0F172A">12 tablas 3FN + restricciones FK</text>
+<text x="1028" y="217" font-size="10.5" fill="#0F172A">Sin exposicion publica</text>
+</svg>
