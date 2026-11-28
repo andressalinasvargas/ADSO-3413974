@@ -39,7 +39,7 @@
 | **A7.** Matriz de trazabilidad análisis → diseño | [06-matriz-trazabilidad-diseno.md](06-matriz-trazabilidad-diseno.md) | [`G1-P2-fotocopiadora-syp/09-matriz-trazabilidad.md`](../../../../01-analysis/03-conceptual-model/04-evidence-learning/G1-P2-fotocopiadora-syp/09-matriz-trazabilidad.md) | Mapeé `12/12 RF` (`100 %`) y `8/8 RNF` hacia clases, componentes y tablas, con verificación inversa `24/24` clases sin huérfanas. |
 
 **Qué reutilicé (resumen):**
-Partí del análisis individual realizado en `G1-P1-fotocopiadora-syp` y `G1-P2-fotocopiadora-syp` (`12 RF`, `8 RNF`, `12` clases conceptuales y `11` entidades) junto con los módulos reales del proyecto colaborativo del año (`Fotocopiadora SyP`).
+Partí del análisis individual realizado en `G1-P1-fotocopiadora-syp` y `G1-P2-fotocopiadora-syp` (`12 RF`, `8 RNF`, `12` clases conceptuales y `11` entidades), de mis prácticas previas de modelado registradas en `03-execute/20-week` y `03-execute/23-week`, y de los módulos reales del proyecto colaborativo del año (`Fotocopiadora SyP`).
 
 **Qué ajusté para llevarlo al estándar de la rúbrica (resumen):**
 Convertí el dominio conceptual sin métodos en un diagrama OO de `24` elementos tipados, con herencia (`Persona`), agregaciones (`Categoria`/`CarritoCompra`) y composiciones (`Pedido`, `Cotizacion`, `Notificacion`), desacoplando persistencia y exportación CSV.
@@ -67,7 +67,8 @@ Diseñé desde cero la **Arquitectura Hexagonal**, los patrones GoF **Comando** 
 | Día | Qué avancé (mensaje del commit) |
 | :--- | :--- |
 | `2026-11-27` (Día 1) | `feat(g2-p1): agregar diseno OO con Comando y Fabrica Abstracta, arquitectura hexagonal, vistas y trazabilidad de fotocopiadora-syp` — Construcción completa de `A1`–`A7` y diagramas `.drawio`/`.svg` propios sobre `G1-P1`/`G1-P2`. |
-| *`2026-11-28` (Día 2 programado antes `06:00 a. m.`)* | Cierre de trazabilidad cruzada `P1 ↔ P2` contra políticas `POL-*` y hallazgo `H-04` en [`G2-P2/07-lista-chequeo-verificacion.md`](../G2-P2-fotocopiadora-syp/07-lista-chequeo-verificacion.md). |
+| `2026-11-27` (Día 1 · EN) | `docs(g2): agregar paquete completo de documentacion en ingles para G2-P1 y G2-P2` — Espejo documental en inglés dentro de `english/`. |
+| `2026-11-28` (Día 2 · Cierre) | `feat(g2-p1): refinar diagrama OO con multiplicidades completas, cerrar trazabilidad P1-P2 H-04 y actualizar cierre Dia 2` — Tipado completo de parámetros, multiplicidades origen/destino y realizaciones punteadas en `02-diagrama-clases.svg`, cierre de auditoría cruzada `H-04` (`P1 ↔ P2` vs `POL-*`) y verificación final. |
 
 ---
 
@@ -91,4 +92,4 @@ Diseñé desde cero la **Arquitectura Hexagonal**, los patrones GoF **Comando** 
 
 Declaro que los artefactos de esta carpeta son de mi autoría, que lo que reutilicé de mi trabajo del año o de otras fuentes está indicado en la sección 3, que no entregué como propio material del instructor ni de otros aprendices, y que puedo explicar cada artefacto en la verificación oral.
 
-Usuario de GitHub: `@andressalinasvargas`  Fecha: `2026-11-27`
+Usuario de GitHub: `@andressalinasvargas`  Fecha: `2026-11-28`

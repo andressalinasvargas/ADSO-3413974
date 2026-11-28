@@ -54,3 +54,19 @@
 | `22` | `IFabricaEntregaComercial` | Interfaz GoF | `RF-05`, `RF-06`, `RF-12` | `NucleoPedidosCotizaciones` |
 | `23` | `FabricaEntregaPedido` | Clase GoF | `RF-05`, `RF-12` | `NucleoPedidosCotizaciones` |
 | `24` | `FabricaEntregaCotizacion` | Clase GoF | `RF-06`, `RF-12` | `NucleoPedidosCotizaciones` |
+
+---
+
+## 3. Auditoría Cruzada Día 2 (`2026-11-28`): Componentes (`G2-P1`) ↔ Tablas y Políticas `POL-*` (`G2-P2`)
+
+> Cierre del hallazgo **`H-04`** (verificado en [`07-lista-chequeo-verificacion.md`](../G2-P2-fotocopiadora-syp/07-lista-chequeo-verificacion.md)): cobertura verificada de **`12 / 12` tablas** y **`9 / 9` políticas `POL-*`** sin huérfanas.
+
+| # | Componente (`A5`) | Tablas de `G2-P2` (`12`) que opera | Políticas `POL-*` (`G2-P2/06-politicas-seguridad-datos.md`) aplicadas |
+| :- | :--- | :--- | :--- |
+| `1` | **`WebCatalogoPWA`** | `categoria`, `producto`, `compatibilidad_producto`, `pedido`, `cotizacion`, `solicitud_servicio`, `reporte_contador`, `mensaje_contacto`, `notificacion` | `POL-CON-02` (`TLS 1.3`), `POL-CON-03` (consentimiento Ley 1581 y `is_owner`), `POL-DIS-03` (respaldo PWA `dist/` + `localStorage` + WhatsApp). |
+| `2` | **`PanelAdminWeb`** | `usuario`, `categoria`, `producto`, `pedido`, `cotizacion`, `solicitud_servicio`, `reporte_contador`, `mensaje_contacto`, `notificacion` | `POL-INT-02` (`activo = 0`), `POL-CON-01` (omisión de `clave_hash`), `POL-CON-02` (cookie `HttpOnly` `syp_session`), `POL-CON-03` (exportación CSV anti-fórmulas). |
+| `3` | **`NucleoIdentidadAcceso`** | `usuario` | `POL-INT-02` (desactivación lógica), `POL-CON-01` (`BCrypt` hash+sal), `POL-CON-02` (`JWT HttpOnly`), `POL-CON-03` (titularidad `is_owner`). |
+| `4` | **`NucleoPedidosCotizaciones`** | `categoria`, `producto`, `compatibilidad_producto`, `pedido`, `detalle_pedido`, `cotizacion`, `detalle_cotizacion` | `POL-INT-01` (`FK` + `CHECK`), `POL-INT-02` (anti-doble envío), `POL-INT-03` (recálculo de precios e IVA en servidor), `POL-CON-03` (`is_owner`). |
+| `5` | **`NucleoServicioRenting`** | `solicitud_servicio`, `reporte_contador`, `mensaje_contacto` | `POL-INT-01` (`CHECK`), `POL-INT-02` (`UNIQUE uk_rep_usuario_eq_mes`), `POL-CON-03` (autorización Ley 1581 en formularios), `POL-DIS-03` (canal alterno WhatsApp). |
+| `6` | **`NucleoNotificacionesExport`** | `notificacion`, `pedido`, `cotizacion`, `solicitud_servicio`, `reporte_contador` | `POL-INT-01` (`CASCADE` por usuario), `POL-CON-03` (`ExportadorCsvSeguro` neutraliza `=,+,-,@`). |
+| `7` | **`AdaptadorPersistenciaSQL`** | **`12 / 12` tablas** (`usuario` a `mensaje_contacto`) | `POL-INT-01` (`12` FK con `ON DELETE` y `33` `CHECK`), `POL-DIS-01` (respaldo diario `02:00 a. m. AES-256`), `POL-DIS-02` (prueba mensual de restauración `RPO <= 24 h`, `RTO <= 2 h`). |

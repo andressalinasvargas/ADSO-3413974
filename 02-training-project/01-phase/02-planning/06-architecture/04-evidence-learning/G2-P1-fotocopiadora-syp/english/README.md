@@ -59,7 +59,7 @@
 | :--- | :--- |
 | `2026-11-27` (Day 1) | `feat(g2-p1): agregar diseno OO con Comando y Fabrica Abstracta, arquitectura hexagonal, vistas y trazabilidad de fotocopiadora-syp` — Built `A1`–`A7` and `.drawio`/`.svg` diagrams. |
 | `2026-11-27` (Day 1 · EN) | `docs(g2): agregar paquete completo de documentacion en ingles para G2-P1 y G2-P2` — English mirror of `G2-P1` and `G2-P2`. |
-| *`2026-11-28` (Day 2 scheduled before `06:00 a.m.`)* | Cross-traceability audit closure `P1 ↔ P2` against `POL-*` policies and finding `H-04` in [07-verification-checklist.md](../../G2-P2-fotocopiadora-syp/english/07-verification-checklist.md). |
+| `2026-11-28` (Day 2 · Closure) | `feat(g2-p1): refinar diagrama OO con multiplicidades completas, cerrar trazabilidad P1-P2 H-04 y actualizar cierre Dia 2` — Added typed params, end-to-end multiplicities, dashed realizations in `02-diagrama-clases.svg`, and closed `H-04` (`P1 ↔ P2` cross-audit). |
 
 ---
 
@@ -83,4 +83,4 @@
 
 I declare that the artifacts in this folder are of my own authorship, reused year-long/prior sources are declared in Section 3, no instructor templates or other trainees' work were claimed as my own, and I can explain every artifact during oral verification.
 
-GitHub handle: `@andressalinasvargas` · Date: `2026-11-27`
+GitHub handle: `@andressalinasvargas` · Date: `2026-11-28`

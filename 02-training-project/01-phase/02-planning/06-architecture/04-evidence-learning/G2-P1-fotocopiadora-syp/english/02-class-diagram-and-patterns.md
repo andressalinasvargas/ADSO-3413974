@@ -153,6 +153,8 @@ classDiagram
   Cliente "0..1" --> "0..*" Pedido
   Cliente "0..1" --> "0..*" SolicitudServicio
   Cliente "1" --> "0..*" ReporteContador
+  Administrador "1" --> "0..*" MensajeContacto
+  Administrador ..> ExportadorCsvSeguro : uses
   DespachadorComandos "1" --> "0..*" IComandoOperacion
   IComandoOperacion <|.. ComandoConfirmarPedido
   IComandoOperacion <|.. ComandoEmitirCotizacion

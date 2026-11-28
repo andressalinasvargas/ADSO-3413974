@@ -56,3 +56,19 @@
 | `22` | `IFabricaEntregaComercial` | GoF Interface | `RF-05`, `RF-06`, `RF-12` | `NucleoPedidosCotizaciones` |
 | `23` | `FabricaEntregaPedido` | GoF Class | `RF-05`, `RF-12` | `NucleoPedidosCotizaciones` |
 | `24` | `FabricaEntregaCotizacion` | GoF Class | `RF-06`, `RF-12` | `NucleoPedidosCotizaciones` |
+
+---
+
+## 3. Day 2 Cross-Audit (`2026-11-28`): Components (`G2-P1`) ↔ Tables & `POL-*` Policies (`G2-P2`)
+
+> Closure of finding **`H-04`** (verified in [`07-verification-checklist.md`](../../G2-P2-fotocopiadora-syp/english/07-verification-checklist.md)): verified **`12 / 12` tables** and **`9 / 9` `POL-*` policies** with zero orphans.
+
+| # | Component (`A5`) | `G2-P2` Tables (`12`) operated | `POL-*` Policies (`G2-P2/06-data-security-policies.md`) enforced |
+| :- | :--- | :--- | :--- |
+| `1` | **`WebCatalogoPWA`** | `categoria`, `producto`, `compatibilidad_producto`, `pedido`, `cotizacion`, `solicitud_servicio`, `reporte_contador`, `mensaje_contacto`, `notificacion` | `POL-CON-02` (`TLS 1.3`), `POL-CON-03` (Law 1581 consent & `is_owner`), `POL-DIS-03` (`dist/` PWA + `localStorage` + WhatsApp fallback). |
+| `2` | **`PanelAdminWeb`** | `usuario`, `categoria`, `producto`, `pedido`, `cotizacion`, `solicitud_servicio`, `reporte_contador`, `mensaje_contacto`, `notificacion` | `POL-INT-02` (`activo = 0`), `POL-CON-01` (omit `clave_hash`), `POL-CON-02` (`HttpOnly` cookie `syp_session`), `POL-CON-03` (anti-formula CSV export). |
+| `3` | **`NucleoIdentidadAcceso`** | `usuario` | `POL-INT-02` (logical disable), `POL-CON-01` (salted `BCrypt`), `POL-CON-02` (`HttpOnly JWT`), `POL-CON-03` (`is_owner` ownership). |
+| `4` | **`NucleoPedidosCotizaciones`** | `categoria`, `producto`, `compatibilidad_producto`, `pedido`, `detalle_pedido`, `cotizacion`, `detalle_cotizacion` | `POL-INT-01` (`FK` + `CHECK`), `POL-INT-02` (anti-double-submit), `POL-INT-03` (server-side price/VAT recalculation), `POL-CON-03` (`is_owner`). |
+| `5` | **`NucleoServicioRenting`** | `solicitud_servicio`, `reporte_contador`, `mensaje_contacto` | `POL-INT-01` (`CHECK`), `POL-INT-02` (`UNIQUE uk_rep_usuario_eq_mes`), `POL-CON-03` (Law 1581 consent on forms), `POL-DIS-03` (WhatsApp fallback). |
+| `6` | **`NucleoNotificacionesExport`** | `notificacion`, `pedido`, `cotizacion`, `solicitud_servicio`, `reporte_contador` | `POL-INT-01` (per-user `CASCADE`), `POL-CON-03` (`ExportadorCsvSeguro` neutralizes `=,+,-,@`). |
+| `7` | **`AdaptadorPersistenciaSQL`** | **`12 / 12` tables** (`usuario` through `mensaje_contacto`) | `POL-INT-01` (`12` FKs with `ON DELETE` & `33` `CHECK`s), `POL-DIS-01` (daily `02:00 a.m. AES-256` backup), `POL-DIS-02` (monthly restore drill `RPO <= 24 h`, `RTO <= 2 h`). |
