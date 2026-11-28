@@ -1,5 +1,7 @@
 # README de entrega · Guía 2: Diseño de la solución
 
+> **English version:** [english/README.md](english/README.md)
+
 ## 1. Datos de la entrega
 
 | Campo | Valor |
