@@ -1,5 +1,7 @@
 # README de entrega · Guía 3: Propuesta Técnica
 
+> **English version:** [english/README.md](english/README.md)
+
 ## 1. Datos de la entrega
 
 | Campo | Valor |
