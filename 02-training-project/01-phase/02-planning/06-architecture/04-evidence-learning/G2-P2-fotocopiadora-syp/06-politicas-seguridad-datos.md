@@ -38,3 +38,28 @@
 | **`solicitud_servicio`** | `INSERT` *(cita técnica pública)* | `INSERT`, `SELECT` *(propias solicitudes)* | `SELECT`, `UPDATE` *(`estado_atencion`, `notas_admin`)* | `SELECT` *(solo lectura)* |
 | **`reporte_contador`** | Sin acceso | `SELECT`, `INSERT` *(exclusivamente propios equipos)* | `SELECT` *(auditoría renting)* + Export CSV | `SELECT` *(solo lectura)* |
 | **`mensaje_contacto`** | `INSERT` *(formulario público)* | `INSERT` | `SELECT`, `UPDATE` *(`leido = 1`)* | `SELECT` |
+
+---
+
+## 3. Tratamiento de Datos Personales: Finalidad, Autorización y Derechos del Titular (Ley 1581 de 2012 y Decreto 1074 de 2015)
+
+### 3.1 Finalidad específica por tabla con datos personales
+
+| Tabla con PII | Datos tratados | Finalidad exclusiva informada al titular | Vigencia / retención operativa |
+|---|---|---|---|
+| **`usuario`** | `correo_unico`, `nombre_completo`, `telefono` | Autenticación segura (`BCrypt`/`JWT`), recuperación de historial propio, notificaciones de estado y reporte de contadores. | Mientras la cuenta permanezca activa (`activo = 1`). |
+| **`pedido`** | `nombre_cliente`, `correo_cliente`, `telefono_cliente`, `nit_cliente`, `direccion_entrega`, `ciudad_entrega` | Facturación tributaria, despacho físico de equipos/insumos en Neiva/Huila y soporte de garantías (`Ley 1480/2011`). | Conforme a conservación contable/comercial vigente. |
+| **`cotizacion`** | `nombre_cliente`, `correo_cliente`, `telefono_cliente` | Emisión y seguimiento comercial de propuestas formales dentro de `vigencia_dias` (`1`–`90` días). | Durante la vigencia comercial y archivo histórico comercial. |
+| **`solicitud_servicio`** | `nombre_solicitante`, `telefono_contacto` | Coordinación de visita técnica preventiva, correctiva o instalación en la franja solicitada. | Durante el ciclo de atención y bitácora de garantías técnicas. |
+| **`mensaje_contacto`** | `nombre`, `correo`, `telefono` | Respuesta puntual a consultas comerciales o de soporte enviadas desde el formulario público. | Hasta resolución de la consulta o solicitud de supresión. |
+
+### 3.2 Captura de autorización previa, expresa e informada
+
+1. Todo formulario de captura (`registro de cuenta`, `confirmar pedido`, `solicitar cotización`, `agendar servicio técnico` y `contacto`) incluye una **casilla de autorización desmarcada por defecto** antes de habilitar el envío, junto al enlace visible al aviso de privacidad y finalidades anteriores.
+2. El sistema conserva la marca temporal de registro (`fecha_creacion` en formato ISO-8601 UTC) como prueba verificable del momento en que el titular otorgó su autorización antes del tratamiento.
+3. No se realizan transferencias internacionales a responsables autónomos sin autorización adicional expresa; los servicios de respaldo cifrado externos operan bajo contrato de **transmisión** como encargados (`Decreto 1074/2015`).
+
+### 3.3 Atención de consultas, actualización, rectificación y supresión (`ARCO`)
+
+- **Consulta y rectificación:** los usuarios autenticados consultan y corrigen sus datos de perfil directamente desde su sesión verificada (`POL-CON-02`), o mediante canal oficial administrativo de Fotocopiadora SyP.
+- **Supresión y revocatoria:** ante solicitud válida de retiro del titular, se aplica **desactivación lógica inmediata (`usuario.activo = 0`)** o anonimización en tablas no vinculadas a obligación legal/tributaria (`mensaje_contacto`), conservando únicamente los registros de `pedido` estrictamente exigidos por norma contable sin uso comercial posterior.

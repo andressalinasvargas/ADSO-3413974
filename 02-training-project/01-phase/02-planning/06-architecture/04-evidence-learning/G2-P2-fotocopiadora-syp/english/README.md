@@ -36,7 +36,7 @@
 | **B4.** Data dictionary | [04-data-dictionary.md](04-data-dictionary.md) | New | Documented singular `snake_case` naming standard and `100 %` of columns across all `12` tables with types, sizes, constraints, and domains. |
 | **B5.** SQL script & execution evidence | [../05-script-creacion.sql](../05-script-creacion.sql) · [05-sql-execution-evidence.md](05-sql-execution-evidence.md) · [../05-log-ejecucion-sqlite.txt](../05-log-ejecucion-sqlite.txt) | New | Authored DDL (`12` tables, `12` PK, `12` FK with `ON DELETE`, `33` `CHECK`, zero-PII synthetic rows) and ran it on **SQLite 3** (`4/4` negative tests rejected with `IntegrityError`). |
 | **B6.** Security policies & roles | [06-data-security-policies.md](06-data-security-policies.md) | New | Defined `9` policies (salted `BCrypt`, `TLS 1.3`, Law 1581 `is_owner`, safe CSV, daily encrypted backup & monthly drill) and `4` roles × `12` tables matrix. |
-| **B7.** Checklist & findings | [07-verification-checklist.md](07-verification-checklist.md) | New | Evaluated `24` measurable criteria across `G2-P1` and `G2-P2` with `4` findings (`H-01`–`H-03` closed today; `H-04` scheduled for Day 2). |
+| **B7.** Checklist & findings | [07-verification-checklist.md](07-verification-checklist.md) | New | Evaluated `24` measurable criteria across `G2-P1` and `G2-P2` with `5` findings closed (`24/24` at `100 %` on Day 2). |
 
 ---
 
@@ -48,7 +48,7 @@
 - [x] **B4** Complete data dictionary (`12/12` tables matching SQL 1:1).
 - [x] **B5** SQL script executed cleanly ([../05-log-ejecucion-sqlite.txt](../05-log-ejecucion-sqlite.txt)), `ON DELETE` on all `12` FKs & `33` `CHECK`s.
 - [x] **B6** `9` security policies (salted `BCrypt`, `TLS 1.3`, Law 1581, backup/restore) and `4` roles × `12` tables matrix.
-- [x] **B7** `24`-criterion checklist (`>= 20`) filled across `G2-P1` & `G2-P2`, `4` findings (`3` closed, `H-04` scheduled for Day 2).
+- [x] **B7** `24`-criterion checklist (`>= 20`) filled across `G2-P1` & `G2-P2`, `5` findings closed (`24/24` at `100 %`).
 
 ---
 
@@ -58,7 +58,7 @@
 | :--- | :--- |
 | `2026-11-27` (Day 1) | `feat(g2-p2): agregar modelo conceptual, logico 12 tablas, normalizacion 3FN, DDL verificado en SQLite y seguridad de fotocopiadora-syp` — Built `B1`–`B7` and real SQLite 3 verification (`ExitCode = 0`). |
 | `2026-11-27` (Day 1 · EN) | `docs(g2): agregar paquete completo de documentacion en ingles para G2-P1 y G2-P2` — English mirror of `G2-P1` and `G2-P2`. |
-| *`2026-11-28` (Day 2 scheduled before `06:00 a.m.`)* | Closure of `H-04` cross-audit (`P1 ↔ P2` vs `POL-*`), reaching `24/24` criteria and completing `2` distinct push calendar days. |
+| `2026-11-28` (Day 2 · Closure) | `feat(g2-p2): detallar finalidad y autorizacion Ley 1581, cerrar hallazgos H-04/H-05 al 100% y firmar cierre Dia 2` — Added Law 1581 purpose/consent/ARCO section §3, closed `H-04`/`H-05` (`24/24` criteria), and fulfilled `2` distinct push calendar days. |
 
 ---
 
@@ -82,4 +82,4 @@
 
 I declare that the artifacts in this folder are of my own authorship, reused sources are declared in Section 3, no instructor material or other trainees' work was claimed as my own, and I can explain every artifact during oral verification.
 
-GitHub handle: `@andressalinasvargas` · Date: `2026-11-27`
+GitHub handle: `@andressalinasvargas` · Date: `2026-11-28`

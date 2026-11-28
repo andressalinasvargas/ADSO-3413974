@@ -9,7 +9,7 @@
 
 ---
 
-## 1. Verification Checklist (`24` Measurable Criteria — Day 1 Status)
+## 1. Verification Checklist (`24` Measurable Criteria — Day 2 Closure `2026-11-28`: `24 / 24` Passed `100 %`)
 
 | ID | Artifact | Measurable acceptance criterion | Severity | Result | Verifiable evidence in repository |
 | :- | :--- | :--- | :---: | :---: | :--- |
@@ -36,15 +36,24 @@
 | **LC-21** | `P1`–`P2` Privacy | Public repo free of real third-party personal data or real secrets | Critical | **Yes** | Automated scan across `G1`–`G2` (`0` real PII; `.invalid` examples only). |
 | **LC-22** | `P1`–`P2` Authorship | Differentiated artifacts traced to own analysis without copying other forks | Critical | **Yes** | Own GoF (`Command` + `Abstract Factory`), Hexagonal style & `12` own tables. |
 | **LC-23** | `P2` Consistency | Exact column/table name match across `B2`, `B4`, and `B5` | Major | **Yes** | Cross-checked all `12` tables and columns across logical model, dictionary, and SQL. |
-| **LC-24** | `P1 ↔ P2` Trace | Explicit `P1 ↔ P2` cross-audit (components/classes vs. tables and `POL-*` policies) | Minor | **Partial *(Day 2)*** | **Finding `H-04`:** scheduled for Day 2 closure (`2026-11-28 < 06:00 a.m.`). |
+| **LC-24** | `P1 ↔ P2` Trace | Explicit `P1 ↔ P2` cross-audit (components/classes vs. tables and `POL-*` policies) | Minor | **Yes** | **Finding `H-04` closed (`2026-11-28`):** cross-table linking `7` components against `12/12` tables & `9/9` `POL-*` policies verified in [`06-design-traceability-matrix.md §3`](../../G2-P1-fotocopiadora-syp/english/06-design-traceability-matrix.md#3-day-2-cross-audit-2026-11-28-components-g2-p1--tables--pol--policies-g2-p2). |
 
 ---
 
-## 2. Findings & Remediation Log (`4` Findings)
+## 2. Findings & Remediation Log (`5` Findings — `5 / 5` Closed)
 
 | ID | Artifact | Detected finding | Severity | Fix applied / Status |
 | :- | :--- | :--- | :---: | :--- |
 | **`H-01`** | `G2-P1/02-diagrama-clases` | Needed to isolate CSV formula-sanitizing exporter from `Pedido` and `Cotizacion` entities. | Major | **Closed (`2026-11-27`):** isolated `ExportadorCsvSeguro` inside `NucleoNotificacionesExport`. |
 | **`H-02`** | `G2-P2/05-script-creacion.sql` | Guest orders/quotes without an account (`id_usuario IS NULL`) needed nullable FK support. | Critical | **Closed (`2026-11-27`):** set `pedido.id_usuario`, `cotizacion.id_usuario`, and `solicitud_servicio.id_usuario` nullable with `ON DELETE SET NULL`. |
 | **`H-03`** | `G2-P2/02-modelo-logico` & `B5` | Recursive `PRODUCTO ↔ PRODUCTO` needed to block self-referencing compatibility rows. | Major | **Closed (`2026-11-27`):** created `compatibilidad_producto(id_equipo, id_insumo)` with `CHECK (id_equipo <> id_insumo)`. |
-| **`H-04`** | `G2-P1/A7` ↔ `G2-P2/B6` | Add direct cross-verification table linking `7` components / `24` classes in `P1` against `12` tables / `9` `POL-*` policies in `P2`. | Minor | **Open for Day 2 (`2026-11-28 < 06:00 a.m.`):** closes alongside the second calendar push for G2. |
+| **`H-04`** | `G2-P1/A7` ↔ `G2-P2/B6` | Add direct cross-verification table linking `7` components in `P1` against `12` tables & `9` `POL-*` policies in `P2`. | Minor | **Closed (`2026-11-28`):** added §3 in [`06-design-traceability-matrix.md`](../../G2-P1-fotocopiadora-syp/english/06-design-traceability-matrix.md) verifying `12/12` tables and `9/9` policies. |
+| **`H-05`** | `G2-P1/A2` SVG & `G2-P2/B6` | Refine typed method parameters, source-target multiplicities, and dashed interface realization arrows in `02-diagrama-clases.svg`/`.drawio`; explicitly detail Law 1581 processing purpose and consent mechanism in `B6`. | Major | **Closed (`2026-11-28`):** regenerated [`02-diagrama-clases.svg`](../../G2-P1-fotocopiadora-syp/02-diagrama-clases.svg) with typed params, end-to-end multiplicities, `5` dashed realizations, and connected `MensajeContacto`/`ExportadorCsvSeguro`; added §3 Law 1581 section in [`06-data-security-policies.md`](06-data-security-policies.md). |
+
+---
+
+## 3. Second Integral Verification (Day 2 · `2026-11-28`)
+
+- **Approved criteria:** **`24 / 24` = `Yes` (`100 %`)**, `0` pending or partial criteria.
+- **Resolved and re-verified findings:** **`5 / 5` closed (`H-01` to `H-05`)**.
+- **Verified consistency:** `.drawio`/`.svg` diagrams, ES/EN relative links, and `12`-table SQL schema executed on `SQLite 3.53.1` (`ExitCode = 0`, `0` errors).

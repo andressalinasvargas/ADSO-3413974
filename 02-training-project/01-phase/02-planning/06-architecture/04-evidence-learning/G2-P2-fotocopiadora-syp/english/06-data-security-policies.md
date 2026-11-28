@@ -40,3 +40,28 @@
 | **`solicitud_servicio`** | `INSERT` *(public technical appointment)* | `INSERT`, `SELECT` *(own requests)* | `SELECT`, `UPDATE` *(`estado_atencion`, `notas_admin`)* | `SELECT` *(read-only)* |
 | **`reporte_contador`** | No access | `SELECT`, `INSERT` *(own renting devices only)* | `SELECT` *(renting audit)* + Export CSV | `SELECT` *(read-only)* |
 | **`mensaje_contacto`** | `INSERT` *(public contact form)* | `INSERT` | `SELECT`, `UPDATE` *(`leido = 1`)* | `SELECT` |
+
+---
+
+## 3. Personal Data Processing: Purpose, Consent & Data-Subject Rights (Law 1581 of 2012 & Decree 1074 of 2015)
+
+### 3.1 Specific Purpose per Table Containing PII
+
+| Table with PII | Processed fields | Exclusive purpose disclosed to data subject | Operational retention |
+|---|---|---|---|
+| **`usuario`** | `correo_unico`, `nombre_completo`, `telefono` | Secure authentication (`BCrypt`/`JWT`), own order/service history lookup, status alerts, and counter reporting. | While account remains active (`activo = 1`). |
+| **`pedido`** | `nombre_cliente`, `correo_cliente`, `telefono_cliente`, `nit_cliente`, `direccion_entrega`, `ciudad_entrega` | Tax invoicing, physical dispatch of equipment/supplies, and statutory warranty support (`Law 1480/2011`). | Per statutory commercial/accounting retention period. |
+| **`cotizacion`** | `nombre_cliente`, `correo_cliente`, `telefono_cliente` | Issuance and commercial follow-up of formal quotes within `vigencia_dias` (`1`–`90` days). | Commercial validity window & quote history archive. |
+| **`solicitud_servicio`** | `nombre_solicitante`, `telefono_contacto` | Scheduling preventive, corrective, or installation technical visits in the requested time slot. | Service ticket lifecycle & technical warranty log. |
+| **`mensaje_contacto`** | `nombre`, `correo`, `telefono` | Timely reply to commercial or support inquiries sent from the public contact form. | Until inquiry resolution or deletion request. |
+
+### 3.2 Capture of Prior, Explicit, and Informed Authorization
+
+1. Every intake form (`account signup`, `order checkout`, `quote request`, `technical service booking`, and `contact`) renders an **unchecked-by-default consent checkbox** prior to submission, linked to the visible privacy notice describing the purposes above.
+2. The system persists the creation timestamp (`fecha_creacion` in ISO-8601 UTC) as verifiable proof of when consent was granted prior to processing.
+3. No transfers to external autonomous controllers occur without extra express authorization; external encrypted backup storage operates under a **data processor transmission** agreement (`Decree 1074/2015`).
+
+### 3.3 Handling Inquiries, Updates, Rectification & Deletion Requests (`ARCO`)
+
+- **Access & rectification:** authenticated users inspect and update profile data via verified session (`POL-CON-02`) or through Fotocopiadora SyP's official admin channel.
+- **Deletion & revocation:** upon valid revocation request, the platform applies **immediate logical deactivation (`usuario.activo = 0`)** or anonymization in tables free of statutory retention (`mensaje_contacto`), preserving only legally required tax/order rows (`pedido`) blocked from secondary commercial use.

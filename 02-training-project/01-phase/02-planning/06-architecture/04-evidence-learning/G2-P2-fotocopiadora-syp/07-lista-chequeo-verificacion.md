@@ -7,7 +7,7 @@
 
 ---
 
-## 1. Lista de Chequeo (`24` Criterios Medibles — Estado Día 1)
+## 1. Lista de Chequeo (`24` Criterios Medibles — Estado Cierre Día 2 · `2026-11-28`: `24 / 24` Aprobados `100 %`)
 
 | ID | Artefacto | Criterio de aceptación medible | Severidad | Resultado | Evidencia verificable en el repositorio |
 | :- | :--- | :--- | :---: | :---: | :--- |
@@ -34,15 +34,24 @@
 | **LC-21** | `P1`–`P2` Privacidad | Repositorio público sin datos personales reales de terceros ni credenciales reales | Crítico | **Sí** | Verificado con escáner automático en `G1`–`G2` (`0` PII real; solo ejemplos `.invalid`). |
 | **LC-22** | `P1`–`P2` Autoría | Artefactos diferenciados y trazables al análisis propio sin copiar otros forks | Crítico | **Sí** | GoF propios (`Comando` + `Fábrica Abstracta`), arquitectura Hexagonal y `12` tablas propias. |
 | **LC-23** | `P2` Consistencia | Coincidencia exacta de nombres de tablas/columnas entre `B2`, `B4` y `B5` | Mayor | **Sí** | Cruzadas las `12` tablas y todas sus columnas entre modelo lógico, diccionario y DDL. |
-| **LC-24** | `P1 ↔ P2` Trazabilidad | Auditoría cruzada explícita `P1 ↔ P2` (componentes/clases contra tablas y políticas `POL-*`) | Menor | **Parcial *(Día 2)*** | **Hallazgo `H-04`:** se programa sección de auditoría cruzada `P1 ↔ P2` en `G2-P1/06-matriz-trazabilidad-diseno.md` para el cierre Día 2 (`2026-11-28` antes `06:00 a. m.`). |
+| **LC-24** | `P1 ↔ P2` Trazabilidad | Auditoría cruzada explícita `P1 ↔ P2` (componentes/clases contra tablas y políticas `POL-*`) | Menor | **Sí** | **Hallazgo `H-04` cerrado (`2026-11-28`):** tabla cruzada de `7` componentes contra `12/12` tablas y `9/9` políticas `POL-*` verificada en [`G2-P1/06-matriz-trazabilidad-diseno.md §3`](../G2-P1-fotocopiadora-syp/06-matriz-trazabilidad-diseno.md#3-auditoría-cruzada-día-2-2026-11-28-componentes-g2-p1--tablas-y-políticas-pol--g2-p2). |
 
 ---
 
-## 2. Registro de Hallazgos y Correcciones (`4` Hallazgos)
+## 2. Registro de Hallazgos y Correcciones (`5` Hallazgos — `5 / 5` Cerrados)
 
 | ID | Artefacto | Hallazgo detectado | Severidad | Corrección realizada / Estado |
 | :- | :--- | :--- | :---: | :--- |
 | **`H-01`** | `G2-P1/02-diagrama-clases` | Faltaba separar el exportador CSV con neutralización de fórmulas respecto a las entidades `Pedido` y `Cotizacion`. | Mayor | **Cerrado (`2026-11-27`):** se aisló la clase `ExportadorCsvSeguro` dentro del componente `NucleoNotificacionesExport`. |
 | **`H-02`** | `G2-P2/05-script-creacion.sql` | Una cotización o pedido puede provenir de un visitante invitado sin cuenta (`id_usuario IS NULL`). | Crítico | **Cerrado (`2026-11-27`):** se definieron anulables `pedido.id_usuario`, `cotizacion.id_usuario` y `solicitud_servicio.id_usuario` con `ON DELETE SET NULL`. |
 | **`H-03`** | `G2-P2/02-modelo-logico` y `B5` | La asociación recursiva `PRODUCTO ↔ PRODUCTO` requería impedir auto-referencias de un producto consigo mismo. | Mayor | **Cerrado (`2026-11-27`):** se creó `compatibilidad_producto(id_equipo, id_insumo)` con `CONSTRAINT ck_comp_distintos CHECK (id_equipo <> id_insumo)`. |
-| **`H-04`** | `G2-P1/A7` ↔ `G2-P2/B6` | Añadir tabla de verificación cruzada directa que conecte los `7` componentes y `24` clases de `P1` contra las `12` tablas y `9` políticas `POL-*` de `P2`. | Menor | **Abierto para Día 2 (`2026-11-28 < 06:00 a. m.`):** cerrar junto con el segundo `push` de calendario de G2. |
+| **`H-04`** | `G2-P1/A7` ↔ `G2-P2/B6` | Añadir tabla de verificación cruzada directa que conecte los `7` componentes de `P1` contra las `12` tablas y `9` políticas `POL-*` de `P2`. | Menor | **Cerrado (`2026-11-28`):** agregada sección §3 en [`06-matriz-trazabilidad-diseno.md`](../G2-P1-fotocopiadora-syp/06-matriz-trazabilidad-diseno.md) verificando cobertura `12/12` tablas y `9/9` políticas. |
+| **`H-05`** | `G2-P1/A2` SVG y `G2-P2/B6` | Refinar en `02-diagrama-clases.svg`/`.drawio` los tipos de parámetros, multiplicidades en ambos extremos y flechas punteadas de realización de interfaz; detallar explícitamente finalidad y mecanismo de autorización Ley 1581 en `B6`. | Mayor | **Cerrado (`2026-11-28`):** regenerado [`02-diagrama-clases.svg`](../G2-P1-fotocopiadora-syp/02-diagrama-clases.svg) con tipado completo, multiplicidades origen-destino y `5` realizaciones punteadas + conexión de `MensajeContacto`/`ExportadorCsvSeguro`; agregada sección §3 Ley 1581 en [`06-politicas-seguridad-datos.md`](06-politicas-seguridad-datos.md). |
+
+---
+
+## 3. Segunda Verificación Integral (Día 2 · `2026-11-28`)
+
+- **Criterios aprobados:** **`24 / 24` en `Sí` (`100 %`)**, `0` criterios pendientes o parciales.
+- **Hallazgos resueltos y re-verificados:** **`5 / 5` cerrados (`H-01` a `H-05`)**.
+- **Consistencia verificada:** diagramas `.drawio`/`.svg`, enlaces relativos ES/EN y esquema SQL de `12` tablas ejecutado en `SQLite 3.53.1` (`ExitCode = 0`, `0` errores).
